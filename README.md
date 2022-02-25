@@ -22,7 +22,7 @@ These workshops are organized onsite in a GCP office.
     * Partnership overview
     * Integration points
 * [Lab 2 - Moving Data](Lab%202%20-%20Moving%20Data.md) (20 min)
-    * Import data from BigQuery into Neo4j using Dataflow
+    * Import data from BigQuery into Neo4j
 * [Lab 3 - Exploring Data](Lab%203%20-%20Exploring%20Data.md) (20 min)
     * Cypher Queries
     * Visualization with Bloom
