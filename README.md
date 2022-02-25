@@ -1,7 +1,7 @@
 # hands-on-lab-neo4j-and-vertex-ai
 Neo4j is the [leading graph database](https://neo4j.com/whitepapers/forrester-wave-graph-data-platforms/) vendor.  We’ve worked closely with GCP Engineering for years.  Our products, AuraDB and AuraDS are offered as managed services on GCP.
 
-We’re planning a series of hands on labs with GCP architects and their customers.  The goal of these workshops is to give a better understanding of how to identify Neo4j opportunities in their accounts.  These sessions aren’t intended to make attendees experts in Neo4j.  Instead, the idea is to give a good foundation to understand when to work with Neo4j.
+We’re planning a series of hands on labs with GCP architects and their customers.  The goal of these workshops is to give a better understanding of how to identify Neo4j use cases for Neo4j.  These sessions aren’t intended to make attendees experts in Neo4j.  Instead, the idea is to give a good foundation to understand when to work with Neo4j.
 
 ## Venue
 These workshops are organized onsite in a GCP office.
