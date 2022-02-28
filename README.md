@@ -10,6 +10,7 @@ These workshops are organized onsite in a GCP office.
 3 hours.
 
 ## Agenda
+* Introductions
 * Lecture - Introduction to Neo4j (20 min)
     * What is Neo4j?
     * Customer use cases
@@ -35,10 +36,13 @@ These workshops are organized onsite in a GCP office.
     * Centrality
     * Community Detection
     * Graph Machine Learning
-* [Lab 4 - Graph Data Science](Lab%204%20-%20Graph%20Data%20Science.md) (30 min)
+* [Lab 4 - Graph Data Science](Lab%204%20-%20Graph%20Data%20Science.md) (20 min)
     * Unsupervised learning on graphs
     * Creating a graph embedding
     * Exporting to pandas
+* Lecture - Vertex AI (20 min)
+    * What is Vertex AI?
+* Lab 5 - Vertex AI (20 min)
     * Importing to Vertex AI
     * Training a model
 * Discussion - Questions and Next Steps (10 min)
