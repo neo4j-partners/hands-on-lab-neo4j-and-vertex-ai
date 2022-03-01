@@ -40,9 +40,11 @@ These workshops are organized onsite in a GCP office.
     * Unsupervised learning on graphs
     * Creating a graph embedding
     * Exporting to pandas
+    * Writing to Google Cloud Storage
 * Lecture - Vertex AI (20 min)
     * What is Vertex AI?
-* Lab 5 - Vertex AI (20 min)
+    * Using Vertex AI with Neo4j
+* [Lab 4 - Vertex AI](Lab%205%20-%20Vertex%20AI.md) (20 min)
     * Importing to Vertex AI
     * Training a model
 * Discussion - Questions and Next Steps (10 min)
