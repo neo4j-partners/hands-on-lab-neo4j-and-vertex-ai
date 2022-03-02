@@ -28,10 +28,8 @@ To delete the contents of the database, you can run:
 
 Now, let's load the full training dataset:
 
+    :auto USING PERIODIC COMMIT 10000
     LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/train.csv' AS row
     MERGE (m:Manager {filingManager:row.filingManager})
     MERGE (c:Company {nameOfIssuer:row.nameOfIssuer, cusip:row.cusip})
     MERGE (m)-[r1:Owns {value:toInteger(row.value), shares:toInteger(row.shares), reportCalendarOrQuarter:row.reportCalendarOrQuarter, target:row.target}]->(c)
-
-Start time 1109pm
-
