@@ -14,14 +14,24 @@ When you get a new dataset, it's often a good idea to poke at it in pandas a bit
 ## Import data into Neo4j
 Now that we've done a little traditional tabular data exploration with pandas, let's trying doing graph exploration.  We're going to need to load the data into Neo4j.  To do that, we'll use the AuraDS setup we created in our last lab.
 
-    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/train.csv' AS row
+First off, let's try loading a tiny portion of the dataset and playing around with it.
+
+    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/2022-02-17.csv' AS row
     MERGE (m:Manager {filingManager:row.filingManager})
     MERGE (c:Company {nameOfIssuer:row.nameOfIssuer, cusip:row.cusip})
-    MERGE (m)-[r1:Owns {value:toInteger(row.value), shares:toInteger(row.shares), reportCalendarOrQuarter:row.reportCalendarOrQuarter, target:row.target}]->(c)
-
-Start time 9:54pm...
+    MERGE (m)-[r1:Owns {value:toInteger(row.value), shares:toInteger(row.shares), reportCalendarOrQuarter:row.reportCalendarOrQuarter}]->(c)
 
 To delete the contents of the database, you can run:
 
     MATCH (n)
     DETACH DELETE n;
+
+Now, let's load the full training dataset:
+
+    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/train.csv' AS row
+    MERGE (m:Manager {filingManager:row.filingManager})
+    MERGE (c:Company {nameOfIssuer:row.nameOfIssuer, cusip:row.cusip})
+    MERGE (m)-[r1:Owns {value:toInteger(row.value), shares:toInteger(row.shares), reportCalendarOrQuarter:row.reportCalendarOrQuarter, target:row.target}]->(c)
+
+Start time 1109pm
+
