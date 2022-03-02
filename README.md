@@ -47,4 +47,4 @@ These workshops are organized onsite in a GCP office.
 * [Lab 5 - Vertex AI](Lab%205%20-%20Vertex%20AI) (20 min)
     * Importing to Vertex AI
     * Training a model
-* Discussion - Questions and Next Steps (10 min)
+* [Discussion - Questions and Next Steps](Discussion%20-%20Questions%20and%20Next%20Steps.md) (10 min)
