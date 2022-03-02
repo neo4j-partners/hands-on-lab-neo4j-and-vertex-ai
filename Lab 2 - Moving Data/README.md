@@ -7,11 +7,7 @@ We're going to be working with two files: train.csv and test.csv.  As the names 
     https://storage.googleapis.com/neo4j-datasets/form13/train.csv
     https://storage.googleapis.com/neo4j-datasets/form13/test.csv
 
-First off, it might be helpful to get an idea what the data looks like.  So, let's fire up a notebook and fiddle with it.
-
-    import pandas as pd
-    pd.read_csv('train.csv')
-    pd['target'].describe()
+First off, it might be helpful to get an idea what the data looks like.  So, let's fire up a notebook and fiddle with it.  You can open the notebook [here](playing-around.ipynb).
 
 ## Import data into Neo4j
 
