@@ -1,8 +1,13 @@
 # Lab 2 - Moving Data
-asd
+In this lab, we're going to take data from a Google Cloud Storage bucket and import it into Neo4j.  We'll use the load CSV command in the Neo4j Cypher query language to do this.
 
 ## Checking out what we have.
-So, we're starting with two files: train.csv and test.csv.  In a python3 console, run:
+We're going to be working with two files: train.csv and test.csv.  As the names imply, one is intended to be a training data set for our ML algorithms and another a test dataset.  The files are publicly available here:
+
+    https://storage.googleapis.com/neo4j-datasets/form13/train.csv
+    https://storage.googleapis.com/neo4j-datasets/form13/test.csv
+
+First off, it might be helpful to get an idea what the data looks like.  So, let's fire up a notebook and fiddle with it.
 
     import pandas as pd
     pd.read_csv('train.csv')

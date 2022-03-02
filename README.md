@@ -15,16 +15,16 @@ These workshops are organized onsite in a GCP office.
     * What is Neo4j?
     * Customer use cases
     * How is it deployed and managed on GCP?
-* [Lab 1 - Deploy Neo4j](Lab%201%20-%20Deploy%20Neo4j.md) (20 min)
+* [Lab 1 - Deploy Neo4j](Lab%201%20-%20Deploy%20Neo4j) (20 min)
     * Deploying Neo4j AuraDB
     * Deploying Neo4j AuraDS
 * Break (10 min)
 * Lecture - Neo4j and GCP (20 min)
     * Partnership overview
     * Integration points
-* [Lab 2 - Moving Data](Lab%202%20-%20Moving%20Data.md) (20 min)
+* [Lab 2 - Moving Data](Lab%202%20-%20Moving%20Data) (20 min)
     * Import data into Neo4j
-* [Lab 3 - Exploring Data](Lab%203%20-%20Exploring%20Data.md) (20 min)
+* [Lab 3 - Exploring Data](Lab%203%20-%20Exploring%20Data) (20 min)
     * Cypher Queries
     * Visualization with Bloom
 * Break (10 min)
@@ -36,7 +36,7 @@ These workshops are organized onsite in a GCP office.
     * Centrality
     * Community Detection
     * Graph Machine Learning
-* [Lab 4 - Graph Data Science](Lab%204%20-%20Graph%20Data%20Science.md) (20 min)
+* [Lab 4 - Graph Data Science](Lab%204%20-%20Graph%20Data%20Science) (20 min)
     * Unsupervised learning on graphs
     * Creating a graph embedding
     * Exporting to pandas
@@ -44,7 +44,7 @@ These workshops are organized onsite in a GCP office.
 * Lecture - Vertex AI (20 min)
     * What is Vertex AI?
     * Using Vertex AI with Neo4j
-* [Lab 5 - Vertex AI](Lab%205%20-%20Vertex%20AI.md) (20 min)
+* [Lab 5 - Vertex AI](Lab%205%20-%20Vertex%20AI) (20 min)
     * Importing to Vertex AI
     * Training a model
 * Discussion - Questions and Next Steps (10 min)
