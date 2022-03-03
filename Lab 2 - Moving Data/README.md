@@ -26,10 +26,29 @@ To delete the contents of the database, you can run:
     MATCH (n)
     DETACH DELETE n;
 
-Now, let's load the full training dataset:
+Now, let's load the full training dataset.
 
     :auto USING PERIODIC COMMIT 10000
     LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/train.csv' AS row
     MERGE (m:Manager {filingManager:row.filingManager})
     MERGE (c:Company {nameOfIssuer:row.nameOfIssuer, cusip:row.cusip})
     MERGE (m)-[r1:Owns {value:toInteger(row.value), shares:toInteger(row.shares), reportCalendarOrQuarter:row.reportCalendarOrQuarter, target:row.target}]->(c)
+
+Hmmmm... The load is taking a really long time.  What can we do to improve it?  Let's try a few things...  LOAD CSV runs a lot faster if you do the relationships and nodes seperately.  Let's try loading nodes first.
+
+    :auto USING PERIODIC COMMIT 10000
+    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/train.csv' AS row
+    MERGE (m:Manager {filingManager:row.filingManager})
+    MERGE (c:Company {nameOfIssuer:row.nameOfIssuer, cusip:row.cusip})
+
+With that done, we can process the same file again, this time loading relationships.
+
+    :auto USING PERIODIC COMMIT 10000
+    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/train.csv' AS row
+    MERGE (m:Manager {filingManager:row.filingManager})
+    MERGE (c:Company {nameOfIssuer:row.nameOfIssuer, cusip:row.cusip})
+    MERGE (m)-[r1:Owns {value:toInteger(row.value), shares:toInteger(row.shares), reportCalendarOrQuarter:row.reportCalendarOrQuarter, target:row.target}]->(c)
+
+https://neo4j.com/developer/guide-import-csv/#_optimizing_load_csv_for_performance
+https://data-importer.neo4j.io/
+https://graphacademy.neo4j.com/courses/importing-data/
