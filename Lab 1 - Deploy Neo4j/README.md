@@ -4,5 +4,5 @@ asd
 ## Deploying Neo4j AuraDB
 asd
 
-## Deploying Neo4j AuraDS
+## Deploying Neo4j Enterprise Edition
 asd

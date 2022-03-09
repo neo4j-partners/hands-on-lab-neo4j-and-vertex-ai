@@ -17,7 +17,7 @@ These workshops are organized onsite in a GCP office.
     * How is it deployed and managed on GCP?
 * [Lab 1 - Deploy Neo4j](Lab%201%20-%20Deploy%20Neo4j) (20 min)
     * Deploying Neo4j AuraDB
-    * Deploying Neo4j AuraDS
+    * Deploying Neo4j Enterprise Edition
 * Break (10 min)
 * Lecture - Neo4j and GCP (20 min)
     * Partnership overview
