@@ -1,17 +1,4 @@
-# Lab 4 - Graph Data Science
-asd
+# Lab 5 - Graph Data Science
+In this lab, we're going to work with a notebook.  We're going to generate a graph embedding.  This will be an additional feature we can use to train our machine learning model later.
 
-## Unsupervised learning on graphs
-asd
-
-## Creating a graph embedding
-asd
-
-## Exporting to pandas
-asd
-
-## Importing to Vertex AI
-asd
-
-## Training a model
-asd
+So, open up the notebook [here](embedding.ipynb)

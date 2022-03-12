@@ -1,4 +1,4 @@
-# Lab 3 - Exploring Data
+# Lab 4 - Exploring Data
 asd
 
 ## Cypher Queries

@@ -1,4 +1,4 @@
-# Lab 2 - Moving Data
+# Lab 3 - Moving Data
 In this lab, we're going to take data from a Google Cloud Storage bucket and import it into Neo4j.  We'll use the load CSV command in the Neo4j Cypher query language to do this.
 
 ## Checking out what we have.
