@@ -93,9 +93,15 @@ You'll be presented with the credentials for your database.  Be absolutely certa
 
 ![](images/21-creds.png)
 
-You'll see a dialog that your database is being created.  This takes less than five minutes.  You can poke around the menus here a bit.
+You'll see a dialog that your database is being created.  This takes less than five minutes.
 
 ![](images/22-deploying.png)
+
+When deployment is complete you'll see this menu.
+
+![](images/23-deployed.png)
+
+You can poke around the menus here a bit and see more on database status and connection information.  We'll look at these menus in more detail later.
 
 ## Deploying Neo4j Enterprise Edition through the Marketplace
 Now we're going to deploy Neo4j a second way.  To do so, let's go to the Google Cloud Marketplace.  We could go to the Marketplace and search.  But, instead, let's go directly to the listing for Neo4j Enterprise Edition.  That's [here](todo).
