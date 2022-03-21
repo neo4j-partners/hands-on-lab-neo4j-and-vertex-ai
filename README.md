@@ -53,7 +53,7 @@ These workshops are organized onsite in a GCP office.
 * Lecture - Vertex AI (15 min)
     * What is Vertex AI?
     * Using Vertex AI with Neo4j
-* [Lab 6 - Vertex AI](Lab%206%20-%20Vertex%20AI) (20 min)
+* [Lab 6 - Vertex AI](Lab%206%20-%20Vertex%20AI) (15 min)
     * Importing to Vertex AI
     * Training a model
 * [Lab 7 - Cleanup](Lab%207%20-%20Cleanup) (5 min)
