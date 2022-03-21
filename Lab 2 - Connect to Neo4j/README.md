@@ -20,6 +20,8 @@ We're now presented with the instance's details.  Scroll down to find the "Exter
 
 In my case, the external IP is 34.138.21.128.  Click on the "Copy to Clipboard" button for that and paste it into a new browser tab.  Add ":7474" to the end of that URL. 7474 is the port that Neo4j Browser uses for HTTP communication.  There's also an HTTPS listener running on 7473. Neo4j Browser is the GUI for Neo4j.
 
+For instance, I navigated to http://34.138.21.128:7474
+
 ![](images/05-ip.png)
 
 We're now presented with the Neo4j Browser. The default database is called "Neo4j."  We can leave that blank. The default login is "neo4j."  The password was given in our parameters file, parameters.single.yaml.  It's "foo123."  Type that in a click "Connect."

@@ -4,7 +4,7 @@ In this lab, we're going to take data from an Google Cloud Storage bucket and im
 The dataset is pulled from the SEC's EDGAR database.  These are public filings of something called form 13.  Asset managers with over $100m AUM are required to submit Form 13 quarterly.  That's then made available to the public over http.  The csvs linked above were pull from EDGAR using some python scripts.  We don't have time to run those in the lab today as they take a few hours.  But, if you're curious, they're all available [here](https://github.com/neo4j-partners/neo4j-sec-edgar-form13).
 
 ## LOAD CSV 
-For this portion of the lab, we're going to work with a subset of the data.  Our full dataset is a year of data.  However, we'll just be playing around with a day's worth.  The data is [here](https://neo4j-dataset.s3.amazonaws.com/form13/2022-02-17.csv).
+For this portion of the lab, we're going to work with a subset of the data.  Our full dataset is a year of data.  However, we'll just be playing around with a day's worth.  The data is [here](https://storage.googleapis.com/neo4j-datasets/form13/form13.csv).
 
 You may want to download the data and load it into your favorite tool for exploring CSV files.  Pandas, Excel or anything else should be able to make short work of it.  Once you understand what's in the data, the next step would be to load it into Neo4j.
 
@@ -132,7 +132,7 @@ Now our data model is all set.  We need to connect the importer up to our databa
 
 That prompts for three fields.  The username is neo4j.  The password is the same as you entered when you deployed via marketplace, possibly "foo123."
 
-The host field will be the public DNS name of the EC2 instance we were working with earlier with a protocol and port added. A particular example is neo4j://ec2-44-202-197-32.compute-1.amazonaws.com:7687
+The host field will be the external IP of the Google Compute Engine instance we were working with earlier with a protocol and port added. A particular example is neo4j://34.138.21.128:7687
 
 With all that filled in, click "Run."
 
@@ -154,4 +154,4 @@ Our load is all done!  You can click "Review in Neo4j Browser" to get redirected
 
 ![](images/28-browser.png)
 
-Congratulations on setting up Neo4j on AWS, connecting to it and loading some data!
+Congratulations on setting up Neo4j on GCP, connecting to it and loading some data!
