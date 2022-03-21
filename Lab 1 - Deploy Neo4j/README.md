@@ -101,16 +101,14 @@ When deployment is complete you'll see this menu.
 
 ![](images/23-deployed.png)
 
-You can poke around the menus here a bit and see more on database status and connection information.  We'll look at these menus in more detail later.
+You can poke around the menus here a bit and see more on database status and connection information.
 
 ## Deploying Neo4j Enterprise Edition on IaaS
-Now we're going to deploy Neo4j a second way, on Infrastructure as a Service (IaaS).  We'll be using Neo4j Enterprise Edition.  That is the installable version of Neo4j.  The Marketplace listing has a Deployment Manager (DM) template that deploys Neo4j for you.  This has options to deploy Neo4j Graph Database, Neo4j Graph Data Science and Neo4j Bloom.
+Now we're going to deploy Neo4j a second way, on Infrastructure as a Service (IaaS).  We'll be using Neo4j Enterprise Edition.  That is the installable version of Neo4j.  The Marketplace listing has a Deployment Manager (DM) template that deploys Neo4j for you.  This has options to deploy Neo4j Graph Database, Neo4j Graph Data Science and Neo4j Bloom.  We're going to use the IaaS version for our exercises because it has all these additional features.
 
-Graph Database is, as the name implies, Neo4j's core database.  It's designed from the ground up to store graphs.  This comes in both a community and an enterprise version.  We're going to use the enterprise version.
-
-Graph Data Science (GDS) is the graph library that installs on top of the database.  It has implentations of 60 different graph algorithms.  We're going to use GDS to do things like create graph embeddings later in the labs.
-
-Bloom is a business intelligence tool.  We'll install it as well and use it to explore the data.
+* Graph Database is, as the name implies, Neo4j's core database.  It's designed from the ground up to store graphs.  This comes in both a community and an enterprise version.  We're going to use the enterprise version.
+* Graph Data Science (GDS) is the graph library that installs on top of the database.  It has implentations of 60 different graph algorithms.  We're going to use GDS to do things like create graph embeddings later in the labs.
+* Bloom is a business intelligence tool.  We'll install it as well and use it to explore the data.
 
 We're going to be using the absolute cutting edge, a new template that isn't available in the Marketplace yet.  The Marketplace is essentially a nice GUI around Deployment Manager.  So, what we're going to do is a little more raw and technical.
 
@@ -202,4 +200,4 @@ The deployment takes a few minutes to run.  When complete, you'll see this:
 
 ![](images/37-deploy.png)
 
-You now have a single node of Neo4j running!  In the next lab, we'll connect to both databases we deployed.
+You now have a single node of Neo4j running!  In the next lab, we'll connect to it.
