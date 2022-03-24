@@ -32,8 +32,8 @@ These workshops are organized onsite in a GCP office.
     * Spark
     * Glue
 * [Lab 3 - Moving Data](Lab%203%20-%20Moving%20Data/README.md) (20 min)
-    * LOAD CSV
-    * Data Importer
+    * A Day of Data
+    * A Year of Data
 * Break (10 min)
 * Lecture - Graph Data Science (15 min)
     * Why Graph Data Science
