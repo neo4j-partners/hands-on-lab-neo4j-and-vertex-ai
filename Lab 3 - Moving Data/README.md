@@ -128,19 +128,21 @@ And now we can load our Holdings:
 
 Well, this is cool.  We've got all our nodes loaded in.  Now we need to tie them together with relationships.  We're going to want two kinds of relationships:
 
-(1) Managers should "Own" Holdings
-(2) Holdings are "PartOf" Companies
+(1) A Manager "OWNS" Holdings
+(2) Holdings are "PARTOF" Companies
 
-So, let's put together the owns relationship first.
+So, let's put together the OWNS relationship first.
 
-LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13.csv' AS row
-MATCH (m:Manager {filingManager:row.filingManager})
-MATCH (h:Holding {filingManager:row.filingManager, cusip:row.cusip, reportCalendarOrQuarter:row.reportCalendarOrQuarter})
-MERGE (m)-[r:Owns]->(h)
+    :auto LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13.csv' AS row
+    CALL { WITH row 
+    MATCH (m:Manager {filingManager:row.filingManager})
+    MATCH (h:Holding {filingManager:row.filingManager, cusip:row.cusip, reportCalendarOrQuarter:row.reportCalendarOrQuarter})
+    MERGE (m)-[r:OWNS]->(h) } IN TRANSACTIONS OF 50000 ROWS;
 
-And, now we can create the part of relationships:
+And, now we can create the PARTOF relationships:
 
-LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13.csv' AS row
-MATCH (h:Holding {filingManager:row.filingManager, cusip:row.cusip, reportCalendarOrQuarter:row.reportCalendarOrQuarter})
-MATCH (c:Company {cusip:row.cusip})
-MERGE (h)-[r:PartOf]->(c)
+    :auto LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13.csv' AS row
+    CALL { WITH row 
+    MATCH (h:Holding {filingManager:row.filingManager, cusip:row.cusip, reportCalendarOrQuarter:row.reportCalendarOrQuarter})
+    MATCH (c:Company {cusip:row.cusip})
+    MERGE (h)-[r:PARTOF]->(c) } IN TRANSACTIONS OF 50000 ROWS;
