@@ -146,3 +146,5 @@ And, now we can create the PARTOF relationships:
     MATCH (h:Holding {filingManager:row.filingManager, cusip:row.cusip, reportCalendarOrQuarter:row.reportCalendarOrQuarter})
     MATCH (c:Company {cusip:row.cusip})
     MERGE (h)-[r:PARTOF]->(c) } IN TRANSACTIONS OF 50000 ROWS;
+
+You've done it!  We've loaded our data set up.  Let's explore it in the next lab!
