@@ -8,7 +8,7 @@ First off, let's fiddle with the data in pandas.  Click [here](exploring_pandas.
 Now we'll run a few queries using the python API.  Earlier we used the graphical interface in the Neo4j Browser.  We're going to do the same thing but in a programmatic way.  Let's start by firing up a notebook.  Click [here](exploring_cypher.ipynb) and then follow the "Run in Colab" link to open it in Google Colab.
 
 ## Bloom
-Bloom is Neo4j's business intellgence tool.  We can open it on port 7474 under the path /bloom of the instance we were using previously.  For instance, for my deployment, the URL is http://35.237.130.165:7474/bloom
+Bloom is Neo4j's business intelligence (BI) tool.  We can open it on port 7474 under the path /bloom of the instance we were using previously.  For instance, for my deployment, the URL is http://35.237.130.165:7474/bloom
 
 When you open Bloom, you should see the login screen.  Use the same credentials we used before.  If you kept the defaults the username will be neo4j and the password foo123.
 
