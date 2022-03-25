@@ -27,9 +27,9 @@ That will load the nodes and relationships from the file.  You should see the nu
 
 ![](images/03-runcypher.png)
 
-Sometimes it takes a minute to populate this menu, but once it's populated you'll see the nodes, relationships and properties we loaded.  We have two kinds of nodes, Manager and Company.  Manager nodes are asset managers.  Company nodes are the companies that those asset manages buy shares of.  Managers are related to companies by the "owns" relationship.  Manager, company and owns all have properties that we can inspect as well.
+Sometimes it takes a minute to populate this menu, but once it's populated you'll see the nodes, relationships and properties we loaded.  We have two kinds of nodes, manager and company.  Manager nodes are asset managers.  Company nodes are the companies that those asset manages buy shares of.  Managers are related to companies by the owns relationship.  Manager, company and owns all have properties that we can inspect as well.
 
-Click on "Manager" under "Node Labels to automatically generate a new cypher query.
+Click on "Manager" under "Node Labels" to automatically generate a new cypher query.
 
 ![](images/04-database.png)
 
@@ -90,16 +90,16 @@ Finally, switch back to the neo4j database:
 Now, all your data should be deleted and you're back on the neo4j database.
 
 ## A Year of Data
-There are many ways to load data into Neo4j.  The LOAD CSV statement we used before was pretty naive.  It didn't create any indices.  It also loaded the nodes and relationships simultaneously.  Both of those are inefficient approaches.  It wasn't a big deal as that single day of data was about 57kb.  However, we'd now like to load a full year of data.  That's 49.5mb of data, so we have to be a bit more efficient.  That new dataset is [here](https://storage.googleapis.com/neo4j-datasets/form13/form13.csv.)
+The LOAD CSV statement we used before was pretty naive.  It didn't create any indices.  It also loaded the nodes and relationships simultaneously.  Both of those are inefficient approaches.  It wasn't a big deal as that single day of data was about 57kb.  However, we'd now like to load a full year of data.  That's 49.5mb of data, so we have to be a bit more efficient.  That new dataset is [here](https://storage.googleapis.com/neo4j-datasets/form13/form13.csv.)
 
 If you're curious, you can read a bit about the intracties of optimizing those loads here:
 
 * https://neo4j.com/developer/guide-import-csv/#_optimizing_load_csv_for_performance
 * https://graphacademy.neo4j.com/courses/importing-data/
 
-We're also going to change our data model a bit.  This is to make it work better in the Graph Data Science component of our lab where we create graph embedding.  We're going to move some properties out of the owns relationship we had previously, into a new node type call "Holding."
+We're also going to change our data model a bit.  This is to make it work better in the Graph Data Science (GDS) component of our lab where we create graph embedding.  We're going to move some properties out of the owns relationship we had previously, into a new node type call "Holding."
 
-First, let's create constraints, essentially a primary key, for the Company and Manager node types.  Company keys should be cusips.  We know a cusip is unique because that is the whole point of one.  They are identifiers for securities designed to be unique.  You can read more about them [here](https://www.cusip.com).  This is a much better field to use than nameOfIssuer because it avoids the problem where some companies (like Apple or Apple, Inc.) are referred to by slightly different names.
+First, let's create constraints, essentially a primary key, for the company and manager node types.  Company keys should be cusips.  We know a CUSIP is unique because that is the whole point of one.  They are identifiers for securities designed to be unique.  You can read more about them [here](https://www.cusip.com).  This is a much better field to use than nameOfIssuer because it avoids the problem where some companies (like Apple or Apple, Inc.) are referred to by slightly different names.
 
 The manager is a little more difficult.  But, we're going to assume that the filingManager field is both unique and correct.
 
@@ -126,7 +126,7 @@ That should give this:
 
 Now that we have all the constraints, let's load our nodes.  We're going to do that first and grab the relationships in a second pass.  While we could do it in a single cypher statement, as we did above, it's more efficient to run them in series.
 
-Let's load the companies first.  We're going to have a lot of duplication, since our key is cusip and many different rows in our csv, each representing a filing, have the same cusip.  So, we need to enhance our LOAD CSV statement a little bit to deal with those duplicates.
+Let's load the companies first.  We're going to have a lot of duplication, since our key is CUSIP and many different rows in our csv, each representing a filing, have the same cusip.  So, we need to enhance our LOAD CSV statement a little bit to deal with those duplicates.
 
     LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13.csv' AS row
     MERGE (c:Company {cusip:row.cusip})
@@ -161,10 +161,10 @@ That should give this:
 
 Well, this is cool.  We've got all our nodes loaded in.  Now we need to tie them together with relationships.  We're going to want two kinds of relationships:
 
-(1) A Manager "OWNS" Holdings
-(2) Holdings are "PARTOF" Companies
+(1) A manager "OWNS" holdings
+(2) Holdings are "PARTOF" companies
 
-So, let's put together the OWNS relationship first.
+So, let's put together the owns relationship first.
 
     :auto LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13.csv' AS row
     CALL { WITH row 
