@@ -1,5 +1,5 @@
 # Lab 6 - Vertex AI
-Now we've reached what we've been working toward -- pulling graph data into Vertex AI.
+Now we've reached what we've been working toward -- pulling graph data into Vertex AI.  We're going to work with two notebooks in this lab.
 
 ## Raw Data
 First, we're going to work with the raw data set.  We'll do the following:
