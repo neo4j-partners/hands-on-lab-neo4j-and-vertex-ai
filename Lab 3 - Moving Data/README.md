@@ -45,7 +45,7 @@ When it expands, we can see what companies this manager owns shares in.  In this
 
 We can also click on the relationship, that is the line between the nodes to see detail on the transaction.
 
-![](images/07-manager.png)
+![](images/07-company.png)
 
 In this case, it appears we have a report from 12-31-2021 that 139,781 shares were purchased with a value of $10,063,000.
 
@@ -57,24 +57,37 @@ As you play around, you may start to see some of the structure in the graph with
 
 ![](images/09-nodes.png)
 
-Now that we have some understanding of this portion of the dataset, we're going to delete it.  Then we'll load the full data set.  To delete the dataset, you'll want to run this in the Neo4j Browser:
+Now that we have some understanding of this portion of the dataset, we're going to delete it.  Then we'll load the full data set.  We don't want to delete the database we're currently using.  So, we're going to switch databases first.  Run this in the Neo4j Browser.
 
     :use system
 
-Then drop the database and recreate it.
+That should give you this:
+
+![](images/10-usesystem.png)
+
+Then drop the database:
 
     drop database neo4j
+
+That will give you this:
+
+![](images/11-drop.png)
+
+Now, create a new data:
+
     create database neo4j
 
-Then switch back to the neo4j database:
+You'll see this:
+
+![](images/12-create.png)
+
+Finally, switch back to the neo4j database:
 
     :use neo4j
 
-![](images/10-delete.png)
+![](images/13-useneo4j.png)
 
-Now all your data should be deleted.
-
-![](images/11-delete.png)
+Now, all your data should be deleted and you're back on the neo4j database.
 
 ## A Year of Data
 There are many ways to load data into Neo4j.  The LOAD CSV statement we used before was pretty naive.  It didn't create any indices.  It also loaded the nodes and relationships simultaneously.  Both of those are inefficient approaches.  It wasn't a big deal as that single day of data was about 57kb.  However, we'd now like to load a full year of data.  That's 49.5mb of data, so we have to be a bit more efficient.  That new dataset is [here](https://storage.googleapis.com/neo4j-datasets/form13/form13.csv.)
