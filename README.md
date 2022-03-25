@@ -11,7 +11,7 @@ These workshops are organized onsite in a GCP office.
 
 ## Agenda
 * Introductions
-* Lecture - Introduction to Neo4j (15 min)
+* Lecture - [Introduction to Neo4j](https://docs.google.com/presentation/d/1WvPzs_JEh8uuKEAQGecH1rUd1NoRzqZIKc-hQkuBdXQ/edit?usp=sharing) (15 min)
     * What is Neo4j?
     * Customer use cases
     * How is it deployed and managed on GCP?
@@ -25,7 +25,7 @@ These workshops are organized onsite in a GCP office.
     * Neo4j Bloom
     * Interacting via Shell
 * Break (10 min)
-* Lecture - Moving Data (10 min)
+* Lecture - [Moving Data](https://docs.google.com/presentation/d/1O6Oy_GbDYYCvQanUyUCl30hQdSsy9kKL53Jgl23Nnsk/edit?usp=sharing) (10 min)
     * LOAD CSV
     * Data Importer
     * Kafka
@@ -35,7 +35,7 @@ These workshops are organized onsite in a GCP office.
     * A Day of Data
     * A Year of Data
 * Break (10 min)
-* Lecture - Graph Data Science (15 min)
+* Lecture - [Graph Data Science](https://docs.google.com/presentation/d/133tXAH--V7Uvyd0Ylhs08_xDEPfl64uvaNNdxeHVpvk/edit?usp=sharing) (15 min)
     * Why Graph Data Science
     * Neo4j GDS Library and Catalog
     * Algorithm Families and Examples
