@@ -11,11 +11,11 @@ These workshops are organized onsite in a GCP office.
 
 ## Agenda
 * Introductions
-* Lecture - [Introduction to Neo4j](https://docs.google.com/presentation/d/1WvPzs_JEh8uuKEAQGecH1rUd1NoRzqZIKc-hQkuBdXQ/edit?usp=sharing) (15 min)
+* Lecture - [Introduction to Neo4j](https://docs.google.com/presentation/d/1WvPzs_JEh8uuKEAQGecH1rUd1NoRzqZIKc-hQkuBdXQ/edit?usp=sharing) (10 min)
     * What is Neo4j?
     * Customer use cases
     * How is it deployed and managed on GCP?
-* [Lab 1 - Deploy Neo4j](Lab%201%20-%20Deploy%20Neo4j) (20 min)
+* [Lab 1 - Deploy Neo4j](Lab%201%20-%20Deploy%20Neo4j) (15 min)
     * Sign up for GCP
     * Deploying Neo4j AuraDB through the Marketplace
     * Deploying Neo4j Enterprise Edition through the Marketplace
@@ -31,11 +31,11 @@ These workshops are organized onsite in a GCP office.
     * Kafka
     * Spark
     * Glue
-* [Lab 3 - Moving Data](Lab%203%20-%20Moving%20Data/README.md) (20 min)
+* [Lab 3 - Moving Data](Lab%203%20-%20Moving%20Data/README.md) (15 min)
     * A Day of Data
     * A Year of Data
 * Break (10 min)
-* Lecture - [Graph Data Science](https://docs.google.com/presentation/d/133tXAH--V7Uvyd0Ylhs08_xDEPfl64uvaNNdxeHVpvk/edit?usp=sharing) (15 min)
+* Lecture - [Graph Data Science](https://docs.google.com/presentation/d/133tXAH--V7Uvyd0Ylhs08_xDEPfl64uvaNNdxeHVpvk/edit?usp=sharing) (10 min)
     * Why Graph Data Science
     * Neo4j GDS Library and Catalog
     * Algorithm Families and Examples
@@ -53,8 +53,8 @@ These workshops are organized onsite in a GCP office.
 * Lecture - Vertex AI (15 min)
     * What is Vertex AI?
     * Using Vertex AI with Neo4j
-* [Lab 6 - Vertex AI](Lab%206%20-%20Vertex%20AI) (15 min)
+* [Lab 6 - Vertex AI](Lab%206%20-%20Vertex%20AI) (20 min)
     * Raw Data
     * Data with Embedding
-* [Lab 7 - Cleanup](Lab%207%20-%20Cleanup) (5 min)
+* [Lab 7 - Cleanup](Lab%207%20-%20Cleanup) (Optional, 0 min)
 * [Discussion - Questions and Next Steps](Discussion%20-%20Questions%20and%20Next%20Steps.md) (10 min)
