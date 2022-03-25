@@ -7,7 +7,7 @@ First, we're going to work with the raw data set.  We'll do the following:
 * Break into train and test sets
 * Train a classifier
 
-To do that, open the notebook [here](vertexai-raw.ipynb).
+To do that, open the notebook [here](vertex-ai-raw.ipynb).
 
 ## Data with Embedding
-Now, let's build a similar classifier to the last one.  But, this time we're going to use data from our graph embedding.  We can do that [here](vertexai-embedding.ipynb).
+Now, let's build a similar classifier to the last one.  But, this time we're going to use data from our graph embedding.  We can do that [here](vertex-ai-embedding.ipynb).
