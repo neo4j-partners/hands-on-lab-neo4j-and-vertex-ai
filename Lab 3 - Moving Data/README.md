@@ -106,6 +106,10 @@ The manager is a little more difficult.  But, we're going to assume that the fil
     CREATE CONSTRAINT IF NOT EXISTS ON (p:Company) ASSERT (p.cusip) IS NODE KEY;
     CREATE CONSTRAINT IF NOT EXISTS ON (p:Manager) ASSERT (p.filingManager) IS NODE KEY;
 
+That should give this:
+
+![](images/14-constraint.png)
+
 Now, the holding is a bit more interesting.  It needs a compound key.  Because a holding is unique in the context of:
 
 (1) Being held by a particular filingManager
@@ -116,6 +120,10 @@ So, we're going to need something with a compount key like this:
 
     CREATE CONSTRAINT IF NOT EXISTS ON (p:Holding) ASSERT (p.filingManager, p.cusip, p.reportCalendarOrQuarter) IS NODE KEY;
 
+That should give this:
+
+![](images/15-constraint.png)
+
 Now that we have all the constraints, let's load our nodes.  We're going to do that first and grab the relationships in a second pass.  While we could do it in a single cypher statement, as we did above, it's more efficient to run them in series.
 
 Let's load the companies first.  We're going to have a lot of duplication, since our key is cusip and many different rows in our csv, each representing a filing, have the same cusip.  So, we need to enhance our LOAD CSV statement a little bit to deal with those duplicates.
@@ -125,10 +133,18 @@ Let's load the companies first.  We're going to have a lot of duplication, since
     ON CREATE SET
         c.nameOfIssuer=row.nameOfIssuer
 
+That should give this:
+
+![](images/16-company.png)
+
 Now let's load the Managers:
 
     LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13.csv' AS row
     MERGE (m:Manager {filingManager:row.filingManager})
+
+That should give this:
+
+![](images/17-manager.png)
 
 And now we can load our Holdings:
 
@@ -138,6 +154,10 @@ And now we can load our Holdings:
         h.value=row.value, 
         h.shares=row.shares,
         h.target=row.target
+
+That should give this:
+
+![](images/18-holding.png)
 
 Well, this is cool.  We've got all our nodes loaded in.  Now we need to tie them together with relationships.  We're going to want two kinds of relationships:
 
@@ -152,6 +172,10 @@ So, let's put together the OWNS relationship first.
     MATCH (h:Holding {filingManager:row.filingManager, cusip:row.cusip, reportCalendarOrQuarter:row.reportCalendarOrQuarter})
     MERGE (m)-[r:OWNS]->(h) } IN TRANSACTIONS OF 50000 ROWS;
 
+That should give this:
+
+![](images/19-owns.png)
+
 And, now we can create the PARTOF relationships:
 
     :auto LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13.csv' AS row
@@ -160,4 +184,8 @@ And, now we can create the PARTOF relationships:
     MATCH (c:Company {cusip:row.cusip})
     MERGE (h)-[r:PARTOF]->(c) } IN TRANSACTIONS OF 50000 ROWS;
 
-You've done it!  We've loaded our data set up.  Let's explore it in the next lab!
+That should give this:
+
+![](images/20-partof.png)
+
+You've done it!  We've loaded our data set up.  We'll explore it in the next lab.  But, feel free to poke around in the Neo4j Browser a bit as well.
