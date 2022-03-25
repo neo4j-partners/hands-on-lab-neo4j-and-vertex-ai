@@ -159,7 +159,13 @@ Then there's a directory for Marketplace.  That's some GUI wrapper stuff written
 
 deployment.py and cluster.py are Google Deployment Manager (DM) files.  This is Google Infrastructure as Code (IaC) language that automates deploying resources on Google Cloud Platform (GCP).  node.sh is a script that runs automatically in the DM template.
 
-We're going to run the deploy.sh script.  That calls DM.  It takes two parameters, the name of a deployment and the name of a config file.  We're going to use the single parameters file, parameters.single.yaml.  This deploys a single node of Neo4j. Let's run it and deploy Neo4j!
+We're going to run the deploy.sh script.  That calls DM.  It takes two parameters, the name of a deployment and the name of a config file.  We're going to use the single parameters file, parameters.single.yaml.  This deploys a single node of Neo4j. 
+
+Before we run it, we need to make one change.  We're going to be using two products that require license keys, Neo4j Bloom and Neo4j Graph Data Science.  You're going to need to open parameters.single.yaml in your favorite text editor, say vi.  Then you'll need to update the values of graphDataScienceLicenseKey and bloomLicenseKey to the keys provided by the person running this lab.
+
+** IMPORTANT - Note that if you skip the license key step, Bloom will not run and Neo4j Graph Data Science will run in community mode which limits its functionality. This will limit your ability to complete later exercises. **
+
+Let's run it and deploy Neo4j!
 
     clear
     ./deploy.sh neo4j single
