@@ -6,7 +6,7 @@ A quick thing we can do to check that our deployment is running successfully is 
 
 ![](images/01-console.png)
 
-In the search bar, type "vm instnaces" and then click on "VM Instances" under "PRODUCTS AND PAGES."
+In the search bar, type "vm instances" and then click on "VM Instances" under "PRODUCTS AND PAGES."
 
 ![](images/02-search.png)
 
@@ -40,7 +40,7 @@ Before we move on, let's make sure Neo4j Graph Data Science (GDS) is all set up.
 
     RETURN gds.version() as version
 
-Then hit the little blue triangle play button to run it.  You should see the following.
+Then hit the little blue triangle play button to run it.  You should see a GDS version number.
 
 ![](images/09-gds.png)
 

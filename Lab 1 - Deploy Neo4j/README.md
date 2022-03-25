@@ -29,7 +29,7 @@ You'll now be presented with the console again.  There may be a few help dialogs
 Great!  You now have a GCP account and you're all ready to get started deploying stuff!
 
 ## Deploying Neo4j AuraDB through the Marketplace
-Now let's deploy Neo4j's managed service, AuraDS.  We're going to deploy the professional version.  To do that, first navigate to the console [here](https://console.cloud.google.com/).  Then click the hamburger icon in the upper left to exapnd the menu.
+Now let's deploy Neo4j's managed service, AuraDS.  We're going to deploy the professional version.  To do that, first navigate to the console [here](https://console.cloud.google.com/).  Then click the hamburger icon in the upper left to expand the menu.
 
 ![](images/06-console.png)
 

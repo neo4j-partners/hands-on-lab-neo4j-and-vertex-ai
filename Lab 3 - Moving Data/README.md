@@ -1,14 +1,14 @@
 # Lab 3 - Moving Data
-In this lab, we're going to take data from an Google Cloud Storage bucket and import it into Neo4j.  There are a few different ways to do this.  We'll start with the LOAD CSV function and later try the Data Importer.
+In this lab, we're going to take data from an Google Cloud Storage bucket and import it into Neo4j.  There are a few different ways to do this.  We'll start with a very naive LOAD CSV statement and then improve it.  The Neo4j [Data Importer](https://data-importer.neo4j.io/) is another option.
 
-The dataset is pulled from the SEC's EDGAR database.  These are public filings of something called form 13.  Asset managers with over $100m AUM are required to submit Form 13 quarterly.  That's then made available to the public over http.  The csvs linked above were pull from EDGAR using some python scripts.  We don't have time to run those in the lab today as they take a few hours.  But, if you're curious, they're all available [here](https://github.com/neo4j-partners/neo4j-sec-edgar-form13).
+The dataset is pulled from the SEC's EDGAR database.  These are public filings of something called Form 13.  Asset managers with over $100m AUM are required to submit Form 13 quarterly.  That's then made available to the public over http.  The csvs linked above were pull from EDGAR using some python scripts.  We don't have time to run those in the lab today as they take a few hours.  But, if you're curious, they're all available [here](https://github.com/neo4j-partners/neo4j-sec-edgar-form13).  We've filtered the data to only include filings over $10m in value.
 
 ## A Day of Data
 For this portion of the lab, we're going to work with a subset of the data.  Our full dataset is a year of data.  However, we'll just be playing around with a day's worth.  The data is [here](https://storage.googleapis.com/neo4j-datasets/form13/2022-02-17.csv).
 
 You may want to download the data and load it into your favorite tool for exploring CSV files.  Pandas, Excel or anything else should be able to make short work of it.  Once you understand what's in the data, the next step would be to load it into Neo4j.
 
-To load it, let's open the tab that has our Neo4j Browser in it.  If you don't have that tab open, you can review the previous lab to grab the address of it again.
+To load it in Neo4j, let's open the tab that has our Neo4j Browser in it.  If you don't have that tab open, you can review the previous lab to grab the address of it again.
 
 ![](images/01-neo4jbrowser.png)
 
@@ -90,7 +90,7 @@ Finally, switch back to the neo4j database:
 Now, all your data should be deleted and you're back on the neo4j database.
 
 ## A Year of Data
-The LOAD CSV statement we used before was pretty naive.  It didn't create any indices.  It also loaded the nodes and relationships simultaneously.  Both of those are inefficient approaches.  It wasn't a big deal as that single day of data was about 57kb.  However, we'd now like to load a full year of data.  That's 49.5mb of data, so we have to be a bit more efficient.  That new dataset is [here](https://storage.googleapis.com/neo4j-datasets/form13/form13.csv.)
+The LOAD CSV statement we used before was pretty naive.  It didn't create any indices.  It also loaded the nodes and relationships simultaneously.  Both of those are inefficient approaches.  It wasn't a big deal as that single day of data was about 57kb.  However, we'd now like to load a full year of data.  That's 49.5mb of data, so we have to be a bit more efficient.  That new dataset is [here](https://storage.googleapis.com/neo4j-datasets/form13/form13.csv).
 
 If you're curious, you can read a bit about the intracties of optimizing those loads here:
 
