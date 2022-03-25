@@ -1,4 +1,13 @@
 # Lab 6 - Vertex AI
 Now we've reached what we've been working toward -- pulling graph data into Vertex AI.
 
-We're going to create a dataset in Vertex AI and then train a model on it. You can do this either using the Google Cloud console or the python API.  We're going to use the python API in this case.  So, let's fire up another notebook [here](vertexai.ipynb).
+## Raw Data
+First, we're going to work with the raw data set.  We'll do the following:
+* Pull it from a bucket
+* Break into train and test sets
+* Train a classifier
+
+To do that, open the notebook [here](vertexai-raw.ipynb).
+
+## Data with Embedding
+Now, let's build a similar classifier to the last one.  But, this time we're going to use data from our graph embedding.  We can do that [here](vertexai-embedding.ipynb).
