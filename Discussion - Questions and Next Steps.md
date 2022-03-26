@@ -1,17 +1,23 @@
 # Discussion - Questions and Next Steps
 This section has some thoughts on future work, improvements and next steps.  Please feel free to [PR](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/pulls) your ideas and suggestions.
 
-## Future Work - Lab 1 - Deploy Neo4j
+## Lab 1 - Deploy Neo4j
 Today we used AuraDB and a Deployment Manager template to deploy Neo4j EE.  AuraDS is going GA on GCP in a matter of days.  For people who want a SaaS solution, that's going to be preferable.  The GDS version we used, 2.0.0, was released 3/25.  An updated Google Marketplace listing should be coming in the next few days.  Deployment is rapidly improving.
 
-## Future Work - Lab 3 - Moving Data
+## Lab 2 - Connect to Neo4j
+We connected over HTTP.  We are working on improving the self signed cert experience for deployment on IaaS.  We'd also like to use Let's Encrypt or something similar to get a proper cert.  Using Aura avoids this issue entirely.
+
+## Lab 3 - Moving Data
 We used LOAD CSV to pull data in.  That is one of many ways.  Neo4j [Data Loader](https://data-importer.neo4j.io/) was recently released.  However it doesn't support compound keys on relationships, so we weren't able to use it.
 
 We're also working with Google on [Dataflow](https://cloud.google.com/dataflow) integration.  A [PR to Apache Beam](https://github.com/apache/beam/pull/15916) has already been accepted.  We're just working to get the templates that would wrap it together.
 
 The Neo4j [Spark Connector](https://neo4j.com/docs/spark/current/) is another way to get data in.  We've been working with the Google [Dataproc](https://cloud.google.com/dataproc) team on some demos of that.  It works today but some walkthrough are in progress.
 
-## Future Work - Labs 5 - Graph Data Science
+## Lab 4 - Exploring Data
+This section of the lab could be expanded.  A data enrichment exercise might be really interesting.
+
+## Lab 5 - Graph Data Science
 With a novel data set combined with a novel approach to machine learning, there's enough material here for numerous business applications or academic papers.  Some areas that might be interesting to explore in the future follow...
 
 The data set isn't normalized.  Between these large asset managers, it's quite likely they own a signifcant portion of the stock outstanding for certain issues.  So rather than measuring shares or value, a more powerful feature might be percentage of float outstanding.
@@ -26,7 +32,7 @@ The projection we used consisted only of the nodes.  We could use node propertie
 
 Regarding the embedding, that is one approach to creating features.  We also could have explored other algorithms like Nearest Neighbor to generate community features.
 
-## Future Work - Lab 6 - Vertex AI
+## Lab 6 - Vertex AI
 Vertex AI is an amazing suite of products.  It's largely serverless.  The GUI is intuitive.  It takes almost all the infrastructure pain out of machine learning.  At the same time, it is very very new.  The console is constantly changing.  New features are often introduced with only a REST API.  The APIs change.
 
 While we were working on this lab a number of changes like that happened.  There's a new batch prediction feature that's amazing and we worked into the very end of the lab.
