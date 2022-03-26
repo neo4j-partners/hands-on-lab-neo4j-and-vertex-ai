@@ -32,6 +32,8 @@ The projection we used consisted only of the nodes.  We could use node propertie
 
 Regarding the embedding, that is one approach to creating features.  We also could have explored other algorithms like Nearest Neighbor to generate community features.
 
+A higher dimensional embedding, like 256, was recommended by Neo4j data scientists.
+
 ## Lab 6 - Vertex AI
 Vertex AI is an amazing suite of products.  It's largely serverless.  The GUI is intuitive.  It takes almost all the infrastructure pain out of machine learning.  At the same time, it is very very new.  The console is constantly changing.  New features are often introduced with only a REST API.  The APIs change.
 
