@@ -47,7 +47,7 @@ These workshops are organized onsite in a GCP office.
     * Cypher Queries
     * Vizualization with Neo4j Bloom
 * [Lab 5 - Graph Data Science](Lab%205%20-%20Graph%20Data%20Science/README.md) (15 min)
-    * Creating a graph embedding
+    * Creating a Graph Embedding
     * Exporting to pandas
     * Writing to Google Cloud Storage
 * Lecture - [Vertex AI](https://docs.google.com/presentation/d/19TewJE5YgESTmN9qW4MOtFP4m39uPhUaRXErkCzrdbE/edit?usp=sharing) (15 min)
