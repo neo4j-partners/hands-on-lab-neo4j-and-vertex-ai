@@ -171,7 +171,7 @@ Before we run it, we need to make one change.  We're going to be using two produ
 
 **IMPORTANT - Note that if you skip the license key step, Bloom will not run and Neo4j Graph Data Science will run in community mode which limits its functionality. This will limit your ability to complete later exercises.**
 
-Let's run it and deploy Neo4j!
+Ok... Let's run it and deploy Neo4j!
 
     clear
     ./deploy.sh neo4j single
