@@ -5,7 +5,7 @@ This section has some thoughts on future work, improvements and next steps.  Ple
 Today we used AuraDB and a Deployment Manager template to deploy Neo4j EE.  AuraDS is going GA on GCP in a matter of days.  For people who want a SaaS solution, that's going to be preferable.  The GDS version we used, 2.0.0, was released 3/25.  An updated Google Marketplace listing should be coming in the next few days.  Deployment is rapidly improving.
 
 ## Lab 2 - Connect to Neo4j
-We connected over HTTP.  We are [working on improving](https://github.com/neo4j-partners/google-deployment-manager-neo4j/issues/3) the self signed cert experience for deployment on IaaS.  We'd also like to use Let's Encrypt or something similar to get a proper cert.  Using Aura avoids this issue entirely.
+We connected over HTTP.  We are work on improving the self signed cert experience for deployment on IaaS.  We'd also like to use Let's Encrypt or something similar to get a proper cert.  Using Aura avoids this issue entirely.
 
 ## Lab 3 - Moving Data
 We used LOAD CSV to pull data in.  That is one of many ways.  Neo4j [Data Loader](https://data-importer.neo4j.io/) was recently released.  However it doesn't support compound keys on relationships, so we weren't able to use it.
@@ -40,6 +40,8 @@ Vertex AI is an amazing suite of products.  It's largely serverless.  The GUI is
 While we were working on this lab a number of changes like that happened.  There's a new batch prediction feature that's amazing and we worked into the very end of the lab.
 
 At the same time, AutoML takes ~2 hours to run even with a 1 hour budget.  The nice part about using a SaaS like Vertex AI is that all this is going to improve without any need to manage upgrades, infrastructure, etc.
+
+A new feature for batch prediction recently dropped.  We're going to include it in future versions of this lab as it matures.  But, you can paly around with it today, using the endpoint that was deployed as the last step in the notebook.
 
 ## Next Steps
 We hope you enjoyed these labs.  If you have any questions, feel free to reach out directly to any of us.  We'd love the opportuinity to explore and support your use cases.
