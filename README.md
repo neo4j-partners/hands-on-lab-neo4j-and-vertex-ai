@@ -1,5 +1,5 @@
 # hands-on-lab-neo4j-and-vertex-ai
-Neo4j is the [leading graph database](https://neo4j.com/whitepapers/forrester-wave-graph-data-platforms/) vendor.  We’ve worked closely with GCP Engineering for years.  Our products, AuraDB and AuraDS are offered as managed services on GCP.  Neo4j Graph Database, Graph Data Science and Bloom are offered in the [Google Cloud Marketplace](https://aws.amazon.com/marketplace/seller-profile?id=23ec694a-d2af-4641-b4d3-b7201ab2f5f9).
+Neo4j is the [leading graph database](https://neo4j.com/whitepapers/forrester-wave-graph-data-platforms/) vendor.  We’ve worked closely with GCP Engineering for years.  Our products, AuraDB and AuraDS are offered as managed services on GCP.  Neo4j Graph Database, Graph Data Science and Bloom are offered in the [Google Cloud Marketplace](https://console.cloud.google.com/marketplace/browse?q=neo4j).
 
 This workshop is a hands of lab with Neo4j and Vertex AI.  The goal of this workshop is to give tangible experience working with both products on Google Cloud.  The data set we'll be using is from the SEC EDGAR database.  Specifically, the public filings of asset manages with $100m or more under management.  We'll use Neo4j to explore their holdings.  Then we'll use Vertex AI to predict which holdings they'll have next quarter.
 
