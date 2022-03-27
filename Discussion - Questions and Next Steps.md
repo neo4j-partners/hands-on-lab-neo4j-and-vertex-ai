@@ -32,7 +32,7 @@ The projection we used consisted only of the nodes.  We could use node propertie
 
 Regarding the embedding, that is one approach to creating features.  We also could have explored other algorithms like Nearest Neighbor to generate community features.
 
-A higher dimensional embedding, like 256, was recommended by someone in the Neo4j data science team.  We didn't do that because it'd require Colab Pro for the RAM footprint.  But, testing it seperately, it doesn't seem to help.
+Some work on tuning the embedding would improve accuracy.  It is interesting that, even without tuning, the embedding provides more valuable features than either reportCalendarOrQuarter or cusip.
 
 ## Lab 6 - Vertex AI
 Vertex AI is an amazing suite of products.  It's largely serverless.  The GUI is intuitive.  It takes almost all the infrastructure pain out of machine learning.  At the same time, it is very very new.  The console is constantly changing.  New features are often introduced with only a REST API.  The APIs change.
