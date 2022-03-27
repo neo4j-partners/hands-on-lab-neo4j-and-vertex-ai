@@ -27,10 +27,9 @@ These workshops are organized onsite in a GCP office.
 * Break (10 min)
 * Lecture - [Moving Data](https://docs.google.com/presentation/d/1O6Oy_GbDYYCvQanUyUCl30hQdSsy9kKL53Jgl23Nnsk/edit?usp=sharing) (10 min)
     * LOAD CSV
-    * Data Importer
-    * Kafka
-    * Spark
-    * Glue
+    * Apache Beam and Google Dataflow
+    * Apache Spark and Google Dataproc
+    * Apache Kafka and Cloud Cloud
 * [Lab 3 - Moving Data](Lab%203%20-%20Moving%20Data/README.md) (15 min)
     * A Day of Data
     * A Year of Data
