@@ -43,8 +43,9 @@ These workshops are organized onsite in a GCP office.
     * Community Detection
     * Graph Machine Learning
 * [Lab 4 - Exploring Data](Lab%204%20-%20Exploring%20Data/README.md) 15 min)
+    * Pandas
     * Cypher Queries
-    * Vizualization with Bloom
+    * Vizualization with Neo4j Bloom
 * [Lab 5 - Graph Data Science](Lab%205%20-%20Graph%20Data%20Science/README.md) (15 min)
     * Creating a graph embedding
     * Exporting to pandas
