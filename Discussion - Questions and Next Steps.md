@@ -20,7 +20,7 @@ This section of the lab could be expanded.  A data enrichment exercise might be 
 ## Lab 5 - Graph Data Science
 With a novel data set combined with a novel approach to machine learning, there's enough material here for numerous business applications or academic papers.  Some areas that might be interesting to explore in the future follow...
 
-The data set isn't normalized.  Between these large asset managers, it's quite likely they own a signifcant portion of the stock outstanding for certain issues.  So rather than measuring shares or value, a more powerful feature might be percentage of float outstanding.
+The data set isn't normalized.  Between these large asset managers, it's quite likely they own a significant portion of the stock outstanding for certain issues.  So rather than measuring shares or value, a more powerful feature might be percentage of float outstanding.
 
 That then leads to a question about what other data could be used to enrich this dataset.  You wouldn't have to go far to enrich it with data from other forms.  For instance, Form 4, consists of filings for high level executives and directors of companies.  We didn't use that data for this lab as it's not particularly connected, so the graphs were disparate.  However, if it were used in combination with the Form 13 data, it might give some pretty interesting graphs.
 
