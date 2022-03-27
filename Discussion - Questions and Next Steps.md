@@ -5,7 +5,7 @@ This section has some thoughts on future work, improvements and next steps.  Ple
 Today we used AuraDB and a Deployment Manager template to deploy Neo4j EE.  AuraDS is going GA on GCP in a matter of days.  For people who want a SaaS solution, that's going to be preferable.  The GDS version we used, 2.0.0, was released 3/25.  An updated Google Marketplace listing should be coming in the next few days.  Deployment is rapidly improving.
 
 ## Lab 2 - Connect to Neo4j
-We connected over HTTP.  We are work on improving the self signed cert experience for deployment on IaaS.  We'd also like to use Let's Encrypt or something similar to get a proper cert.  Using Aura avoids this issue entirely.
+We connected over HTTP.  We are working on improving the self signed cert experience for deployment on IaaS.  We'd also like to use Let's Encrypt or something similar to get a proper cert.  Using Aura avoids this issue entirely.
 
 ## Lab 3 - Moving Data
 We used LOAD CSV to pull data in.  That is one of many ways.  Neo4j [Data Loader](https://data-importer.neo4j.io/) was recently released.  However it doesn't support compound keys on relationships, so we weren't able to use it.
