@@ -20,7 +20,7 @@ These workshops are organized onsite in a GCP office.
     * Signup for Google Cloud
 * [Lab 1 - Deploy Neo4j](Lab%201%20-%20Deploy%20Neo4j) (15 min)
     * Improving the Labs
-    * Sign up for GCP
+    * Enable APIs
     * Deploying Neo4j AuraDB Professional through the Marketplace
     * Deploying Neo4j Enterprise Edition on IaaS
 * [Lab 2 - Connect to Neo4j](Lab%202%20-%20Connect%20to%20Neo4j/README.md) (15 min)
