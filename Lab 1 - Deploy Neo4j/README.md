@@ -7,7 +7,8 @@ As you work through these labs, we'd really appreciate your feedback.  One way t
 ## Enable APIs
 Throughout these labs, we're going to use a number of APIs.  If you haven't already enabled them, login to each service and click "Enable API."
 
-* [Compute Engine](https://console.cloud.google.com/compute/instances)
+* [Deployment Manager](https://console.cloud.google.com/dm)
+* [Compute Engine](https://console.cloud.google.com/compute)
 * [Cloud Storage](https://console.cloud.google.com/storage)
 * [Vertex AI](https://console.cloud.google.com/vertex-ai)
 
