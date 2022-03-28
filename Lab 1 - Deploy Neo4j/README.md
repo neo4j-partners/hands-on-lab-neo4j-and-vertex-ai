@@ -11,6 +11,10 @@ Throughout these labs, we're going to use a number of APIs.  If you haven't alre
 * [Cloud Storage](https://console.cloud.google.com/storage)
 * [Vertex AI](https://console.cloud.google.com/vertex-ai)
 
+In the case of Compute Engine, the dialog looks like this:
+
+![](images/01-compute.png)
+
 ## Deploying Neo4j AuraDB Professional through the Marketplace
 Now let's deploy Neo4j's managed service, AuraDB.  We're going to deploy the professional version.  To do that, first navigate to the console [here](https://console.cloud.google.com/).  Then click the hamburger icon in the upper left to expand the menu.
 
@@ -161,32 +165,6 @@ If you've never run DM before, you may get a few messages asking you to authoriz
 ![](images/31-auth.png)
 
 ![](images/32-auth.png)
-
-On a brand new account, you may see other errors if services are not authoized.  In this case both the Compute Engine wasn't yet authorized.  Click on the link in the terminal output to go to the service and authorize it.
-
-![](images/33-auth.png)
-
-For compute, it looks like this.  Click "enable."
-
-![](images/34-compute.png)
-
-When the compute API is finished enabling, you will see this message.
-
-![](images/35-compute.png)
-
-Now, back in the terminal, let's try running the deploy again.  We're going to need to delete the earlier deployment first.
-
-    clear
-    gcloud deployment-manager deployments delete neo4j
-
-When prompted if you want to delete the deployment, type "y."
-
-![](images/36-delete.png)
-
-Now let's run the deploy again.
-
-    clear
-    ./deploy.sh neo4j single
 
 The deployment takes a few minutes to run.  When complete, you'll see this:
 
