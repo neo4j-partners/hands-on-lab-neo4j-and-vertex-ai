@@ -17,6 +17,6 @@ To delete the bucket we created, run the following command
 ## Delete Vertex AI Resources
 We created a variety of Vertex AI resoruces.  The API is not quite there for gcloud yet.  So, the easiest thing to do is probably just to login to the console [here](https://console.cloud.google.com/vertex-ai) and delete them manually.  You'll want to delete the following:
 
-* Datasets
-* Models
-* Endpoints
+* [Datasets](https://console.cloud.google.com/vertex-ai/datasets)
+* [Training Pipelines](https://console.cloud.google.com/vertex-ai/training/training-pipelines)
+* [Models](https://console.cloud.google.com/vertex-ai/models)
