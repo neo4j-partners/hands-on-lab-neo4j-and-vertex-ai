@@ -182,7 +182,8 @@ And, now we can create the PARTOF relationships:
     MATCH (h:Holding {filingManager:row.filingManager, cusip:row.cusip, reportCalendarOrQuarter:row.reportCalendarOrQuarter})
     MATCH (c:Company {cusip:row.cusip})
     MERGE (h)-[r:PARTOF]->(c)
-    That should give this:
+
+That should give this:
 
 ![](images/20-partof.png)
 
