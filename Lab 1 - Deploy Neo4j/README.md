@@ -171,4 +171,4 @@ The deployment takes a few minutes to run.  When complete, you'll see this:
 
 ![](images/37-deploy.png)
 
-You now have a single node of Neo4j running!  In the next lab, we'll connect to it.
+You now have a deployment of Neo4j running!  In the next lab, we'll connect to it.
