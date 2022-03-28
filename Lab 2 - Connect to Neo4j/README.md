@@ -49,6 +49,8 @@ Assuming that all looks good, let's move on...
 ## Neo4j Bloom
 Let's also check that Neo4j Bloom is running.  Bloom is Neo4j's Business Intelligence (BI) product.  We can connect to it on the same IP address and port as above.  The only difference is that we'll need to put "/bloom" on the end of the URL.  For instance, in my case the URL was http://34.138.21.128:7474/bloom
 
+![](images/09-bloom.png)
+
 ## Interacting via Shell
 These steps are really useful if something goes wrong with your Neo4j deployment.  We're going to connect to an instance and check out some logs.  To get the connection information, let's go back to the tab with the instance page we were using before. If you closed it, you can follow the steps from above to find it again.
 
