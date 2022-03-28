@@ -15,6 +15,9 @@ These workshops are organized onsite in a GCP office.
     * What is Neo4j?
     * Customer use cases
     * How is it deployed and managed on GCP?
+* [Lab 0 - Signup for Google Cloud](Lab%200%20-%20Signup%20for%20Google%20Cloud) (Optional)
+    * Singup for Google
+    * Signup for Google Cloud
 * [Lab 1 - Deploy Neo4j](Lab%201%20-%20Deploy%20Neo4j) (15 min)
     * Improving the Labs
     * Sign up for GCP
@@ -56,5 +59,5 @@ These workshops are organized onsite in a GCP office.
 * [Lab 6 - Vertex AI](Lab%206%20-%20Vertex%20AI) (20 min)
     * Raw Data
     * Data with Embedding
-* [Lab 7 - Cleanup](Lab%207%20-%20Cleanup) (Optional, 0 min)
+* [Lab 7 - Cleanup](Lab%207%20-%20Cleanup) (Optional)
 * [Discussion - Questions and Next Steps](Discussion%20-%20Questions%20and%20Next%20Steps.md) (10 min)

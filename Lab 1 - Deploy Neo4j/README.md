@@ -2,37 +2,17 @@
 In this lab, we're going to deploy Neo4j from the Google Cloud Marketplace.  We'll deploy two different ways.  The first is our Software as a Service (SaaS) or Database as a Service (DBaaS) offering, Neo4j AuraDB.  The second is a Neo4j IaaS listing.  That listing has a Deployment Manager template under it that we'll inspect.  We'll also look at more customizable deployment options.
 
 ## Improving the Labs
-As you work through these labs, we'd really appreciate your feedback.  The best way to help us improve is to open an issue by going [here](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/issues).  Outright bugs, usability suggestions, and general comments are all appreciated.  Pull requests are great too!
+As you work through these labs, we'd really appreciate your feedback.  One way to help us improve is to open an issue by going [here](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/issues).  Outright bugs, usability suggestions, and general comments are all appreciated.  Pull requests are great too!
 
-## Sign up for GCP
-The most basic thing you're going to need for these labs is a Google Cloud Platform (GCP) account.  If you already have a personal account or one through your company, you can use that.  If you don't have an account yet, you can sign up for one [here](https://console.cloud.google.com/).  That may require you to sign up for a Google account as well if you don't already have one.
+## Enable APIs
+Throughout these labs, we're going to use a number of APIs.  If you haven't already enabled them, login to each service and click "Enable API."
 
-You'll need to provide your phone number and credit card information.  New GCP accounts come with a $300 credit. Total costs for the lab should be significantly under $50. At the end of the lab we'll show you how to delete any resources you've deployed as well.
-
-Once you've signed up for an account, you'll see a dialog to activate your $300 in credits.  Click activate.
-
-![](images/01-newaccount.png)
-
-Accept the terms of service and click "Continue."
-
-![](images/02-newaccount.png)
-
-Verify your phone number and click "Continue."
-
-![](images/03-newaccount.png)
-
-Provide your payment information and click "Continue."  Note this is only used to verfiy your identity.  It will not be charged unless both your $300 credit is exhausted and you enable billing.
-
-![](images/04-newaccount.png)
-
-You'll now be presented with the console again.  There may be a few help dialogs you can dismiss.
-
-![](images/05-console.png)
-
-Great!  You now have a GCP account and you're all ready to get started deploying stuff!
+* [Compute Engine](https://console.cloud.google.com/compute/instances)
+* [Cloud Storage](https://console.cloud.google.com/storage)
+* [Vertex AI](https://console.cloud.google.com/vertex-ai)
 
 ## Deploying Neo4j AuraDB Professional through the Marketplace
-Now let's deploy Neo4j's managed service, AuraDS.  We're going to deploy the professional version.  To do that, first navigate to the console [here](https://console.cloud.google.com/).  Then click the hamburger icon in the upper left to expand the menu.
+Now let's deploy Neo4j's managed service, AuraDB.  We're going to deploy the professional version.  To do that, first navigate to the console [here](https://console.cloud.google.com/).  Then click the hamburger icon in the upper left to expand the menu.
 
 ![](images/06-console.png)
 
