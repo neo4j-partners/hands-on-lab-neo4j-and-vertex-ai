@@ -12,9 +12,11 @@ Using Deployment Manager, we deployed a Neo4j cluster.  To delete it, run the fo
 ## Delete the Bucket
 To delete the bucket we created, run the following command
 
-    gcloud bucket delete YOUR_BUCKET_NAME
+    gcloud alpha storage rm --recursive gs://YOUR_BUCKET_NAME
 
 ## Delete Vertex AI Resources
-We created a variety of Vertex AI resoruces.  To delete them run the following commands:
+We created a variety of Vertex AI resoruces.  The API is not quite there for gcloud yet.  So, the easiest thing to do is probably just to login to the console [here](https://console.cloud.google.com/vertex-ai) and delete them manually.  You'll want to delete the following:
 
-    gcloud ...
+* Datasets
+* Models
+* Endpoints
