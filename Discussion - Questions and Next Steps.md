@@ -43,5 +43,7 @@ At the same time, AutoML takes ~2 hours to run even with a 1 hour budget.  The n
 
 A new feature for batch prediction recently dropped.  We're going to include it in future versions of this lab as it matures.  But, you can paly around with it today, using the endpoint that was deployed as the last step in the notebook.
 
+In the future, we should rework the test and train sets to take advantage of this [feature](https://cloud.google.com/vertex-ai/docs/datasets/prepare-tabular?&_ga=2.93752285.-1780612517.1647714214#ml-use).
+
 ## Next Steps
 We hope you enjoyed these labs.  If you have any questions, feel free to reach out directly to any of us.  We'd love the opportunity to explore and support your use cases.
