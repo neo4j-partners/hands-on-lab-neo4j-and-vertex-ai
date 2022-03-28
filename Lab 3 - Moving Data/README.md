@@ -153,7 +153,8 @@ And now we can load our Holdings:
     ON CREATE SET
         h.value=row.value, 
         h.shares=row.shares,
-        h.target=row.target
+        h.target=row.target,
+        h.nameOfIssuer=row.nameOfIssuer
 
 That should give this:
 
