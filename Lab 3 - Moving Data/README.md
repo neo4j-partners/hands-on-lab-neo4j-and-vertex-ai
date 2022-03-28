@@ -167,11 +167,10 @@ Well, this is cool.  We've got all our nodes loaded in.  Now we need to tie them
 
 So, let's put together the owns relationship first.
 
-    :auto LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13.csv' AS row
-    CALL { WITH row 
+    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13.csv' AS row
     MATCH (m:Manager {filingManager:row.filingManager})
     MATCH (h:Holding {filingManager:row.filingManager, cusip:row.cusip, reportCalendarOrQuarter:row.reportCalendarOrQuarter})
-    MERGE (m)-[r:OWNS]->(h) } IN TRANSACTIONS OF 50000 ROWS;
+    MERGE (m)-[r:OWNS]->(h)
 
 That should give this:
 
@@ -179,13 +178,11 @@ That should give this:
 
 And, now we can create the PARTOF relationships:
 
-    :auto LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13.csv' AS row
-    CALL { WITH row 
+    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13.csv' AS row
     MATCH (h:Holding {filingManager:row.filingManager, cusip:row.cusip, reportCalendarOrQuarter:row.reportCalendarOrQuarter})
     MATCH (c:Company {cusip:row.cusip})
-    MERGE (h)-[r:PARTOF]->(c) } IN TRANSACTIONS OF 50000 ROWS;
-
-That should give this:
+    MERGE (h)-[r:PARTOF]->(c)
+    That should give this:
 
 ![](images/20-partof.png)
 
