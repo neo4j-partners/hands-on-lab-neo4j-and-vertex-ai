@@ -130,7 +130,7 @@ Run a few more commands...
 
     clear
     ls
-    cd cd google-deployment-manager-neo4j
+    cd google-deployment-manager-neo4j
     ls
 
 ![](images/29-shell.png)
