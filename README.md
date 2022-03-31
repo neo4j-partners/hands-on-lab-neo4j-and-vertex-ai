@@ -1,7 +1,13 @@
 # hands-on-lab-neo4j-and-vertex-ai
 Neo4j is the [leading graph database](https://neo4j.com/whitepapers/forrester-wave-graph-data-platforms/) vendor.  We’ve worked closely with GCP Engineering for years.  Our products, AuraDB and AuraDS are offered as managed services on GCP.  Neo4j Enterprise Edition, which includes Graph Database, Graph Data Science and Bloom is offered in the [Google Cloud Marketplace](https://console.cloud.google.com/marketplace/browse?q=neo4j).
 
-This workshop is a hands of lab with Neo4j and Vertex AI.  The goal of this workshop is to give tangible experience working with both products on Google Cloud.  The data set we'll be using is from the SEC EDGAR database.  Specifically, the public filings of asset manages with $100m or more under management.  We'll use Neo4j to explore their holdings.  Then we'll use Vertex AI to predict which holdings they'll have next quarter.
+In this hands on lab, you’ll get to learn about Neo4j and GCP Vertex AI.  The lab is intended for data scientists and data engineers.  We’ll walk through deploying Neo4j and Vertex AI on GCP in your own GCP account.  Then we’ll get hands on with a real world dataset, building a machine learning pipeline that takes advantage of features generated using Neo4j Graph Data Science to improve prediction in GCP Vertex AI.  You’ll come out of this lab with enough knowledge to apply graph feature engineering to your own datasets.
+
+We’re going to analyze the quarterly filings of asset managers with $100m+ assets under management (AUM).  These are regulatory filing made to the Securities and Exchange Commission’s (SEC) EDGAR system.  We’re going to show how to load that data from a GCP Cloud Storage bucket into Neo4j.  We’ll then explore the relationships of different asset managers and their holdings using the Neo4j Browser and Neo4j’s Cypher query language.
+
+Finally, we’ll use Neo4j Graph Data Science to create a graph embedding from our data, export that out, and run supervised learning algorithms in GCP Vertex AI.  We’ll try to predict what holdings asset managers will maintain or enlarge in the next quarter.  
+
+If you’re in the capital markets space, we think you’ll be interested in potential applications of this approach to creating new features for algorithmic trading, understanding tail risk, securities master data management and so on.  If you’re not in the capital markets space, this session will still be useful to learn about building machine learning pipelines with Neo4j and GCP Vertex AI.
 
 ## Venue
 These workshops are organized onsite in a GCP office.
