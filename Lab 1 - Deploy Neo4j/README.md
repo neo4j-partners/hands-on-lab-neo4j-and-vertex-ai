@@ -16,9 +16,8 @@ In the case of Compute Engine, the dialog looks like this:
 
 ![](images/01-compute.png)
 
-
 ## Deploy Neo4j
 There are a number of ways to deploy Neo4j on GCP.  You'll need to pick on and deploy that to use later in the labs.  If you want to deploy multiple ways, you're welcome to do that as well.
 
-* IaaS - [Deploying Neo4j Enterprise Edition with the CLI](IaaS/Deploying%20Neo4j%20Enterprise%20Edition%20with%20the%20CLI.md)
-* SaaS - [Deploying Neo4j AuraDB Professional](SaaS/Deploying%20Neo4j%20AuraDB%20Professional.md)
+* [IaaS](IaaS/README.md)
+* [SaaS](SaaS/README.md)
