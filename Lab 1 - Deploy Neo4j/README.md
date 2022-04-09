@@ -1,5 +1,5 @@
 # Lab 1 - Deploy Neo4j
-In this lab, we're going to deploy Neo4j.
+In this lab, we're going to do a little initial setup and then deploy Neo4j.
 
 ## Improving the Labs
 As you work through these labs, we'd really appreciate your feedback.  One way to help us improve is to open an issue by going [here](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/issues).  Outright bugs, usability suggestions, and general comments are all appreciated.  Pull requests are great too!
