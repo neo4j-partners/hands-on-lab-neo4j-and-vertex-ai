@@ -1,7 +1,9 @@
 # SaaS
-AuraDB is Neo4j's software as a service (SaaS) offering.  This is sometimes refered to as a database as a service (DBaaS) as well.
+Aura is Neo4j's software as a service (SaaS) offering.  This is sometimes refered to as a database as a service (DBaaS) as well.  Aura comes in a number of flavors.  There's an enterprise and a professional version.  We're going to deploy the professional version.  
 
-We're going to deploy the professional version.  To do that, first navigate to the console [here](https://console.cloud.google.com/).  Then click the hamburger icon in the upper left to expand the menu.
+Aura also comes in a database (AuraDB) and a data science (AuraDS) version.  We're going to use AuraDS.
+
+To get started, first navigate to the console [here](https://console.cloud.google.com/).  Then click the hamburger icon in the upper left to expand the menu.
 
 ![](images/06-console.png)
 
