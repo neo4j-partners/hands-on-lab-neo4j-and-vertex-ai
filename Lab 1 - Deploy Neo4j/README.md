@@ -17,4 +17,4 @@ In the case of Compute Engine, the dialog looks like this:
 ![](images/01-compute.png)
 
 ## Deploy Neo4j
-There are a number of ways to deploy Neo4j on GCP.  We're going to deploy on IaaS using Google Deployment Manager from the CLI.  To get started with that, go [here](IaaS/README.md).
+There are a number of ways to deploy Neo4j on GCP.  We're going to deploy on IaaS using Google Deployment Manager and the CLI.  To get started with that, go [here](IaaS/README.md).

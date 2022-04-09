@@ -2,7 +2,7 @@
 This section has some thoughts on future work, improvements and next steps.  Please feel free to [PR](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/pulls) your ideas and suggestions.
 
 ## Lab 1 - Deploy Neo4j
-Today we used AuraDB and a Deployment Manager template to deploy Neo4j EE.  AuraDS is going GA on GCP in a matter of days.  For people who want a SaaS solution, that's going to be preferable.  The GDS version we used, 2.0.0, was released 3/25.  An updated Google Marketplace listing should be coming in the next few days.  Deployment is rapidly improving.
+Today we used a Deployment Manager template to deploy Neo4j EE.  AuraDS is going GA on GCP in a matter of days.  For people who want a SaaS solution, that's going to be preferable.  An updated Google Marketplace listing should be coming in the next few days as well.  Deployment is rapidly improving.
 
 ## Lab 2 - Connect to Neo4j
 We connected over HTTP.  We are working on improving the self signed cert experience for deployment on IaaS.  We'd also like to use Let's Encrypt or something similar to get a proper cert.  Using Aura avoids this issue entirely.

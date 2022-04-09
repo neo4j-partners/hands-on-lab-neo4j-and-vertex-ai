@@ -1,5 +1,7 @@
 # Lab 3 - Moving Data
-In this lab, we're going to take data from an Google Cloud Storage bucket and import it into Neo4j.  There are a few different ways to do this.  We'll start with a very naive LOAD CSV statement and then improve it.  The Neo4j [Data Importer](https://data-importer.neo4j.io/) is another option.
+In this lab, we're going to take data from an Google Cloud Storage bucket and import it into Neo4j.  There are a few different ways to do this.  We'll start with a very naive LOAD CSV statement and then improve it.  
+
+The Neo4j [Data Importer](https://data-importer.neo4j.io/) is another option.
 
 The dataset is pulled from the SEC's EDGAR database.  These are public filings of something called Form 13.  Asset managers with over $100m AUM are required to submit Form 13 quarterly.  That's then made available to the public over http.  The csvs linked above were pull from EDGAR using some python scripts.  We don't have time to run those in the lab today as they take a few hours.  But, if you're curious, they're all available [here](https://github.com/neo4j-partners/neo4j-sec-edgar-form13).  We've filtered the data to only include filings over $10m in value.
 
@@ -90,7 +92,7 @@ Finally, switch back to the neo4j database:
 Now, all your data should be deleted and you're back on the neo4j database.
 
 ## A Year of Data
-The LOAD CSV statement we used before was pretty naive.  It didn't create any indices.  It also loaded the nodes and relationships simultaneously.  Both of those are inefficient approaches.  It wasn't a big deal as that single day of data was about 57kb.  However, we'd now like to load a full year of data.  That's 49.5mb of data, so we have to be a bit more efficient.  That new dataset is [here](https://storage.googleapis.com/neo4j-datasets/form13/form13.csv).
+The LOAD CSV statement we used before was pretty naive.  It didn't create any indices.  It also loaded the nodes and relationships simultaneously.  Both of those are inefficient approaches.  It wasn't a big deal as that single day of data was about 57kb.  However, we'd now like to load a full year of data.  That's 49.5mb of data, so we have to be a bit more efficient.  That new dataset is [here](https://storage.googleapis.com/neo4j-datasets/form13/2021.csv).
 
 If you're curious, you can read a bit about the intracties of optimizing those loads here:
 
@@ -128,7 +130,7 @@ Now that we have all the constraints, let's load our nodes.  We're going to do t
 
 Let's load the companies first.  We're going to have a lot of duplication, since our key is CUSIP and many different rows in our csv, each representing a filing, have the same cusip.  So, we need to enhance our LOAD CSV statement a little bit to deal with those duplicates.
 
-    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13.csv' AS row
+    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/2021.csv' AS row
     MERGE (c:Company {cusip:row.cusip})
     ON CREATE SET
         c.nameOfIssuer=row.nameOfIssuer
@@ -139,7 +141,7 @@ That should give this:
 
 Now let's load the Managers:
 
-    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13.csv' AS row
+    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/2021.csv' AS row
     MERGE (m:Manager {filingManager:row.filingManager})
 
 That should give this:
@@ -148,7 +150,7 @@ That should give this:
 
 And now we can load our Holdings:
 
-    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13.csv' AS row
+    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/2021.csv' AS row
     MERGE (h:Holding {filingManager:row.filingManager, cusip:row.cusip, reportCalendarOrQuarter:row.reportCalendarOrQuarter})
     ON CREATE SET
         h.value=row.value, 
@@ -167,7 +169,7 @@ Well, this is cool.  We've got all our nodes loaded in.  Now we need to tie them
 
 So, let's put together the owns relationship first.
 
-    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13.csv' AS row
+    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/2021.csv' AS row
     MATCH (m:Manager {filingManager:row.filingManager})
     MATCH (h:Holding {filingManager:row.filingManager, cusip:row.cusip, reportCalendarOrQuarter:row.reportCalendarOrQuarter})
     MERGE (m)-[r:OWNS]->(h)
@@ -178,7 +180,7 @@ That should give this:
 
 And, now we can create the PARTOF relationships:
 
-    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13.csv' AS row
+    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/2021.csv' AS row
     MATCH (h:Holding {filingManager:row.filingManager, cusip:row.cusip, reportCalendarOrQuarter:row.reportCalendarOrQuarter})
     MATCH (c:Company {cusip:row.cusip})
     MERGE (h)-[r:PARTOF]->(c)

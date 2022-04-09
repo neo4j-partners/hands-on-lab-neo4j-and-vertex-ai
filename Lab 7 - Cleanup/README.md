@@ -1,11 +1,11 @@
 # Lab 7 - Cleanup
-You can keep the resources you've deployed in these labs running as long as you like.  Eventually the credits in your account will be exhausted and they'll be automatically shutdown.  Alternatively, you can delete them by following these instructions.
+You can keep the resources you've deployed in these labs running as long as you like.  If you used a free trial, eventually the credits in your account will be exhausted and they'll be automatically shutdown.  Alternatively, you can delete them by following these instructions.
 
 ## Delete AuraDB Professional Database
-To delete the AuraDB Professional database, login to the console [here](https://console.neo4j.io/) and select delete database.
+If you deployed a SaaS instance you can delete it by logging into the console [here](https://console.neo4j.io/).  Then select delete database.
 
 ## Delete Deployment Manager Resources
-Using Deployment Manager, we deployed a Neo4j cluster.  To delete it, run the following command in Cloud Shell.  You can open your Cloud Shell from the Google Cloud console [here](https://console.cloud.google.com/).
+If you deployed from the CLI using Deployment Manager, follow these instructions.  Run the following command in Cloud Shell.  You can open your Cloud Shell from the Google Cloud console [here](https://console.cloud.google.com/).
 
     gcloud deployment-manager deployments delete neo4j
 
