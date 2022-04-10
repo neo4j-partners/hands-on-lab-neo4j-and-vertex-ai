@@ -37,13 +37,9 @@ Some work on tuning the embedding would improve accuracy.  It is interesting tha
 ## Lab 6 - Vertex AI
 Vertex AI is an amazing suite of products.  It's largely serverless.  The GUI is intuitive.  It takes almost all the infrastructure pain out of machine learning.  At the same time, it is very very new.  The console is constantly changing.  New features are often introduced with only a REST API.  The APIs change.
 
-While we were working on this lab a number of changes like that happened.  There's a new batch prediction feature that's amazing and we worked into the very end of the lab.
+AutoML takes ~2 hours to run even with a 1 hour budget.  The nice part about using a SaaS like Vertex AI is that all this is going to improve without any need to manage upgrades, infrastructure, etc.
 
-At the same time, AutoML takes ~2 hours to run even with a 1 hour budget.  The nice part about using a SaaS like Vertex AI is that all this is going to improve without any need to manage upgrades, infrastructure, etc.
-
-A new feature for batch prediction recently dropped.  We're going to include it in future versions of this lab as it matures.  But, you can paly around with it today, using the endpoint that was deployed as the last step in the notebook.
-
-In the future, we should rework the test and train sets to take advantage of this [feature](https://cloud.google.com/vertex-ai/docs/datasets/prepare-tabular?&_ga=2.93752285.-1780612517.1647714214#ml-use).
+A new feature for batch prediction recently dropped.  We're going to include it in future versions of this lab as it matures.
 
 ## Next Steps
 We hope you enjoyed these labs.  If you have any questions, feel free to reach out directly to any of us.  We'd love the opportunity to explore and support your use cases.
