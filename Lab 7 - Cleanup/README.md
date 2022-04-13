@@ -5,12 +5,12 @@ You can keep the resources you've deployed in these labs running as long as you 
 If you deployed a SaaS instance you can delete it by logging into the console [here](https://console.neo4j.io/).  Then select delete database.
 
 ## Delete Deployment Manager Resources
-If you deployed from the CLI using Deployment Manager, follow these instructions.  Run the following command in Cloud Shell.  You can open your Cloud Shell from the Google Cloud console [here](https://console.cloud.google.com/).
+If you deployed from the CLI using Deployment Manager, you can delete the deployment with Cloud Shell.  Open your Cloud Shell from the Google Cloud console [here](https://console.cloud.google.com/).  Then run this command:
 
     gcloud deployment-manager deployments delete neo4j
 
 ## Delete the Bucket
-To delete the bucket we created, run the following command
+To delete the bucket we created, run the following command in Cloud Shell:
 
     gcloud alpha storage rm --recursive gs://YOUR_BUCKET_NAME
 
