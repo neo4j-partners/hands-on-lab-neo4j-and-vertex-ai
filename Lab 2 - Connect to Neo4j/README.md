@@ -44,6 +44,10 @@ Then hit the little blue triangle play button to run it.  You should see a GDS v
 
 ![](images/09-gds.png)
 
+You might also consider running the following command.  If it returns `gdsEdition` as `licensed` then your license that you input when we deployed was processed properly.
+
+    CALL gds.debug.sysInfo()
+
 Assuming that all looks good, let's move on...
 
 ## Neo4j Bloom
