@@ -63,7 +63,9 @@ There's an interesting issue hiding in our dataset.  Because of the way we loade
 
     MATCH (n:Company{cusip:"78462F103"}) RETURN n LIMIT 25
 
-Do you see what happened?  Different asset managers call securities slightly different things.  All that led to the creation of the [CUSIP](https://www.cusip.com/).  So, in these filings asset managers may enter all sorts of names, but the CUSIP will be unqieue.  In the next section we're going to key off the CUSIP and resolve this issue.
+Do you see what happened?  Different asset managers call securities slightly different things.  In this case, the commonly held SPY or S&P 500 ETF has a number of different names.
+
+Issues like this led to the creation of the [CUSIP](https://www.cusip.com/).  So, in these filings asset managers may enter all sorts of names, but the CUSIP will be unqieue.  In the next section we're going to key off the CUSIP and resolve this issue.
 
 Now that we have some understanding of this portion of the dataset, we're going to delete it.  Then we'll load the full data set.  We don't want to delete the database we're currently using.  So, we're going to switch databases first.  Run this in the Neo4j Browser.
 
