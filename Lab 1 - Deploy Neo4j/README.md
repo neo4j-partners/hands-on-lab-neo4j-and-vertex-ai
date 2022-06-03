@@ -1,99 +1,111 @@
 # Lab 1 - Deploy Neo4j
-In this lab, we're going to do a little initial setup and then deploy Neo4j.
 
-## Improving the Labs
-As you work through these labs, we'd really appreciate your feedback.  One way to help us improve is to open an issue by going [here](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/issues).  Outright bugs, usability suggestions, and general comments are all appreciated.  Pull requests are great too!
+Neo4j has three products:
+* Graph Database - a native graph data store built from the ground up to leverage not only data but also data relationships.
+* Graph Data Science - a software platform helping data scientists uncover the connections in big data to answer business critical questions and improve predictions.
+* Bloom - a graph exploration application for visually interacting with Neo4j graphs. Bloom gives graph novices and experts alike the ability to visually investigate and explore graph data from different business perspectives.
 
-## Enable APIs
-Throughout these labs, we're going to use a number of APIs.  If you haven't already enabled them, login to each service and click "Enable API."
+There are many ways to run these products on Google Cloud.  The Marketplace in particular offers three ways to deploy Neo4j:
 
-* [Deployment Manager](https://console.cloud.google.com/dm)
-* [Compute Engine](https://console.cloud.google.com/compute)
-* [Cloud Storage](https://console.cloud.google.com/storage)
-* [Vertex AI](https://console.cloud.google.com/vertex-ai)
+* Software as a Service (SaaS) - Neo4j Aura is the lowest effort way to deploy Neo4j.  Infrastructure is managed entirely for you.  Aura is available in AuraDB (Database) and AuraDS (Data Science) versions.  DB is the core database.  DS include Bloom for Business Intelligence and Neo4j Graph Data Science.
+* Infrastructure as a Service (IaaS) - Neo4j Enterprise Edition is available on IaaS with a Google Deployment Manager template.  That allow you to choose whether you would like a single node or cluster.  It allows configuration of Graph Database, Bloom and Graph Data Science.
+* Platform as a Service (PaaS) - This is an option to deploy Graph Database on Kubernetes.
 
-In the case of Compute Engine, the dialog looks like this:
+You can inspect these options [here](https://console.cloud.google.com/marketplace/browse?q=neo4j).
 
-![](images/01-compute.png)
+## Deploying AuraDS Professional
+We're going to use the SaaS version, AuraDS in these labs.  This is sometimes refered to as a database as a service (DBaaS).  Aura comes in a number of flavors.  There's an enterprise and a professional version.  We're going to deploy the professional version.  
 
-## Deploy Neo4j with Google Deployment Manager on IaaS
-We're going to deploy Neo4j on Infrastructure as a Service (IaaS).  We'll be using Neo4j Enterprise Edition.  That is the installable version of Neo4j.  The Marketplace listing has a Deployment Manager (DM) template that deploys Neo4j for you.  This has options to deploy Neo4j Graph Database, Neo4j Graph Data Science and Neo4j Bloom.  We're going to use the IaaS version for our exercises because it has all these additional features.
+So, let's get started deploying...  To do so, let's go to the Google Cloud console [here](https://console.cloud.google.com/).  If it's not already open, click the hamburger icon in the upper left to expand the menu.
 
-* Graph Database is, as the name implies, Neo4j's core database.  It's designed from the ground up to store graphs.  This comes in both a community and an enterprise version.  We're going to use the enterprise version.
-* Graph Data Science (GDS) is the graph library that installs on top of the database.  It has implentations of 60 different graph algorithms.  We're going to use GDS to do things like create graph embeddings later in the labs.
-* Bloom is a business intelligence tool.  We'll install it as well and use it to explore the data.
+![](images/01-console.png)
 
-We're going to be using the absolute cutting edge, a new template that isn't available in the Marketplace yet.  The Marketplace is essentially a nice GUI around Deployment Manager.  So, what we're going to do is a little more raw and technical.
+On the left menu, scroll to the bottom and click "MORE PRODUCTS."
 
-So, let's get started deploying...  To do so, let's go to the Google Cloud console [here](https://console.cloud.google.com/).  
+![](images/02-console.png)
 
-We're going to use Cloud Shell as our CLI.  This is a CLI built into the console.  It's really nice because it's kept up to date automatically and your credentials are alreayd in it.  Click on the "Activate Cloud Shell" icon in the upper right of the console.
+Still in the left menu, scroll all the way to the bottom.  You'll see a listing for Neo4j.  Click on that.
 
-![](images/24-console.png)
+![](images/03-console.png)
 
-If you're running cloud shell for the first time, you'll be presented with a dialog like this.  Just click "Continue."
+That takes you to a description of Neo4j AuraDB Professional.  Click on "Subscribe."
 
-![](images/25-shell.png)
+![](images/04-listing.png)
 
-Cloud Shell takes a few seconds to spin up.  When it's ready you'll see a terminal like this.  Click the "open in new window" button on the upper right of the Cloud Shell to expand it.
+On the plan summary, review it and then scroll to the bottom.
 
-![](images/26-shell.png)
+![](images/05-plan.png)
 
-Now we have a nice full screen shell.  
+Review the terms and accept them.  Then click "Subscribe."
 
-![](images/27-shell.png)
+![](images/06-plan.png)
 
-Neo4j hosts our partner work in the Neo4j Partners GitHub org [here](https://github.com/neo4j-partners).  We're going to use the Deployment Manager repo [here](https://github.com/neo4j-partners/google-deployment-manager-neo4j).  To clone a copy to our Cloud Shell machine, run this command:
+You'll see a message that "Your order is now active."  Click "Go to product page."
 
-    git clone https://github.com/neo4j-partners/google-deployment-manager-neo4j.git
+![](images/07-plan.png)
 
-That should give you something like this:
+We're now subscribed but need to enable the API.  Click on "Enable."
 
-![](images/28-shell.png)
+![](images/08-listing.png)
 
-Run a few more commands...
+When complete you'll see this page.  Click on "Manage Via Neo4j, Inc." at the top of the page.
 
-    clear
-    ls
-    cd google-deployment-manager-neo4j
-    ls
+![](images/09-enabled.png)
 
-![](images/29-shell.png)
+Confirm that you're ok with getting redirected to the management console.
 
-We're now in the repo we cloned.  It has a README that describes the repo.  That's probably better view in a web browser [here](https://github.com/neo4j-partners/google-deployment-manager-neo4j) though.  The LICENSE file states this is Apache 2.0 licensed, so you're free to fork it and modify it to your heart's content.
+![](images/10-redirect.png)
 
-Then there's a directory for Marketplace.  That's some GUI wrapper stuff written in jinja plus some helper scripts for packaging in marketplace.  That brings us to the simple directory.  Simple is the basic DM template.  Let's cd in there and list the contents.
+You'll be asked which Google credentials you want to use.  Be sure to select the same credentials you've been using so far.
 
-    clear
-    cd simple
-    ls
+![](images/11-auth.png)
 
-![](images/30-shell.png)
+You'll need to agree to some terms and cookies.  Click "Got it" and "I agree."
 
-deployment.py and cluster.py are Google Deployment Manager (DM) files.  This is Google Infrastructure as Code (IaC) language that automates deploying resources on Google Cloud Platform (GCP).  node.sh is a script that runs automatically in the DM template.
+![](images/12-terms.png)
 
-We're going to run the deploy.sh script.  That calls DM.  It takes two parameters, the name of a deployment and the name of a config file.  We're going to use the single parameters file, parameters.single.yaml.  This deploys a single node of Neo4j. 
+And, now you're at the AuraDB console.  At this point, we've authorized the API and logged into the console for AuraDB Professional.  
 
-Before we run it, we need to make one change.  We're going to be using two products that require license keys, Neo4j Bloom and Neo4j Graph Data Science.  You're going to need to open parameters.single.yaml in your favorite text editor, say vi.  Then you'll need to update the values of graphDataScienceLicenseKey and bloomLicenseKey to use these keys:
+Click "Got it!" to dismiss the cookie dialog.
 
-* graphDataScienceLicenseKey: eyJhbGciOiJQUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJlbkBuZW80ai5jb20iLCJleHAiOjE2NTIyNTI0MDAsImZlYXR1cmVWZXJzaW9uIjoiKiIsIm9yZyI6Ik5lbzRqIFRyYWluaW5nIiwicHViIjoibmVvNGouY29tIiwicXVhbnRpdHkiOiIxIiwicmVnIjoiQmVuIExhY2tleSIsInNjb3BlIjoiVHJpYWwiLCJzdWIiOiJuZW80ai1nZHMiLCJ2ZXIiOiIqIiwiaXNzIjoibmVvNGouY29tIiwibmJmIjoxNjQ5Njg1MzY4LCJpYXQiOjE2NDk2ODUzNjgsImp0aSI6IjkyOUcxa2psXyJ9.zbS3KAaiVuVwdplCcJbg3NBAx9D_QRT0Cc68hu9PIOTLbvi6H4c0vqWtXfd2GrwkRBvBA58yhJJrGicTu7SfHbHG8-BBmJLspVNvPT3YGaTCXZx4MwL7PgRm2XDnkOaHSbJTtO9qY5xUq7UxGcEUygqYxkPeydpyo0_lfNu6erGyL6lJaiTqnkeLFnanlZesrVF1bpmC2nOOl13PLQfG2Mi4J2l1VS9T2js8y_4lOS1Zb_OLPZxhc5i9-wqzHVYnIdQj_LpN-GeL8f61pmct0QNd-WEBl2EbWX4WQCMXt2HfMUX_fvTYbPvW16JDQ0Zm3IQTuT9v52xfb6lUwD1iNw
-* bloomLicenseKey: eyJhbGciOiJQUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJlbkBuZW80ai5jb20iLCJleHAiOjE2NTIyNTI0MDAsImZlYXR1cmVWZXJzaW9uIjoiKiIsIm9yZyI6Ik5lbzRqIFRyYWluaW5nIiwicHViIjoibmVvNGouY29tIiwicXVhbnRpdHkiOiIxIiwicmVnIjoiQmVuIExhY2tleSIsInNjb3BlIjoiVHJpYWwiLCJzdWIiOiJuZW80ai1ibG9vbS1zZXJ2ZXIiLCJ2ZXIiOiIqIiwiaXNzIjoibmVvNGouY29tIiwibmJmIjoxNjQ5Njg1MzM4LCJpYXQiOjE2NDk2ODUzMzgsImp0aSI6IjBWZjZNOEUzcCJ9.y2BcqXyEb3xF70ZLiMOJA3scQvZKYKWkdlHXZBKRvCJ7XxmN8MZW0Pg_1DH7nu7V6PzIdf2_WYdvpYIvfx_fNkTZnFjTiWEd9ooyuNYU-AdUfotp59ikXkR14nBPh3R8bg3r-BHwRkzoqL3p1LljDCVCx0ulRD7Mty0nMiOthnfHyLaV0eWKEH8Mo74v1kcwQGwfMaHKn1AyZQ40VyJXTv6FAu4t-maVTSUDm-mXMAdIlVWRDAk8yO4wa6XjanIu9D7Ge_fSWloqijqTrjV0oSMQ0nyLNmGggmCHDUnOMzIrh3ESrbxKWwkTtQbgXX7yYticC_nGo29LW-lGaSXR4w
+![](images/13-aura.png)
 
-**IMPORTANT - Note that if you skip the license key step, Bloom will not run and Neo4j Graph Data Science will run in community mode which limits its functionality. This will limit your ability to complete later exercises.**
+We can now create our first database.  We want to create an AuraDS instance.  That way we'll have access to Graph Data Science (GDS) and Bloom, the Neo4j business intelligence tool.  So, click on "AuraDS" at the top.
 
-Ok... Let's run it and deploy Neo4j!
+![](images/14-aura.png)
 
-    clear
-    ./deploy.sh neo4j single
+Now click on "New Instance" to create a new AuraDS instance.
 
-If you've never run DM before, you may get a few messages asking you to authorize it.  Click "AUTHORIZE" and type "y."
+![](images/15-aura.png)
 
-![](images/31-auth.png)
+We're presented with various options for that database.  For instance name, enter "form13."  For number of nodes, enter "500,000" and for number of relationships, enter "1,000,000".
 
-![](images/32-auth.png)
+![](images/16-aurads.png)
 
-The deployment takes a few minutes to run.  When complete, you'll see this:
+Then scroll down.  We're going to be making a node embedding, so select that.  The node embedding will allow us to represent our graph as features that Google Vertex AI can consume in a tablular format.
 
-![](images/37-deploy.png)
+![](images/17-aurads.png)
+
+Scroll to the bottom and click "Calculate estimate."
+
+![](images/18-estimate.png)
+
+Review the estimate and click "Create instance."
+
+![](images/19-estimate.png)
+
+You'll be presented with the credentials for your database.  Be absolutely certain to write those down.  We can't get them again later and you'll need them in a later lab.  Once you've done that click "I have stored these credentials safely to use later." Then click "Continue."
+
+![](images/20-creds.png)
+
+You'll see a dialog that your database is being created.  This takes less than five minutes.
+
+![](images/21-deploying.png)
+
+When deployment is complete you'll see this menu.
+
+![](images/22-deployed.png)
+
+You can poke around the menus here a bit and see more on database status and connection information.
 
 You now have a deployment of Neo4j running!  In the next lab, we'll connect to it.

@@ -1,6 +1,11 @@
 # Lab 6 - Vertex AI
 Now we've reached what we've been working toward -- pulling graph data into Vertex AI.  We're going to work with two notebooks in this lab.
 
+## Enable the API
+If you haven't already, you're going to need to enable the Vertex AI API.  You can do that by going [here](https://console.cloud.google.com/vertex-ai).
+
+![](images/01-compute.png)
+
 ## Raw Data
 First, we're going to work with the raw data set.  We'll do the following:
 * Pull it from a bucket

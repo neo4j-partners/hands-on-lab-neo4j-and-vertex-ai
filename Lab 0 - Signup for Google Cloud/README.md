@@ -3,6 +3,9 @@ For this lab you'll need both a Google and a Google Cloud account.  If you don't
 
 You'll need to provide your phone number and credit card information.  New Google Cloud accounts come with a $300 credit. Total costs for the lab should be significantly under $50. At the end of the lab we'll show you how to delete any resources you've deployed as well.
 
+## Improving the Labs
+As you work through these labs, we'd really appreciate your feedback.  One way to help us improve is to open an issue by going [here](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/issues).  Outright bugs, usability suggestions, and general comments are all appreciated.  Pull requests are great too!
+
 ## Sign up for a Google Cloud account
 You can sign up for a Google Cloud account [here](https://console.cloud.google.com/). Click on "Create account" and select "For myself."
 
