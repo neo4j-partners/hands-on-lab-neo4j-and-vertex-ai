@@ -94,7 +94,7 @@ Review the estimate and click "Create instance."
 
 ![](images/19-estimate.png)
 
-You'll be presented with the credentials for your database.  Be absolutely certain to write those down.  We can't get them again later and you'll need them in a later lab.  Once you've done that click "I have stored these credentials safely to use later." Then click "Continue."
+You'll be presented with the credentials for your database.  Be absolutely certain to write the password down.  We can't get it again later and you'll need it in a later lab.  Once you've done that, click "I have stored these credentials safely to use later." Then click "Continue."
 
 ![](images/20-creds.png)
 
