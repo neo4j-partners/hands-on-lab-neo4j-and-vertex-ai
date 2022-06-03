@@ -15,13 +15,16 @@ These workshops are organized onsite in a GCP office.
 ## Duration
 3 hours.
 
+## Prerequisites
+You'll need a laptop with a web browser.  Your browser will need to be able to access the Google Cloud console and port 7474 on a Neo4j deployment running in GCP.
+
 ## Agenda
 * Introductions
 * Lecture - [Introduction to Neo4j](https://docs.google.com/presentation/d/1WvPzs_JEh8uuKEAQGecH1rUd1NoRzqZIKc-hQkuBdXQ/edit?usp=sharing) (10 min)
     * What is Neo4j?
     * Customer use cases
     * How is it deployed and managed on GCP?
-* [Lab 0 - Signup for Google Cloud](Lab%200%20-%20Signup%20for%20Google%20Cloud) (Optional)
+* [Lab 0 - Signup for Google Cloud](Lab%200%20-%20Signup%20for%20Google%20Cloud) (15 min)
     * Singup for Google
     * Signup for Google Cloud
 * [Lab 1 - Deploy Neo4j](Lab%201%20-%20Deploy%20Neo4j) (15 min)
