@@ -4,9 +4,7 @@ For this lab you'll need both a Google and a Google Cloud account.  If you don't
 You'll need to provide your phone number and credit card information.  New Google Cloud accounts come with a $300 credit. Total costs for the lab should be significantly under $50. At the end of the lab we'll show you how to delete any resources you've deployed as well.
 
 ## Sign up for a Google Cloud account
-You can sign up for a Google Cloud account [here](https://console.cloud.google.com/).
-
-Click on "Create account" and select "For myself."
+You can sign up for a Google Cloud account [here](https://console.cloud.google.com/). Click on "Create account" and select "For myself."
 
 ![](images/01-newaccount.png)
 
