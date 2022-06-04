@@ -16,7 +16,7 @@ These workshops are organized onsite in a GCP office.
 3 hours.
 
 ## Prerequisites
-You'll need a laptop with a web browser.  Your browser will need to be able to access the Google Cloud console and port 7474 on a Neo4j deployment running in GCP.
+You'll need a laptop with a web browser.  Your browser will need to be able to access the Google Cloud Console and port 7474 on a Neo4j deployment running in GCP.
 
 ## Agenda
 * Introductions
