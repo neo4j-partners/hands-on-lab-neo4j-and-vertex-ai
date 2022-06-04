@@ -12,7 +12,7 @@ You may want to download the data and load it into your favorite tool for explor
 
 To load it in Neo4j, let's open the tab that has our Neo4j Browser in it.  If you don't have that tab open, you can review the previous lab to get into it.
 
-![](images/01-neo4jbrowser.png)
+![](images/01-browser.png)
 
 We're going to run a Cypher statement to load the data.  Cypher is Neo4j's query language.  LOAD CSV is part of that and allows us to easily load CSV data.  Try copying this command into the Neo4j Browser.
 
@@ -43,13 +43,13 @@ Now, let's click on one of the managers.  Don't worry, it doesn't particularly m
 
 ![](images/06-manager.png)
 
-When it expands, we can see what companies this manager owns shares in.  In this case, CHANNING GLOBAL ADVISORS, LLC seems to only have one holding, CANADIAN PACIFIC RAILWAY LTD.  Note that this data set only has holdings over $10m.  Smaller holdings were filtered out in pre-processing.
+When it expands, we can see what companies this manager owns shares in.  In this case, DENVER WEALTH MANAGEMENT, INC. seems to only have one holding, ISHARES RUSSELL.  Note that this data set only has holdings over $10m.  Smaller holdings were filtered out in pre-processing.
 
 We can also click on the relationship, that is the line between the nodes to see detail on the transaction.
 
 ![](images/07-company.png)
 
-In this case, it appears we have a report from 12-31-2021 that 139,781 shares were purchased with a value of $10,063,000.
+In this case, it appears we have a report from 12-31-2021 that 68,087 shares were purchased with a value of $20,807,000.
 
 ![](images/08-relationship.png)
 
@@ -63,41 +63,19 @@ There's an interesting issue hiding in our dataset.  Because of the way we loade
 
     MATCH (n:Company{cusip:"78462F103"}) RETURN n LIMIT 25
 
+![](images/10-query.png)
+
 Do you see what happened?  Different asset managers call securities slightly different things.  In this case, the commonly held SPY or S&P 500 ETF has a number of different names.
 
 Issues like this led to the creation of the [CUSIP](https://www.cusip.com/).  So, in these filings asset managers may enter all sorts of names, but the CUSIP will be unique.  In the next section we're going to key off the CUSIP and resolve this issue.
 
-Now that we have some understanding of this portion of the dataset, we're going to delete it.  Then we'll load the full data set.  We don't want to delete the database we're currently using.  So, we're going to switch databases first.  Run this in the Neo4j Browser.
+Now that we have some understanding of this portion of the dataset, we're going to delete it.  Then we'll load the full data set.  To delete all the nodes and relationships in the database, run this command:
 
-    :use system
+    MATCH (n) DETACH DELETE n;
 
-That should give you this:
+![](images/11-delete.png)
 
-![](images/10-usesystem.png)
-
-Then drop the database:
-
-    drop database neo4j
-
-That will give you this:
-
-![](images/11-drop.png)
-
-Now, create a new data:
-
-    create database neo4j
-
-You'll see this:
-
-![](images/12-create.png)
-
-Finally, switch back to the neo4j database:
-
-    :use neo4j
-
-![](images/13-useneo4j.png)
-
-Now, all your data should be deleted and you're back on the neo4j database.
+Now, all your data should be deleted.  Note that the GUI is still caching some property keys.
 
 ## A Year of Data
 The LOAD CSV statement we used before was pretty naive.  It didn't create any indices.  It also loaded the nodes and relationships simultaneously.  Both of those are inefficient approaches.  It wasn't a big deal as that single day of data was about 57kb.  However, we'd now like to load a full year of data.  That's 49.5mb of data, so we have to be a bit more efficient.  That new dataset is [here](https://storage.googleapis.com/neo4j-datasets/form13/2021.csv).
@@ -118,7 +96,7 @@ The manager is a little more difficult.  But, we're going to assume that the fil
 
 That should give this:
 
-![](images/14-constraint.png)
+![](images/12-constraint.png)
 
 Now, the holding is a bit more interesting.  It needs a compound key.  Because a holding is unique in the context of:
 
@@ -126,13 +104,13 @@ Now, the holding is a bit more interesting.  It needs a compound key.  Because a
 (2) Being a particular cusip
 (3) Being for a particular reportOrCalendarQuarter
 
-So, we're going to need something with a compount key like this:
+So, we're going to need something with a compound key like this:
 
     CREATE CONSTRAINT IF NOT EXISTS ON (p:Holding) ASSERT (p.filingManager, p.cusip, p.reportCalendarOrQuarter) IS NODE KEY;
 
 That should give this:
 
-![](images/15-constraint.png)
+![](images/13-constraint.png)
 
 Now that we have all the constraints, let's load our nodes.  We're going to do that first and grab the relationships in a second pass.  While we could do it in a single cypher statement, as we did above, it's more efficient to run them in series.
 
@@ -145,7 +123,7 @@ Let's load the companies first.  We're going to have a lot of duplication, since
 
 That should give this:
 
-![](images/16-company.png)
+![](images/14-company.png)
 
 Now let's load the Managers:
 
@@ -154,7 +132,7 @@ Now let's load the Managers:
 
 That should give this:
 
-![](images/17-manager.png)
+![](images/15-manager.png)
 
 And now we can load our Holdings:
 
@@ -168,7 +146,7 @@ And now we can load our Holdings:
 
 That should give this:
 
-![](images/18-holding.png)
+![](images/16-holding.png)
 
 Well, this is cool.  We've got all our nodes loaded in.  Now we need to tie them together with relationships.  We're going to want two kinds of relationships:
 
@@ -184,7 +162,7 @@ So, let's put together the owns relationship first.
 
 That should give this:
 
-![](images/19-owns.png)
+![](images/17-owns.png)
 
 And, now we can create the PARTOF relationships:
 
@@ -195,6 +173,6 @@ And, now we can create the PARTOF relationships:
 
 That should give this:
 
-![](images/20-partof.png)
+![](images/18-partof.png)
 
 You've done it!  We've loaded our data set up.  We'll explore it in the next lab.  But, feel free to poke around in the Neo4j Browser a bit as well.
