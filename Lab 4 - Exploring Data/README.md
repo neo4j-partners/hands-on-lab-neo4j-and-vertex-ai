@@ -34,6 +34,6 @@ That will give you a view with many nodes.
 
 ![](images/06-result.png)
 
-Now, spend a bit of time exploring the graph.  You can zoom in by holding on the "+" icon.  You can also drag the canvas around to chose what you zoom in on.
+Now, spend a bit of time exploring the graph.  You can zoom in by holding on the "+" icon.  You can also drag the canvas around to choose what you zoom in on.
 
 ![](images/07-explore.png)
