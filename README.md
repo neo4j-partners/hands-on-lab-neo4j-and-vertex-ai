@@ -44,6 +44,10 @@ You'll need a laptop with a web browser.  Your browser will need to be able to a
 * [Lab 3 - Moving Data](Lab%203%20-%20Moving%20Data/README.md) (15 min)
     * A Day of Data
     * A Year of Data
+* [Lab 4 - Exploring Data](Lab%204%20-%20Exploring%20Data/README.md) 15 min)
+    * Pandas
+    * Cypher Queries
+    * Vizualization with Neo4j Bloom
 * Break (10 min)
 * Lecture - [Graph Data Science](https://docs.google.com/presentation/d/133tXAH--V7Uvyd0Ylhs08_xDEPfl64uvaNNdxeHVpvk/edit?usp=sharing) (10 min)
     * Why Graph Data Science
@@ -53,10 +57,6 @@ You'll need a laptop with a web browser.  Your browser will need to be able to a
     * Centrality
     * Community Detection
     * Graph Machine Learning
-* [Lab 4 - Exploring Data](Lab%204%20-%20Exploring%20Data/README.md) 15 min)
-    * Pandas
-    * Cypher Queries
-    * Vizualization with Neo4j Bloom
 * [Lab 5 - Graph Data Science](Lab%205%20-%20Graph%20Data%20Science/README.md) (15 min)
     * Creating a Graph Embedding
     * Exporting to pandas
@@ -67,5 +67,5 @@ You'll need a laptop with a web browser.  Your browser will need to be able to a
 * [Lab 6 - Vertex AI](Lab%206%20-%20Vertex%20AI) (20 min)
     * Raw Data
     * Data with Embedding
-* [Lab 7 - Cleanup](Lab%207%20-%20Cleanup) (Optional)
+* [Lab 7 - Cleanup](Lab%207%20-%20Cleanup) (10 min)
 * [Discussion - Questions and Next Steps](Discussion%20-%20Questions%20and%20Next%20Steps.md) (10 min)
