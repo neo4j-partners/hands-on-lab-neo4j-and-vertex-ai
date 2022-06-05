@@ -15,9 +15,9 @@ You should now see the Neo4j Aura console.
 
 For the form13 instance we created, you can see three options:
 
-(1) Explore - This will open Neo4j Bloom, the business intelligence tool.
-(2) Query - This will open Neo4j Browser, a tool where we can run database queries and inspect the results.
-(3) Import - This opens the Neo4j Data Importer, a graphical tool for importing data into Neo4j.
+1. Explore - This will open Neo4j Bloom, the business intelligence tool.
+2. Query - This will open Neo4j Browser, a tool where we can run database queries and inspect the results.
+3. Import - This opens the Neo4j Data Importer, a graphical tool for importing data into Neo4j.
 
 ## Neo4j Browser
 Let's start with Neo4j Browser.  To open it, click the link that says "Query" on the form13 instance you have running.
