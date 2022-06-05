@@ -6,7 +6,7 @@ You'll need to provide your phone number and credit card information.  New Googl
 ## Improving the Labs
 As you work through these labs, we'd really appreciate your feedback.  One way to help us improve is to open an issue by going [here](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/issues).  Outright bugs, usability suggestions, and general comments are all appreciated.  Pull requests are great too!
 
-## Sign up for a Google Cloud account
+## Sign up for a Google Cloud Account
 You can sign up for a Google Cloud account [here](https://console.cloud.google.com/). Click on "Create account" and select "For myself."
 
 ![](images/01-newaccount.png)

@@ -26,16 +26,13 @@ You'll need a laptop with a web browser.  Your browser will need to be able to a
     * Customer use cases
     * How is it deployed and managed on GCP?
 * [Lab 0 - Signup for Google Cloud](Lab%200%20-%20Signup%20for%20Google%20Cloud) (15 min)
-    * Singup for Google
-    * Signup for Google Cloud
-* [Lab 1 - Deploy Neo4j](Lab%201%20-%20Deploy%20Neo4j) (15 min)
     * Improving the Labs
-    * Enable APIs
-    * Deploy Neo4j with Google Deployment Manager on IaaS
+    * Signup for a Google Cloud Account
+* [Lab 1 - Deploy Neo4j](Lab%201%20-%20Deploy%20Neo4j) (15 min)
+    * Deploying AuraDS Professional
 * [Lab 2 - Connect to Neo4j](Lab%202%20-%20Connect%20to%20Neo4j/README.md) (15 min)
     * Neo4j Browser
     * Neo4j Bloom
-    * Interacting via Shell
 * Break (10 min)
 
 ### Part 2
