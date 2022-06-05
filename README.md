@@ -18,9 +18,9 @@ These workshops are organized onsite in a GCP office.
 ## Prerequisites
 You'll need a laptop with a web browser.  Your browser will need to be able to access the Google Cloud Console and port 7474 on a Neo4j deployment running in GCP.
 
-## Agenda
+## Agenda - Part 1
 * Introductions
-* Lecture - [Introduction to Neo4j](https://docs.google.com/presentation/d/1WvPzs_JEh8uuKEAQGecH1rUd1NoRzqZIKc-hQkuBdXQ/edit?usp=sharing) (10 min)
+* Lecture - [Introduction to Neo4j](https://docs.google.com/presentation/d/1WvPzs_JEh8uuKEAQGecH1rUd1NoRzqZIKc-hQkuBdXQ/edit?usp=sharing) (15 min)
     * What is Neo4j?
     * Customer use cases
     * How is it deployed and managed on GCP?
@@ -36,6 +36,8 @@ You'll need a laptop with a web browser.  Your browser will need to be able to a
     * Neo4j Bloom
     * Interacting via Shell
 * Break (10 min)
+
+## Agenda - Part 2
 * Lecture - [Moving Data](https://docs.google.com/presentation/d/1O6Oy_GbDYYCvQanUyUCl30hQdSsy9kKL53Jgl23Nnsk/edit?usp=sharing) (10 min)
     * LOAD CSV
     * Apache Beam and Google Dataflow
@@ -49,6 +51,8 @@ You'll need a laptop with a web browser.  Your browser will need to be able to a
     * Cypher Queries
     * Vizualization with Neo4j Bloom
 * Break (10 min)
+
+## Agenda - Part 3
 * Lecture - [Graph Data Science](https://docs.google.com/presentation/d/133tXAH--V7Uvyd0Ylhs08_xDEPfl64uvaNNdxeHVpvk/edit?usp=sharing) (10 min)
     * Why Graph Data Science
     * Neo4j GDS Library and Catalog
@@ -67,5 +71,5 @@ You'll need a laptop with a web browser.  Your browser will need to be able to a
 * [Lab 6 - Vertex AI](Lab%206%20-%20Vertex%20AI) (20 min)
     * Raw Data
     * Data with Embedding
-* [Lab 7 - Cleanup](Lab%207%20-%20Cleanup) (10 min)
+* [Lab 7 - Cleanup](Lab%207%20-%20Cleanup) (15 min)
 * [Discussion - Questions and Next Steps](Discussion%20-%20Questions%20and%20Next%20Steps.md) (10 min)
