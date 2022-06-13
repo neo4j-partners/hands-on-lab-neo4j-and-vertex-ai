@@ -16,7 +16,7 @@ When you open Bloom, you should see the login screen.  Use the same credentials 
 
 That should take you to the home screen.  Click in the search bar and then click on "Manager."
 
-If the search bar doesn't population, you may have to click in the upper left and add the three entities: "Manager", "Holding", and "Company".
+If the search bar doesn't populate, you may have to click in the upper left and add the three entities: "Manager", "Holding", and "Company".
 
 ![](images/02-home.png)
 
