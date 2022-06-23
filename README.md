@@ -3,7 +3,7 @@ Neo4j is the [leading graph database](https://neo4j.com/whitepapers/forrester-wa
 
 In this hands on lab, you’ll get to learn about Neo4j and GCP Vertex AI.  The lab is intended for data scientists and data engineers.  We’ll walk through deploying Neo4j and Vertex AI on GCP in your own GCP account.  Then we’ll get hands on with a real world dataset, building a machine learning pipeline that takes advantage of features generated using Neo4j Graph Data Science to improve prediction in GCP Vertex AI.  You’ll come out of this lab with enough knowledge to apply graph feature engineering to your own datasets.
 
-We’re going to analyze the quarterly filings of asset managers with $100m+ assets under management (AUM).  These are regulatory filing made to the Securities and Exchange Commission’s (SEC) EDGAR system.  We’re going to show how to load that data from a GCP Cloud Storage bucket into Neo4j.  We’ll then explore the relationships of different asset managers and their holdings using the Neo4j Browser and Neo4j’s Cypher query language.
+We’re going to analyze the quarterly filings of asset managers with $100m+ assets under management (AUM).  These are regulatory filings made to the Securities and Exchange Commission’s (SEC) EDGAR system.  We’re going to show how to load that data from a GCP Cloud Storage bucket into Neo4j.  We’ll then explore the relationships of different asset managers and their holdings using the Neo4j Browser and Neo4j’s Cypher query language.
 
 Finally, we’ll use Neo4j Graph Data Science to create a graph embedding from our data, export that out, and run supervised learning algorithms in GCP Vertex AI.  We’ll try to predict what holdings asset managers will maintain or enlarge in the next quarter.  
 
