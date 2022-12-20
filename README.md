@@ -18,7 +18,7 @@ These workshops are organized onsite in a GCP office.
 ## Prerequisites
 You'll need a laptop with a web browser.  Your browser will need to be able to access the Google Cloud Console and port 7474 on a Neo4j deployment running in GCP.  If your laptop has a firewall you can't control on it, you may want to bring your personal laptop.
 
-If you have an AWS account with permissions that allow you to invoke Vertex AI, deploy from Marketplace and create a Cloud Storage bucket, then you can use that.  If not, we'll walk you through creating a GCP account.
+If you have an GCP account with permissions that allow you to invoke Vertex AI, deploy from Marketplace and create a Cloud Storage bucket, then you can use that.  If not, we'll walk you through creating a GCP account.
 
 ## Agenda
 ### Part 1
