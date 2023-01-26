@@ -32,7 +32,7 @@ If you have an GCP account with permissions that allow you to invoke Vertex AI, 
     * Signup for a Google Cloud Account
 * [Lab 1 - Deploy Neo4j](Lab%201%20-%20Deploy%20Neo4j) (15 min)
     * Deploying AuraDS Professional
-* [Lab 2 - Connect to Neo4j](Lab%202%20-%20Connect%20to%20Neo4j/README.md) (15 min)
+* [Lab 2 - Connect to Neo4j](Lab%202%20-%20Connect%20to%20Neo4j/README.md) (10 min)
     * Neo4j Browser
     * Neo4j Bloom
 * Break (10 min)
@@ -65,11 +65,11 @@ If you have an GCP account with permissions that allow you to invoke Vertex AI, 
     * Creating a Graph Embedding
     * Exporting to pandas
     * Writing to Google Cloud Storage
-* Lecture - [Vertex AI](https://docs.google.com/presentation/d/19TewJE5YgESTmN9qW4MOtFP4m39uPhUaRXErkCzrdbE/edit?usp=sharing) (15 min)
+* Lecture - [Vertex AI](https://docs.google.com/presentation/d/19TewJE5YgESTmN9qW4MOtFP4m39uPhUaRXErkCzrdbE/edit?usp=sharing) (10 min)
     * What is Vertex AI?
     * Using Vertex AI with Neo4j
-* [Lab 6 - Vertex AI](Lab%206%20-%20Vertex%20AI) (20 min)
+* [Lab 6 - Vertex AI](Lab%206%20-%20Vertex%20AI) (15 min)
     * Raw Data
     * Data with Embedding
-* [Lab 7 - Cleanup](Lab%207%20-%20Cleanup) (15 min)
+* [Lab 7 - Cleanup](Lab%207%20-%20Cleanup) (5 min)
 * [Discussion - Questions and Next Steps](Discussion%20-%20Questions%20and%20Next%20Steps.md) (10 min)
