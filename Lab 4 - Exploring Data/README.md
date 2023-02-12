@@ -10,9 +10,10 @@ Now we'll run a few queries using the python API.  Earlier we used the graphical
 ## Vizualization with Neo4j Bloom
 Bloom is Neo4j's business intelligence (BI) tool.  You can open it from the Neo4j Aura Console as we did in Lab 2.
 
-When you open Bloom, you should see the login screen.  Use the same credentials we used before.
+When you open Bloom, click Explore tab and create a perespective.  Perspective defines a certain business view or domain that can be found in the target Neo4j graph. A single Neo4j graph can be viewed through different Perspectives, each tailored for a different business purpose.
 
-![](images/01-login.png)
+
+![](images/01-Create_Perspective_in_Bloom.png)
 
 That should take you to the home screen.  Click in the search bar and then click on "Manager."
 
