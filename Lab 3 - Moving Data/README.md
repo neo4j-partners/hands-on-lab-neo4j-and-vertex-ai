@@ -94,6 +94,11 @@ The manager is a little more difficult.  But, we're going to assume that the fil
     CREATE CONSTRAINT IF NOT EXISTS FOR (p:Company) REQUIRE (p.cusip) IS NODE KEY;
     CREATE CONSTRAINT IF NOT EXISTS FOR (p:Manager) REQUIRE (p.filingManager) IS NODE KEY;
 
+Now, let's create indices, to make searches of related data more efficient.
+    
+    CREATE INDEX IF NOT EXISTS FOR (p:Company) ON (p.cusip);
+    CREATE INDEX IF NOT EXISTS FOR (p:Manager) ON (p.filingManager);
+
 That should give this:
 
 ![](images/12-constraint.png)
@@ -107,6 +112,10 @@ Now, the holding is a bit more interesting.  It needs a compound key.  Because a
 So, we're going to need something with a compound key like this:
 
     CREATE CONSTRAINT IF NOT EXISTS FOR (p:Holding) REQUIRE (p.filingManager, p.cusip, p.reportCalendarOrQuarter) IS NODE KEY;
+
+Now, let's create index for Holding nodes
+
+    CREATE INDEX IF NOT EXISTS FOR (p:Holding) ON (p.filingManager, p.cusip, p.reportCalendarOrQuarter);
 
 That should give this:
 
