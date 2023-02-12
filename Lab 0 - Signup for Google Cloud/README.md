@@ -7,68 +7,76 @@ You'll need to provide your phone number and credit card information.  New Googl
 As you work through these labs, we'd really appreciate your feedback.  One way to help us improve is to open an issue by going [here](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/issues).  Outright bugs, usability suggestions, and general comments are all appreciated.  Pull requests are great too!
 
 ## Sign up for a Google Cloud Account
-You can sign up for a Google Cloud account [here](https://console.cloud.google.com/). Click on "Create account" and select "For myself."
+You can sign up for a Google Cloud account [here](https://console.cloud.google.com/). Click on "Create account" and select "For my personal use."
 
 ![](images/01-newaccount.png)
 
-Enter you name.  If you have an existing email address you can use that.  Alternatively, select "Create a new Gmail address instead."  Click "Next."
+Enter you name.  
+
+If you have an existing email address you can use that.  Alternatively, select "Create a new Gmail address instead."  
+
+Enter a password and click "Next."
 
 ![](images/02-newaccount.png)
 
-Enter you phone number and other information.  Click "Next."
+Enter you phone number.  Click "Next."
 
-![](images/03-newaccount.png)
-
-Now click "Send" to verify your phone number.
-
-![](images/04-verify.png)
+![](images/03-phone.png)
 
 Enter the code you were texted and click "Verify."
 
-![](images/05-verify.png)
+![](images/04-verify.png)
 
-Click "Yes I'm in" to associate your number with Google services.
+Enter your personal information.
 
-![](images/06-number.png)
+![](images/05-personal.png)
 
-Review the terms and click "I agree" to continue.
+Review the terms and click "Yes, I'm in" to continue.
 
-![](images/07-number.png)
+![](images/06-getmore.png)
 
-You'll now be redirected to the Google Cloud console.  Check the box to agree to terms and click "AGREE AND CONTINUE."
+Review the terms and scroll to the bottom.
+
+![](images/07-terms.png)
+
+Click "I agree."
 
 ![](images/08-terms.png)
 
+You'll now be redirected to the Google Cloud console.  Check the box to agree to terms and click "AGREE AND CONTINUE."
+
+![](images/09-terms.png)
+
 Congratulations!  You've signed up for a Google Cloud account.
 
-![](images/09-console.png)
+![](images/10-console.png)
 
 ## Activate your Google Cloud account
 Now that you have an account, you need to activate it.  That will allow you to use the $300 free trial credits.  Click "ACTIVATE" at the top of the console.
 
 ![](images/10-console.png)
 
-Select an answer for "What best describes your organization or needs?"  I chose "personal." Then review the terms, accept them and click "CONTINUE."
+Select an answer for "What best describes your organization or needs?"  I chose "Other." Then review the terms, accept them and click "CONTINUE."
 
 ![](images/11-activate.png)
-
-Click "CONTINUE" to verify your phone number.
-
-![](images/12-activate.png)
 
 Select "Individual" for account type.  You'll need to enter a credit card number.  This number will not be charged unless you change your billing options explictly to bill it.  The card is used solely to verify your identity.
 
 Once you've entered your information click "START MY FREE TRIAL."
 
-![](images/13-activate.png)
+![](images/12-activate.png)
 
 You'll see a questionaire dialog you can dismiss by clicking "CLOSE."  You can dismiss the tutorial dialog by clicking "SKIP FOR NOW."  Click the "X" to dismiss the "Now viewing project "My First Project" in organization "No organization" dialog.  Click the "X" to dismiss the "Explore products at a glance" dialog.
 
-![](images/14-dialogs.png)
+![](images/13-welcome.png)
+
+You can also dismiss the tutorial and organization dialogs.
+
+![](images/14-welcome.png)
 
 That should give you a console that's ready to use.  
 
-![](images/15-console.png)
+![](images/14-console.png)
 
 You have $300 in credits to use over 90 days.  Your credit card will not be billed unless you change your billing options.
 

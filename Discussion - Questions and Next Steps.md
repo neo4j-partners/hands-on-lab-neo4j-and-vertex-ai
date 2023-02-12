@@ -28,7 +28,7 @@ Other more traditional data could be used to enrich this dataset as well.  Share
 
 That then brings us to the supervised learning problem we explored today.  We looked at what we could compute from this dataset and decided to predict change in holdings over time.  There are many other things we could try to predict.  One obvious thing would be for a given asset manager, trying to predict what securities they will buy in the future based on the current holdings.  If you're in the broker dealer space, it would be pretty easy to introspect holdings and build a recommendation engine off of it.  Of course, one question there is whether you'd want to recommend similar holdings or something diffferent to diversify?
 
-The projection we used consisted only of the nodes.  We could use node properties as well.  GDS currently supports on float valued properties.  But, we have both shares and value as fields we could have used there.  It also would have been easy enough to convert an identifier like CUSIP to a float but that probably wouldn't have much predictive value in the projection.
+The projection we used consisted only of the nodes.  We could use node properties as well.  GDS currently supports only float valued properties.  But, we have both shares and value as fields we could have used there.  It also would have been easy enough to convert an identifier like CUSIP to a float but that probably wouldn't have much predictive value in the projection.
 
 Regarding the embedding, that is one approach to creating features.  We also could have explored other algorithms like Nearest Neighbor to generate community features.
 
