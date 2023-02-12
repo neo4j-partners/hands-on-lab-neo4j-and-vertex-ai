@@ -76,7 +76,7 @@ You can also dismiss the tutorial and organization dialogs.
 
 That should give you a console that's ready to use.  
 
-![](images/14-console.png)
+![](images/15-console.png)
 
 You have $300 in credits to use over 90 days.  Your credit card will not be billed unless you change your billing options.
 
