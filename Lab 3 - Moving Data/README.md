@@ -91,9 +91,8 @@ First, let's create constraints, essentially a primary key, for the company and 
 
 The manager is a little more difficult.  But, we're going to assume that the filingManager field is both unique and correct.
 
-   CREATE CONSTRAINT IF NOT EXISTS FOR (p:Company) REQUIRE (p.cusip) IS NODE KEY;
-   
-   CREATE CONSTRAINT IF NOT EXISTS FOR (p:Manager) REQUIRE (p.filingManager) IS NODE KEY;
+    CREATE CONSTRAINT IF NOT EXISTS FOR (p:Company) REQUIRE (p.cusip) IS NODE KEY;
+    CREATE CONSTRAINT IF NOT EXISTS FOR (p:Manager) REQUIRE (p.filingManager) IS NODE KEY;
 
 That should give this:
 
