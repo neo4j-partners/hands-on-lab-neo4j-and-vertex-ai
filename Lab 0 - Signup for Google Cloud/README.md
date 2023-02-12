@@ -66,11 +66,11 @@ Once you've entered your information click "START MY FREE TRIAL."
 
 ![](images/12-activate.png)
 
-You'll see a questionaire dialog you can dismiss by clicking "CLOSE."  You can dismiss the tutorial dialog by clicking "SKIP FOR NOW."  Click the "X" to dismiss the "Now viewing project "My First Project" in organization "No organization" dialog.  Click the "X" to dismiss the "Explore products at a glance" dialog.
+You'll see a questionaire dialog you can dismiss by clicking "CLOSE."
 
 ![](images/13-welcome.png)
 
-You can also dismiss the tutorial and organization dialogs.
+You can dismiss the tutorial dialog by clicking "SKIP FOR NOW."  Click the "X" to dismiss the "Now viewing project "My First Project" in organization "No organization" dialog.
 
 ![](images/14-welcome.png)
 
