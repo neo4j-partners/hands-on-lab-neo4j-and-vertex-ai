@@ -147,7 +147,7 @@ And now we can load our Holdings:
 
     LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/2021.csv' AS row
     MERGE (h:Holding {filingManager:row.filingManager, cusip:row.cusip, reportCalendarOrQuarter:row.reportCalendarOrQuarter})
-    SET
+    ON CREATE SET
         h.value=row.value, 
         h.shares=row.shares,
         h.target=row.target,
