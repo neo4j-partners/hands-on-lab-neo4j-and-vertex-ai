@@ -91,8 +91,8 @@ First, let's create constraints, essentially a primary key, for the company and 
 
 The manager is a little more difficult.  But, we're going to assume that the filingManager field is both unique and correct.
 
-    CREATE CONSTRAINT IF NOT EXISTS ON (p:Company) ASSERT (p.cusip) IS NODE KEY;
-    CREATE CONSTRAINT IF NOT EXISTS ON (p:Manager) ASSERT (p.filingManager) IS NODE KEY;
+   CREATE CONSTRAINT IF NOT EXISTS FOR (p:Company) REQUIRE (p.cusip) IS NODE KEY;
+    CREATE CONSTRAINT IF NOT EXISTS FOR (p:Manager) REQUIRE (p.filingManager) IS NODE KEY;
 
 That should give this:
 
@@ -106,7 +106,7 @@ Now, the holding is a bit more interesting.  It needs a compound key.  Because a
 
 So, we're going to need something with a compound key like this:
 
-    CREATE CONSTRAINT IF NOT EXISTS ON (p:Holding) ASSERT (p.filingManager, p.cusip, p.reportCalendarOrQuarter) IS NODE KEY;
+    CREATE CONSTRAINT IF NOT EXISTS FOR (p:Holding) REQUIRE (p.filingManager, p.cusip, p.reportCalendarOrQuarter) IS NODE KEY;
 
 That should give this:
 
@@ -118,7 +118,7 @@ Let's load the companies first.  We're going to have a lot of duplication, since
 
     LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/2021.csv' AS row
     MERGE (c:Company {cusip:row.cusip})
-    ON CREATE SET
+    SET
         c.nameOfIssuer=row.nameOfIssuer
 
 That should give this:
@@ -138,7 +138,7 @@ And now we can load our Holdings:
 
     LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/2021.csv' AS row
     MERGE (h:Holding {filingManager:row.filingManager, cusip:row.cusip, reportCalendarOrQuarter:row.reportCalendarOrQuarter})
-    ON CREATE SET
+    SET
         h.value=row.value, 
         h.shares=row.shares,
         h.target=row.target,
