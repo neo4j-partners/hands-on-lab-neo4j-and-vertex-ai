@@ -43,18 +43,3 @@ Then hit the little blue triangle play button to run it.  You should see a GDS v
 ![](images/07-gds.png)
 
 Assuming that all looks good, let's move on...
-
-## Neo4j Bloom
-Let's also check that Neo4j Bloom is running.  Bloom is Neo4j's Business Intelligence (BI) product.  Go back to the tab where you have the Neo4j Aura console open.  Click on the "Explore" link.
-
-![](images/08-aura.png)
-
-You'll be presented with the Neo4j Bloom console.  Enter "neo4j" for the username and your password.  Click "Connect."
-
-![](images/09-auth.png)
-
-That gives you an empty Bloom scene.  In a later lab, we'll explore using Bloom.
-
-![](images/10-bloom.png)
-
-Now that we've connected, let's go to the next lab where we'll import some data.
