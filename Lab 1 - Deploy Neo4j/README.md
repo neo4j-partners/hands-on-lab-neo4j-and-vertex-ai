@@ -1,8 +1,8 @@
 # Lab 1 - Deploy Neo4j
 
-Neo4j has three products:
-* Graph Database - a native graph data store built from the ground up to leverage not only data but also data relationships.
-* Graph Data Science - a software platform helping data scientists uncover the connections in big data to answer business critical questions and improve predictions.
+Neo4j has three major products:
+* Graph Database (GDB) - a native graph data store built from the ground up to leverage not only data but also data relationships.
+* Graph Data Science (GDS) - a software platform helping data scientists uncover the connections in big data to answer business critical questions and improve predictions.
 * Bloom - a graph exploration application for visually interacting with Neo4j graphs. Bloom gives graph novices and experts alike the ability to visually investigate and explore graph data from different business perspectives.
 
 There are many ways to run these products on Google Cloud.  The Marketplace in particular offers three ways to deploy Neo4j:
@@ -24,11 +24,11 @@ On the left menu, scroll to the bottom and click "MORE PRODUCTS."
 
 ![](images/02-console.png)
 
-Still in the left menu, scroll all the way to the bottom.  You'll see a listing for Neo4j.  Click on that.
+Still in the left menu, scroll all the way to the bottom.  You'll see listings for a number of partner products.  These are products from leading ISVs that Google has chosen to integrate tightly into the Cloud Consonle.  Amoung those, you'll see a listing for Neo4j.  Click on that.
 
 ![](images/03-console.png)
 
-That takes you to a description of Neo4j AuraDB Professional.  Click on "Subscribe."
+That takes you to a description of Neo4j Aura Professional.  Click on "Subscribe."
 
 ![](images/04-listing.png)
 
@@ -64,13 +64,15 @@ You'll need to agree to some terms and cookies.  Click "Got it" and "I agree."
 
 ![](images/12-terms.png)
 
-And, now you're at the AuraDB console.  At this point, we've authorized the API and logged into the console for AuraDB Professional.  
+And, now you're at the Aura console.  At this point, we've authorized the API and logged into the console for Aura Professional.  
 
 Click "Got it!" to dismiss the cookie dialog.
 
 ![](images/13-aura.png)
 
-We can now create our first database.  We want to create an AuraDS instance.  That way we'll have access to Graph Data Science (GDS) and Bloom, the Neo4j business intelligence tool.  So, click on "AuraDS" at the top.
+We can now create our first database.  We want to create an AuraDS instance.  That way we'll have access to Graph Data Science (GDS) and Bloom, the Neo4j business intelligence tool.
+
+Important -- Be sure to select AuraDS.
 
 ![](images/14-aura.png)
 
@@ -78,7 +80,7 @@ Now click on "New Instance" to create a new AuraDS instance.
 
 ![](images/15-aura.png)
 
-We're presented with various options for that database.  For instance name, enter "form13."  For number of nodes, enter "500,000" and for number of relationships, enter "1,000,000".
+We're presented with various options for that database.  For instance name, you can leave the default.  For number of nodes, enter "500,000" and for number of relationships, enter "1,000,000".
 
 ![](images/16-aurads.png)
 
@@ -94,7 +96,7 @@ Review the estimate and click "Create instance."
 
 ![](images/19-estimate.png)
 
-You'll be presented with the credentials for your database.  Be absolutely certain to write the password down.  We can't get it again later and you'll need it in a later lab.  Once you've done that, click "I have stored these credentials safely to use later." Then click "Continue."
+You'll be presented with the credentials for your database.  Be absolutely certain to copy the password.  We can't get it again later and you'll need it in a later lab.  Once you've done that, click "I have stored these credentials safely to use later." Then click "Continue."
 
 ![](images/20-creds.png)
 
