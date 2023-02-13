@@ -80,7 +80,7 @@ Now click on "New Instance" to create a new AuraDS instance.
 
 ![](images/15-aura.png)
 
-We're presented with various options for that database.  For instance name, you can leave the default.  For number of nodes, enter "500,000" and for number of relationships, enter "1,000,000".
+We're presented with various options for that database.  For instance name, you enter "form13".  For number of nodes, enter "500,000" and for number of relationships, enter "1,000,000".
 
 ![](images/16-aurads.png)
 
