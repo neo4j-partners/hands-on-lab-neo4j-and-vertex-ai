@@ -50,7 +50,6 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
     * Exploration with Neo4j Bloom
 * [Lab 5 - Vertex AI Workbench](Lab%205%20-%20Vertex%20AI%20Workbench/README.md) 10 min)
     * to do
-
 * Break (10 min)
 
 ### Part 3
@@ -69,7 +68,7 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
 * Lecture - [Vertex AI](https://docs.google.com/presentation/d/19TewJE5YgESTmN9qW4MOtFP4m39uPhUaRXErkCzrdbE/edit?usp=sharing) (10 min)
     * What is Vertex AI?
     * Using Vertex AI with Neo4j
-* [Lab 7 - Vertex AI](Lab%207%20-%20Vertex%20AI) (15 min)
+* [Lab 7 - Vertex AI AutoML](Lab%207%20-%20Vertex%20AI%20AutoML) (15 min)
     * Raw Data
     * Data with Embedding
 * [Lab 8 - Cleanup](Lab%208%20-%20Cleanup) (5 min)
