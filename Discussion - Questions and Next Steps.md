@@ -8,16 +8,19 @@ The lab deploys Neo4j AuraDS Professional through a deep integration in the Goog
 There are currently some issues you may have noticed in accessing the Aura console directly versus a redirect from the Google Cloud Console.  We're working to improve that experience.
 
 ## Lab 3 - Moving Data
-We used LOAD CSV to pull data in.  That is one of many ways.  Neo4j [Data Loader](https://data-importer.neo4j.io/) was recently released.  However it doesn't support compound keys on relationships, so we weren't able to use it.
+We used LOAD CSV to pull data in.  That is one of many ways.  Neo4j [Data Loader](https://data-importer.neo4j.io/) is another.  We're exploring incorporating it into this lab.
 
 We're also working with Google on [Dataflow](https://cloud.google.com/dataflow) integration.  A [PR to Apache Beam](https://github.com/apache/beam/pull/15916) has already been accepted.  We're just working to get the templates that would wrap it together.
 
 The Neo4j [Spark Connector](https://neo4j.com/docs/spark/current/) is another way to get data in.  We've been working with the Google [Dataproc](https://cloud.google.com/dataproc) team on some demos of that.  It works today but some walkthrough are in progress.
 
-## Lab 4 - Exploring Data
-This section of the lab could be expanded.  A data enrichment exercise might be really interesting.
+## Lab 4 - Exploration
+This section of the lab could be expanded.  A data enrichment exercise might be really interesting.  We've been doing work with [EKG elsewhere](http://github.com/neo4j-partners/apevue-knowledge-graph) that could be relevant.
 
-## Lab 5 - Graph Data Science
+## Lab 5 - Vertex AI Workbench
+This section seems pretty solid.  We have a trade off between Colab and Workbench, so we chose to explore both.  We would be curious for feedback on that approach.
+
+## Lab 6 - Graph Data Science
 With a novel data set combined with a novel approach to machine learning, there's enough material here for numerous business applications or academic papers.  Some areas that might be interesting to explore in the future follow...
 
 The data set isn't normalized.  Between these large asset managers, it's quite likely they own a significant portion of the stock outstanding for certain issues.  So rather than measuring shares or value, a more powerful feature might be percentage of float outstanding.
@@ -34,7 +37,7 @@ Regarding the embedding, that is one approach to creating features.  We also cou
 
 Some work on tuning the embedding would improve accuracy.  It is interesting that, even without tuning, the embedding provides more valuable features than either reportCalendarOrQuarter or cusip.
 
-## Lab 6 - Vertex AI
+## Lab 7 - Vertex AI AutoML
 Vertex AI is an amazing suite of products.  It's largely serverless.  The GUI is intuitive.  It takes almost all the infrastructure pain out of machine learning.  At the same time, it is very very new.  The console is constantly changing.  New features are often introduced with only a REST API.  The APIs change.
 
 AutoML takes ~2.5 hours to run even with a 1 hour budget.  The nice part about using a SaaS like Vertex AI is that all this is going to improve without any need to manage upgrades, infrastructure, etc.
