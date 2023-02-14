@@ -1,4 +1,4 @@
-# Lab 6 - Vertex AI
+# Lab 7 - Vertex AI AutoML
 Now we've reached what we've been working toward -- pulling graph data into Vertex AI.  We're going to work with two notebooks in this lab.
 
 ## Raw Data

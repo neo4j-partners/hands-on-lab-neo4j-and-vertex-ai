@@ -1,4 +1,4 @@
-# Vertex AI Workbench
+# Lab 5 - Vertex AI Workbench
 
 ## Pandas
 First off, let's fiddle with the data in pandas.  We're going to use Google Colab to do that.  Colab is a really light weight way to run a notebook on Google Cloud.  Click [here](exploring_pandas.ipynb) to get started.
