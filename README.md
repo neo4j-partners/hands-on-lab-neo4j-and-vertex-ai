@@ -23,7 +23,7 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
 ## Agenda
 ### Part 1
 * Introductions
-* Lecture - [Introduction to Neo4j](https://docs.google.com/presentation/d/1WvPzs_JEh8uuKEAQGecH1rUd1NoRzqZIKc-hQkuBdXQ/edit?usp=sharing) (15 min)
+* Lecture - [Introduction to Neo4j](https://docs.google.com/presentation/d/1WvPzs_JEh8uuKEAQGecH1rUd1NoRzqZIKc-hQkuBdXQ/edit?usp=sharing) (10 min)
     * What is Neo4j?
     * Customer use cases
     * How is it deployed and managed on Google Cloud?
@@ -48,7 +48,7 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
     * A Year of Data
 * [Lab 4 - Exploration](Lab%204%20-%20Exploration/README.md) 10 min)
     * Exploration with Neo4j Bloom
-* [Lab 5 - Vertex AI Workbench](Lab%205%20-%20Vertex%20AI%20Workbench/README.md) 10 min)
+* [Lab 5 - Vertex AI Workbench](Lab%205%20-%20Vertex%20AI%20Workbench/README.md) 15 min)
     * Pandas
     * Vertex AI Workbench
     * Cypher Queries
@@ -74,4 +74,4 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
     * Raw Data
     * Data with Embedding
 * [Lab 8 - Cleanup](Lab%208%20-%20Cleanup) (5 min)
-* [Discussion - Questions and Next Steps](Discussion%20-%20Questions%20and%20Next%20Steps.md) (10 min)
+* [Discussion - Questions and Next Steps](Discussion%20-%20Questions%20and%20Next%20Steps.md) (5 min)
