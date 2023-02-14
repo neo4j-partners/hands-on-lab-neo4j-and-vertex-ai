@@ -4,7 +4,7 @@ Now we've reached what we've been working toward -- pulling graph data into Vert
 ## Raw Data
 First, we're going to work with the raw data set.  We'll do the following:
 * Pull it from a bucket
-* Break into train and test sets
+* Break into train, test and validation sets
 * Train a classifier
 
 To do that, open the [vertex_ai_raw.ipynb](vertex_ai_raw.ipynb) in Vertex AI Workbench.
