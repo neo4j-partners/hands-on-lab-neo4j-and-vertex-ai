@@ -61,7 +61,7 @@ When complete, you should see a message in the terminal as well as a new directo
 ## Cypher Queries
 Now that we've got Vertex AI Workbench setup, we're going to run a few queries using the python API.  Earlier we used the graphical interface in the Neo4j Browser.  We're going to do the same thing but in a programmatic way.  
 
-Let's start by firing up a notebook.  Click on the new "hands-on-lab-neo4j-and-vertex-ai" in the file explorer.  Drill down to Lab 5 and open the "exploring_cypher.ipynb" notebook.  Start up the default kernal and work through that noteboook!
+Let's start by firing up a notebook.  Click on the new "hands-on-lab-neo4j-and-vertex-ai" in the file explorer.  Drill down to Lab 5 and open the "exploring_cypher.ipynb" notebook.  Start up a Python kernel and work through that noteboook!
 
 ![](images/12-kernel.png)
 
