@@ -46,9 +46,9 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
 * [Lab 3 - Moving Data](Lab%203%20-%20Moving%20Data/README.md) (15 min)
     * A Day of Data
     * A Year of Data
-* [Lab 4 - Exploration](Lab%204%20-%20Exploration/README.md) 15 min)
+* [Lab 4 - Exploration](Lab%204%20-%20Exploration/README.md) 10 min)
     * Exploration with Neo4j Bloom
-* [Lab 5 - Vertex AI Workbench](Lab%205%20-%20Vertex%20AI%20Workbench/README.md) 15 min)
+* [Lab 5 - Vertex AI Workbench](Lab%205%20-%20Vertex%20AI%20Workbench/README.md) 10 min)
     * to do
 
 * Break (10 min)
