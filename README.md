@@ -30,11 +30,11 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
 * [Lab 0 - Signup for Google Cloud](Lab%200%20-%20Signup%20for%20Google%20Cloud) (15 min)
     * Improving the Labs
     * Signup for a Google Cloud Account
+    * Activate your Google Cloud account
 * [Lab 1 - Deploy Neo4j](Lab%201%20-%20Deploy%20Neo4j) (15 min)
     * Deploying Neo4j AuraDS Professional
 * [Lab 2 - Connect to Neo4j](Lab%202%20-%20Connect%20to%20Neo4j/README.md) (10 min)
-    * Neo4j Browser
-    * Neo4j Bloom
+    * Neo4j Workspace
 * Break (10 min)
 
 ### Part 2
@@ -46,10 +46,11 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
 * [Lab 3 - Moving Data](Lab%203%20-%20Moving%20Data/README.md) (15 min)
     * A Day of Data
     * A Year of Data
-* [Lab 4 - Exploring Data](Lab%204%20-%20Exploring%20Data/README.md) 15 min)
-    * Pandas
-    * Cypher Queries
-    * Vizualization with Neo4j Bloom
+* [Lab 4 - Exploration](Lab%204%20-%20Exploration/README.md) 15 min)
+    * Exploration with Neo4j Bloom
+* [Lab 5 - Vertex AI Workbench](Lab%205%20-%20Vertex%20AI%20Workbench/README.md) 15 min)
+    * to do
+
 * Break (10 min)
 
 ### Part 3
@@ -61,15 +62,15 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
     * Centrality
     * Community Detection
     * Graph Machine Learning
-* [Lab 5 - Graph Data Science](Lab%205%20-%20Graph%20Data%20Science/README.md) (15 min)
+* [Lab 6 - Graph Data Science](Lab%206%20-%20Graph%20Data%20Science/README.md) (15 min)
     * Creating a Graph Embedding
     * Exporting to pandas
     * Writing to Google Cloud Storage
 * Lecture - [Vertex AI](https://docs.google.com/presentation/d/19TewJE5YgESTmN9qW4MOtFP4m39uPhUaRXErkCzrdbE/edit?usp=sharing) (10 min)
     * What is Vertex AI?
     * Using Vertex AI with Neo4j
-* [Lab 6 - Vertex AI](Lab%206%20-%20Vertex%20AI) (15 min)
+* [Lab 7 - Vertex AI](Lab%207%20-%20Vertex%20AI) (15 min)
     * Raw Data
     * Data with Embedding
-* [Lab 7 - Cleanup](Lab%207%20-%20Cleanup) (5 min)
+* [Lab 8 - Cleanup](Lab%208%20-%20Cleanup) (5 min)
 * [Discussion - Questions and Next Steps](Discussion%20-%20Questions%20and%20Next%20Steps.md) (10 min)

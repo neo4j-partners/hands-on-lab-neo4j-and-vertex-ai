@@ -1,5 +1,9 @@
 # Lab 4 - Exploration
-Bloom is Neo4j's business intelligence (BI) tool.  It's integrated into Neo4j Workbench.  To open it, first go to the Neo4j Aura Console and then click "Open" as we did in Lab 2.  From there, make sure the "Explore" tab at the top is selected.
+Bloom is Neo4j's business intelligence (BI) tool.  It's integrated into Neo4j Workbench.  
+
+## Exploration with Neo4j Bloom
+
+To open Bloom, first go to the Neo4j Aura Console and then click "Open" as we did in Lab 2.  From there, make sure the "Explore" tab at the top is selected.
 
 Perspectives in Bloom define a certain business view or domain that can be found in the target Neo4j graph. A single Neo4j graph can be viewed through different perspectives, each tailored for a different business purpose.
 
