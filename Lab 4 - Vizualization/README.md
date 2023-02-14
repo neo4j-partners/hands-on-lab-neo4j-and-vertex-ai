@@ -1,17 +1,7 @@
-# Lab 4 - Exploring Data
-In this lab, we're going to query the data in a few different ways.
-
-## Pandas
-First off, let's fiddle with the data in pandas.  Click [here](exploring_pandas.ipynb) to get started.
-
-## Cypher Queries
-Now we'll run a few queries using the python API.  Earlier we used the graphical interface in the Neo4j Browser.  We're going to do the same thing but in a programmatic way.  Let's start by firing up a notebook.  Click [here](exploring_cypher.ipynb) and then follow the "Run in Colab" link to open it in Google Colab.
-
-## Vizualization with Neo4j Bloom
+# Lab 4 - Vizualization
 Bloom is Neo4j's business intelligence (BI) tool.  You can open it from the Neo4j Aura Console as we did in Lab 2.
 
 When you open Bloom, click Explore tab and create a perespective.  Perspective defines a certain business view or domain that can be found in the target Neo4j graph. A single Neo4j graph can be viewed through different Perspectives, each tailored for a different business purpose.
-
 
 ![](images/01-Create_Perspective_in_Bloom.png)
 

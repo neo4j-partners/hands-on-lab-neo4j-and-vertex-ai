@@ -10,12 +10,12 @@ Click "OK" to confirm that you're ok to be redirected to the Aura console.
 
 ![](images/02-console.png)
 
-In the Aura console, click on the red garbage can icon in your "form13" instance.
+In the Aura console, clikc on the red garbage can icon in your "form13" instance.
 
 ![](images/03-aura.png)
 
 
-Type "form13" in the dialog and click "Destroy" to delete your instance.
+Type "form13" in the dialog and clikc "Destroy" to delete your instance.
 
 ![](images/04-aura.png)
 
