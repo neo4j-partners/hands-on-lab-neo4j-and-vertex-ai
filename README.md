@@ -49,7 +49,9 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
 * [Lab 4 - Exploration](Lab%204%20-%20Exploration/README.md) 10 min)
     * Exploration with Neo4j Bloom
 * [Lab 5 - Vertex AI Workbench](Lab%205%20-%20Vertex%20AI%20Workbench/README.md) 10 min)
-    * to do
+    * Pandas
+    * Vertex AI Workbench
+    * Cypher Queries
 * Break (10 min)
 
 ### Part 3
