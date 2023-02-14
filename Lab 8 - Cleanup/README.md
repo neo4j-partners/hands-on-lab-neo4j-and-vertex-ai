@@ -14,11 +14,9 @@ In the Aura console, clikc on the red garbage can icon in your "form13" instance
 
 ![](images/03-aura.png)
 
-
 Type "form13" in the dialog and clikc "Destroy" to delete your instance.
 
 ![](images/04-aura.png)
-
 
 You'll then see a message that the instance is being destroyed.
 
@@ -29,7 +27,7 @@ A few seconds later, you should see a blank screen with no instances.  At this p
 ![](images/06-aura.png)
 
 ## Delete the Bucket
-We also created a Google Cloud Storage Bucket.  To delete it,  you can open Google Cloud Console [here](https://console.cloud.google.com/).  Under that open a Cloud Shell terminal and run the following command:
+We also created a Google Cloud Storage Bucket.  To delete it, you can open Google Cloud Console [here](https://console.cloud.google.com/).  Under that open a Cloud Shell terminal and run the following command:
 
     gcloud alpha storage rm --recursive gs://YOUR_BUCKET_NAME
 
@@ -39,6 +37,7 @@ That will give you something like this:
 ## Delete Vertex AI Resources
 We created a variety of Vertex AI resoruces.  The API is not quite there for gcloud yet.  So, the easiest thing to do is probably just to login to the console [here](https://console.cloud.google.com/vertex-ai) and delete them manually.  You'll want to delete the following:
 
+* [Managed Notebook](https://console.cloud.google.com/vertex-ai/workbench/managed)
 * [Datasets](https://console.cloud.google.com/vertex-ai/datasets)
 * [Training Pipelines](https://console.cloud.google.com/vertex-ai/training/training-pipelines)
 * [Models](https://console.cloud.google.com/vertex-ai/models)
