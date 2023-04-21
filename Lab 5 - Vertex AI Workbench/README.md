@@ -50,7 +50,7 @@ You're now presented with a menu of runtimes available.  We're going to clone th
 
 In the terminal type the command:
 
-    git clone https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai.git
+    git clone https://github.com/jcrcNeo/hands-on-lab-neo4j-and-vertex-ai.git
 
 ![](images/10-terminal.png)
 
