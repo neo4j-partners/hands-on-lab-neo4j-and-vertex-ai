@@ -5,6 +5,10 @@ The Neo4j [Data Importer](https://data-importer.neo4j.io/) is another option.  I
 
 The dataset is from the SEC's EDGAR database.  These are public filings of something called Form 13.  Asset managers with over $100m AUM are required to submit Form 13 quarterly.  That's then made available to the public over http.  The csvs linked above were pulled from EDGAR using some python scripts.  We don't have time to run those in the lab today as they take a few hours.  But, if you're curious, they're all available [here](https://github.com/neo4j-partners/neo4j-sec-edgar-form13).  We've filtered the data to only include filings over $10m in value.
 
+Here is the graphical representation of the data model of the database:
+
+![](images/00-Graph_data_model.png)
+
 ## A Day of Data
 For this portion of the lab, we're going to work with a subset of the data.  Our full dataset is a year of data.  However, we'll just be playing around with a day's worth.  The data is [here](https://storage.googleapis.com/neo4j-datasets/form13/2022-02-17.csv).
 
