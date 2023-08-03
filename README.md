@@ -1,3 +1,13 @@
+**⚠️ Warning: Experimental Feature Branch ⚠️**
+
+This branch contains experimental features that are under active development. It is intended for testing and evaluation purposes only. The code in this branch may be unstable, incomplete, or subject to significant changes. Please avoid using this branch in production environments.
+
+If you encounter issues or have feedback regarding the experimental features, feel free to open an issue or provide feedback in the appropriate channels.
+
+**Use at your own risk!**
+
+
+
 # hands-on-lab-neo4j-and-vertex-ai
 Neo4j is the [leading graph database](https://db-engines.com/en/ranking/graph+dbms) vendor.  We’ve worked closely with Google Cloud engineering for years.  Our products, AuraDB and AuraDS are offered as managed services on Google Cloud.  Neo4j Enterprise Edition, which includes Graph Database, Graph Data Science and Bloom is offered in the [Google Cloud Marketplace](https://console.cloud.google.com/marketplace/browse?q=neo4j).
 
@@ -5,7 +15,7 @@ In this hands on lab, you’ll get to learn about [Neo4j](https://neo4j.com/) an
 
 We’re going to analyze the quarterly filings of asset managers with $100m+ assets under management (AUM).  These are regulatory filings made to the Securities and Exchange Commission’s (SEC) EDGAR system.  We’re going to show how to load that data from a Google Cloud Storage bucket into Neo4j.  We’ll then explore the relationships of different asset managers and their holdings using the Neo4j Browser and Neo4j’s Cypher query language.
 
-Finally, we’ll use Neo4j Graph Data Science to create a graph embedding from our data, export that out, and run supervised learning algorithms in Vertex AI.  We’ll try to predict what holdings asset managers will maintain or enlarge in the next quarter.  
+Finally, we’ll use Neo4j Graph Data Science to create a graph embedding from our data, export that out, and run supervised learning algorithms in Vertex AI.  We’ll try to predict what holdings asset managers will maintain or enlarge in the next quarter.
 
 If you’re in the capital markets space, we think you’ll be interested in potential applications of this approach to creating new features for algorithmic trading, understanding tail risk, securities master data management and so on.  If you’re not in the capital markets space, this session will still be useful to learn about building machine learning pipelines with Neo4j and Vertex AI.
 
