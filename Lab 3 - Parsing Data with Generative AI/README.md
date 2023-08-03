@@ -1,4 +1,4 @@
-# Lab 5 - Vertex AI Workbench
+# Lab 3 - Parsing Data with Generative AI
 
 ## Pandas
 First off, let's fiddle with the data in pandas.  We're going to use Google Colab to do that.  Colab is a really light weight way to run a notebook on Google Cloud.  Click [here](exploring_pandas.ipynb) to get started.
@@ -57,12 +57,3 @@ In the terminal type the command:
 When complete, you should see a message in the terminal as well as a new directory in the file explorer on the left.
 
 ![](images/11-clone.png)
-
-## Cypher Queries
-Now that we've got Vertex AI Workbench setup, we're going to run a few queries using the python API.  Earlier we used the graphical interface in the Neo4j Browser.  We're going to do the same thing but in a programmatic way.  
-
-Let's start by firing up a notebook.  Click on the new "hands-on-lab-neo4j-and-vertex-ai" in the file explorer.  Drill down to Lab 5 and open the "exploring_cypher.ipynb" notebook.  Start up a Python kernel and work through that noteboook!
-
-![](images/12-kernel.png)
-
-Congratulations on running your notebook in Vertex AI Workbench!

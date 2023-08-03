@@ -47,8 +47,7 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
 * [Lab 3 - Parsing Data with Generative AI](Lab%302%20-%Parsing%20Data%20with%20Generative%20AI/README.md) (10 min)
     * Pandas
     * Vertex AI Workbench
-    * Prompt Engineering
-    * Fine Tuning
+    * Parsing Data
 * Lecture - [Moving Data](https://docs.google.com/presentation/d/1O6Oy_GbDYYCvQanUyUCl30hQdSsy9kKL53Jgl23Nnsk/edit?usp=sharing) (10 min)
     * Generative AI
     * LOAD CSV
@@ -56,6 +55,7 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
     * Apache Spark and Google Dataproc
     * Apache Kafka and Cloud Cloud
 * [Lab 4 - Loading a CSV](Lab%204%20-%20Loading%20a%20CSV/README.md) (15 min)
+    * Day of Data
     * A Year of Data
 * [Lab 5 - Exploration](Lab%205%20-%20Exploration/README.md) 10 min)
     * Exploration with Neo4j Bloom

@@ -1,4 +1,4 @@
-# Lab 4 - Exploration
+# Lab 5 - Exploration
 Bloom is Neo4j's business intelligence (BI) tool.  It's integrated into Neo4j Workbench.  
 
 ## Exploration with Neo4j Bloom
