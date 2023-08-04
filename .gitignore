@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-.DS_STORE
-=======
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -36,4 +33,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
->>>>>>> neo4j-chatbot-v2/main
+
+# other
+scratch/
+.ipynb_checkpoints/
+*.env
+*.env.template
+.DS_STORE
