@@ -38,5 +38,4 @@ next-env.d.ts
 scratch/
 .ipynb_checkpoints/
 *.env
-*.env.template
 .DS_STORE
