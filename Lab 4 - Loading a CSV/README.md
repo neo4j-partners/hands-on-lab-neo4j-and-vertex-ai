@@ -10,7 +10,7 @@ Here is the graphical representation of the data model of the database:
 ![](images/00-Graph_data_model.png)
 
 ## A Day of Data
-For this portion of the lab, we're going to work with a subset of the data.  Our full dataset is a year of data.  However, we'll just be playing around with a day's worth.  The data is [here](https://storage.googleapis.com/neo4j-datasets/form13/2022-02-17.csv).
+For this portion of the lab, we're going to work with a subset of the data.  Our full dataset is a year of data.  However, we'll just be playing around with a day's worth.  The data is [here](https://storage.cloud.google.com/neo4j-sec-labs-data/form13-5-12.csv).
 
 You may want to download the data and load it into your favorite tool for exploring CSV files.  Pandas, Excel or anything else should be able to make short work of it.  Once you understand what's in the data, the next step would be to load it into Neo4j.
 
@@ -22,10 +22,10 @@ Make sure that "Query" is selected at the top.
 
 We're going to run a Cypher statement to load the data.  Cypher is Neo4j's query language.  LOAD CSV is part of that and allows us to easily load CSV data.  Try copying this command into Neo4j Workspace.
 
-    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/2022-02-17.csv' AS row
-    MERGE (m:Manager {filingManager:row.filingManager})
-    MERGE (c:Company {nameOfIssuer:row.nameOfIssuer, cusip:row.cusip})
-    MERGE (m)-[r1:Owns {value:toInteger(row.value), shares:toInteger(row.shares), reportCalendarOrQuarter:row.reportCalendarOrQuarter}]->(c)
+    LOAD CSV WITH HEADERS FROM "https://storage.googleapis.com/neo4j-sec-labs-data/form13-2023-05-11.csv" AS row
+    MERGE (m:Manager {name:row.managerName})
+    MERGE (c:Company {name:row.companyName, cusip:row.cusip})
+    MERGE (m)-[r:OWNS {value:toFloat(row.value), shares:toInteger(row.shares), reportCalendarOrQuarter:row.reportCalendarOrQuarter}]->(c)
 
 It should look like the following.  You can then press the blue triangle with a circle around it to run the job.
 
@@ -100,34 +100,20 @@ First, let's create constraints, essentially a primary key, for the company and 
 The manager is a little more difficult.  But, we're going to assume that the filingManager field is both unique and correct.
 
     CREATE CONSTRAINT IF NOT EXISTS FOR (p:Company) REQUIRE (p.cusip) IS NODE KEY;
-    CREATE CONSTRAINT IF NOT EXISTS FOR (p:Manager) REQUIRE (p.filingManager) IS NODE KEY;
+    CREATE CONSTRAINT IF NOT EXISTS FOR (p:Manager) REQUIRE (p.name) IS NODE KEY;
 
 That should give this:
 
 ![](images/11-constraint.png)
 
-Now, the holding is a bit more interesting.  It needs a compound key.  Because a holding is unique in the context of:
-
-(1) Being held by a particular filingManager
-(2) Being a particular cusip
-(3) Being for a particular reportOrCalendarQuarter
-
-So, we're going to need something with a compound key like this:
-
-    CREATE CONSTRAINT IF NOT EXISTS FOR (p:Holding) REQUIRE (p.filingManager, p.cusip, p.reportCalendarOrQuarter) IS NODE KEY;
-
-That should give this:
-
-![](images/12-constraint.png)
 
 Now that we have all the constraints, let's load our nodes.  We're going to do that first and grab the relationships in a second pass.  While we could do it in a single cypher statement, as we did above, it's more efficient to run them in series.
 
 Let's load the companies first.  We're going to have a lot of duplication, since our key is CUSIP and many different rows in our csv, each representing a filing, have the same cusip.  So, we need to enhance our LOAD CSV statement a little bit to deal with those duplicates.
 
-    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/2021.csv' AS row
+    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-sec-labs-data/form13-sample.csv' AS row
     MERGE (c:Company {cusip:row.cusip})
-    SET
-        c.nameOfIssuer=row.nameOfIssuer
+    SET c.name=row.companyName
 
 That should give this:
 
@@ -135,33 +121,18 @@ That should give this:
 
 Now let's load the Managers:
 
-    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/2021.csv' AS row
-    MERGE (m:Manager {filingManager:row.filingManager})
+    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-sec-labs-data/form13-sample.csv' AS row
+    MERGE (m:Manager {name:row.managerName})
 
 That should give this:
 
 ![](images/14-manager.png)
 
-And now we can load our Holdings:
 
-    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/2021.csv' AS row
-    MERGE (h:Holding {filingManager:row.filingManager, cusip:row.cusip, reportCalendarOrQuarter:row.reportCalendarOrQuarter})
-    ON CREATE SET
-        h.value=row.value, 
-        h.shares=row.shares,
-        h.target=row.target,
-        h.nameOfIssuer=row.nameOfIssuer
+Well, this is cool.  We've got all our nodes loaded in.  Now we need to tie them together with relationships.  In this case we only need one kind of relationship: A manager "OWNS" company
 
-That should give this:
 
-![](images/15-holding.png)
-
-Well, this is cool.  We've got all our nodes loaded in.  Now we need to tie them together with relationships.  We're going to want two kinds of relationships:
-
-(1) A manager "OWNS" holdings
-(2) Holdings are "PARTOF" companies
-
-So, let's put together the owns relationship first.
+So, let's put that together.
 
     LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/2021.csv' AS row
     MATCH (m:Manager {filingManager:row.filingManager})
