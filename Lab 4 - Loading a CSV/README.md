@@ -25,7 +25,7 @@ We're going to run a Cypher statement to load the data.  Cypher is Neo4j's query
     LOAD CSV WITH HEADERS FROM "https://storage.googleapis.com/neo4j-datasets/form13/form13-v2-2023-05-11.csv" AS row
     MERGE (m:Manager {managerName:row.managerName})
     MERGE (c:Company {companyName:row.companyName, cusip:row.cusip})
-    MERGE (m)-[r:OWNS {value:toFloat(row.value), shares:toInteger(row.shares), reportCalendarOrQuarter:date(row.reportCalendarOrQuarter)}]->(c)
+    MERGE (m)-[r:OWNS {value:toFloat(row.value), shares:toInteger(row.shares), reportCalendarOrQuarter:date(row.reportCalendarOrQuarter)}]->(c);
 
 It should look like the following.  You can then press the blue triangle with a circle around it to run the job.
 
@@ -101,7 +101,7 @@ Let's load the companies first.  We're going to have a lot of duplication, since
 
     LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13-v2.csv' AS row
     MERGE (c:Company {cusip:row.cusip})
-    ON CREATE SET c.companyName=row.companyName
+    ON CREATE SET c.companyName=row.companyName;
 
 That should give this:
 
@@ -110,7 +110,7 @@ That should give this:
 Now let's load the Managers:
 
     LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13-v2.csv' AS row
-    MERGE (m:Manager {managerName:row.managerName})
+    MERGE (m:Manager {managerName:row.managerName});
 
 That should give this:
 
@@ -126,7 +126,7 @@ So, let's put that together.
     MATCH (m:Manager {managerName:row.managerName})
     MATCH (c:Company {cusip:row.cusip})
     MERGE (m)-[r:OWNS {reportCalendarOrQuarter:date(row.reportCalendarOrQuarter)}]->(c)
-    SET r.value = toFloat(row.value), r.shares = toInteger(row.shares)
+    SET r.value = toFloat(row.value), r.shares = toInteger(row.shares);
 
 That should give this:
 
