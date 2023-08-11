@@ -23,9 +23,9 @@ Make sure that "Query" is selected at the top.
 We're going to run a Cypher statement to load the data.  Cypher is Neo4j's query language.  `LOAD CSV` is part of that and allows us to easily load CSV data.  Try copying this command into Neo4j Workspace.
 
     LOAD CSV WITH HEADERS FROM "https://storage.googleapis.com/neo4j-datasets/form13/form13-v2-2023-05-11.csv" AS row
-    MERGE (m:Manager {name:row.managerName})
-    MERGE (c:Company {name:row.companyName, cusip:row.cusip})
-    MERGE (m)-[r:OWNS {value:toFloat(row.value), shares:toInteger(row.shares), reportCalendarOrQuarter:row.reportCalendarOrQuarter}]->(c)
+    MERGE (m:Manager {managerName:row.managerName})
+    MERGE (c:Company {companyName:row.companyName, cusip:row.cusip})
+    MERGE (m)-[r:OWNS {value:toFloat(row.value), shares:toInteger(row.shares), reportCalendarOrQuarter:date(row.reportCalendarOrQuarter)}]->(c)
 
 It should look like the following.  You can then press the blue triangle with a circle around it to run the job.
 
@@ -88,7 +88,7 @@ First, let's create constraints, essentially a primary key, for the company and 
 The manager is a little more difficult.  But, we're going to assume that the manager name field is both unique and correct.
 
     CREATE CONSTRAINT unique_company_id IF NOT EXISTS FOR (p:Company) REQUIRE (p.cusip) IS NODE KEY;
-    CREATE CONSTRAINT unique_manager IF NOT EXISTS FOR (p:Manager) REQUIRE (p.name) IS NODE KEY;
+    CREATE CONSTRAINT unique_manager IF NOT EXISTS FOR (p:Manager) REQUIRE (p.managerName) IS NODE KEY;
 
 That should give this:
 
@@ -101,7 +101,7 @@ Let's load the companies first.  We're going to have a lot of duplication, since
 
     LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13-v2.csv' AS row
     MERGE (c:Company {cusip:row.cusip})
-    ON CREATE SET c.name=row.companyName
+    ON CREATE SET c.companyName=row.companyName
 
 That should give this:
 
@@ -110,7 +110,7 @@ That should give this:
 Now let's load the Managers:
 
     LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13-v2.csv' AS row
-    MERGE (m:Manager {name:row.managerName})
+    MERGE (m:Manager {managerName:row.managerName})
 
 That should give this:
 
@@ -123,9 +123,9 @@ Well, this is cool.  We've got all our nodes loaded in.  Now we need to tie them
 So, let's put that together.
 
     LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13-v2.csv' AS row
-    MATCH (m:Manager {name:row.managerName})
+    MATCH (m:Manager {managerName:row.managerName})
     MATCH (c:Company {cusip:row.cusip})
-    MERGE (m)-[r:OWNS {reportCalendarOrQuarter:row.reportCalendarOrQuarter}]->(c)
+    MERGE (m)-[r:OWNS {reportCalendarOrQuarter:date(row.reportCalendarOrQuarter)}]->(c)
     SET r.value = toFloat(row.value), r.shares = toInteger(row.shares)
 
 That should give this:
