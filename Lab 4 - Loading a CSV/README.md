@@ -10,7 +10,7 @@ Here is the graphical representation of the data model of the database:
 ![](images/00-Graph_data_model.png)
 
 ## A Day of Data
-For this portion of the lab, we're going to work with a subset of the data.  Our full dataset is a year of data.  However, we'll just be playing around with a day's worth.  The data is [here](https://storage.cloud.google.com/neo4j-sec-labs-data/form13-5-12.csv).
+For this portion of the lab, we're going to work with a subset of the data.  Our full dataset is a year of data.  However, we'll just be playing around with a a subset of a day's worth.  The data is [here](https://storage.googleapis.com/neo4j-datasets/form13/form13-v2-2023-05-11.csv).
 
 You may want to download the data and load it into your favorite tool for exploring CSV files.  Pandas, Excel or anything else should be able to make short work of it.  Once you understand what's in the data, the next step would be to load it into Neo4j.
 
@@ -20,9 +20,9 @@ Make sure that "Query" is selected at the top.
 
 ![](images/01-workspace.png)
 
-We're going to run a Cypher statement to load the data.  Cypher is Neo4j's query language.  LOAD CSV is part of that and allows us to easily load CSV data.  Try copying this command into Neo4j Workspace.
+We're going to run a Cypher statement to load the data.  Cypher is Neo4j's query language.  `LOAD CSV` is part of that and allows us to easily load CSV data.  Try copying this command into Neo4j Workspace.
 
-    LOAD CSV WITH HEADERS FROM "https://storage.googleapis.com/neo4j-sec-labs-data/form13-2023-05-11.csv" AS row
+    LOAD CSV WITH HEADERS FROM "https://storage.googleapis.com/neo4j-datasets/form13/form13-v2-2023-05-11.csv" AS row
     MERGE (m:Manager {name:row.managerName})
     MERGE (c:Company {name:row.companyName, cusip:row.cusip})
     MERGE (m)-[r:OWNS {value:toFloat(row.value), shares:toInteger(row.shares), reportCalendarOrQuarter:row.reportCalendarOrQuarter}]->(c)
@@ -39,7 +39,7 @@ Click on "Manager" under "Nodes" to automatically generate a new cypher query an
 
 ![](images/03-runcypher.png)
 
-You'll now see a subset of the managers we have in the database.  The query returns a little over 20 of them.  It's limited because returning to many nodes in this visualization mode can make it hard to navigate.
+You'll now see a subset of the managers we have in the database.  The query returns 25 of them.  It's limited because returning to many nodes in this visualization mode can make it hard to navigate.
 
 Now, let's click on one of the managers.  Don't worry, it doesn't particularly matter which one.  Once we've clicked on it, click the graph icon at the bottom to expand it.
 
@@ -76,16 +76,16 @@ Now that we have some understanding of this portion of the dataset, we're going 
 Now, all your data should be deleted.  Note that Workspace is still caching some property keys.
 
 ## A Year of Data
-The LOAD CSV statement we used before was pretty naive.  It didn't create any indices.  It also loaded the nodes and relationships simultaneously.  Both of those are inefficient approaches.  It wasn't a big deal as that single day was a small amount of data.  However, we'd now like to load a full year of data. Which has millions of rows, so we have to be a bit more efficient.  That new dataset is [here](https://storage.googleapis.com/neo4j-sec-labs-data/form13-sample.csv).
+The LOAD CSV statement we used before was pretty naive.  It didn't create any indices.  It also loaded the nodes and relationships simultaneously.  Both of those are inefficient approaches.  It wasn't a big deal as that single day was a small amount of data.  However, we'd now like to load a full year of data. Which has millions of rows, so we have to be a bit more efficient.  That new dataset is [here](https://storage.googleapis.com/neo4j-datasets/form13/form13-v2.csv).
 
 If you're curious, you can read a bit about the intracties of optimizing those loads here:
 
 * https://neo4j.com/developer/guide-import-csv/#_optimizing_load_csv_for_performance
 * https://graphacademy.neo4j.com/courses/importing-data/
 
-First, let's create constraints, essentially a primary key, for the company and manager node types.  Company keys should be cusips.  We know a CUSIP is unique because that is the whole point of one.  They are identifiers for securities designed to be unique.  You can read more about them [here](https://www.cusip.com).  This is a much better field to use than nameOfIssuer because it avoids the problem where some companies (like Apple or Apple, Inc.) are referred to by slightly different names.
+First, let's create constraints, essentially a primary key, for the company and manager node types.  Company keys should be cusips.  We know a CUSIP is unique because that is the whole point of one.  They are identifiers for securities designed to be unique.  You can read more about them [here](https://www.cusip.com).  This is a much better field to use than nameOfIssuer (called companyName here) because it avoids the problem where some companies (like Apple or Apple, Inc.) are referred to by slightly different names.
 
-The manager is a little more difficult.  But, we're going to assume that the filingManager field is both unique and correct.
+The manager is a little more difficult.  But, we're going to assume that the manager name field is both unique and correct.
 
     CREATE CONSTRAINT unique_company_id IF NOT EXISTS FOR (p:Company) REQUIRE (p.cusip) IS NODE KEY;
     CREATE CONSTRAINT unique_manager IF NOT EXISTS FOR (p:Manager) REQUIRE (p.name) IS NODE KEY;
@@ -95,11 +95,11 @@ That should give this:
 ![](images/10-constraint.png)
 
 
-Now that we have all the constraints, let's load our nodes.  We're going to do that first and grab the relationships in a second pass.  While we could do it in a single cypher statement, as we did above, it's more efficient to run them in series.
+Now that we have all the constraints, let's load our nodes.  We're going to do that first and grab the relationships in a second pass.  While we could do it in a single Cypher statement, as we did above, it's more efficient to run them in series.
 
 Let's load the companies first.  We're going to have a lot of duplication, since our key is CUSIP and many different rows in our csv, each representing a filing, have the same cusip.  So, we need to enhance our LOAD CSV statement a little bit to deal with those duplicates.
 
-    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-sec-labs-data/form13-sample.csv' AS row
+    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13-v2.csv' AS row
     MERGE (c:Company {cusip:row.cusip})
     ON CREATE SET c.name=row.companyName
 
@@ -109,7 +109,7 @@ That should give this:
 
 Now let's load the Managers:
 
-    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-sec-labs-data/form13-sample.csv' AS row
+    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13-v2.csv' AS row
     MERGE (m:Manager {name:row.managerName})
 
 That should give this:
@@ -122,7 +122,7 @@ Well, this is cool.  We've got all our nodes loaded in.  Now we need to tie them
 
 So, let's put that together.
 
-    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-sec-labs-data/form13-sample.csv' AS row
+    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/form13/form13-v2.csv' AS row
     MATCH (m:Manager {name:row.managerName})
     MATCH (c:Company {cusip:row.cusip})
     MERGE (m)-[r:OWNS {reportCalendarOrQuarter:row.reportCalendarOrQuarter}]->(c)
