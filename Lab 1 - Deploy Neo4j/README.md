@@ -1,8 +1,8 @@
 # Lab 1 - Deploy Neo4j
 
 Neo4j has three major products:
-* Graph Database (GDB) - a native graph data store built from the ground up to leverage not only data but also data relationships.
-* Graph Data Science (GDS) - a software platform helping data scientists uncover the connections in big data to answer business critical questions and improve predictions.
+* Graph Database - a native graph data store built from the ground up to leverage not only data but also data relationships.
+* Graph Data Science - a software platform helping data scientists uncover the connections in big data to answer business critical questions and improve predictions.
 * Bloom - a graph exploration application for visually interacting with Neo4j graphs. Bloom gives graph novices and experts alike the ability to visually investigate and explore graph data from different business perspectives.
 
 There are many ways to run these products on Google Cloud.  The Marketplace in particular offers three ways to deploy Neo4j:
@@ -70,7 +70,7 @@ Click "Got it!" to dismiss the cookie dialog.
 
 ![](images/13-aura.png)
 
-We can now create our first database.  We want to create an AuraDS instance.  That way we'll have access to Graph Data Science (GDS) and Bloom, the Neo4j business intelligence tool.
+We can now create our first database.  We want to create an AuraDS instance.  That way we'll have access to Graph Data Science and Bloom, the Neo4j business intelligence tool.
 
 Important -- Be sure to select AuraDS.
 
@@ -80,23 +80,21 @@ Now click on "New Instance" to create a new AuraDS instance.
 
 ![](images/15-aura.png)
 
-We're presented with various options for that database.  For instance name, you enter "form13".  For number of nodes, enter "500,000" and for number of relationships, enter "1,000,000".
+We're presented with various options for that database.  For number of nodes, enter "500,000" and for number of relationships, enter "1,000,000".
 
 ![](images/16-aurads.png)
 
-Then scroll down.  We're going to be making a node embedding, so select that.  The node embedding will allow us to represent our graph as features that Google Vertex AI can consume in a tablular format.
-
-![](images/17-aurads.png)
+Then scroll down.  In later labs, We're going to be making a node embedding, so select that.  The node embedding will allow us to represent our graph as features that Google Vertex AI can consume in a tablular format.
 
 Scroll to the bottom and click "Calculate estimate."
 
 ![](images/18-estimate.png)
 
-Review the estimate and click "Create instance."
+Review the estimate, enter "sec-edgar" for instance name, and click "Create"
 
 ![](images/19-estimate.png)
 
-You'll be presented with the credentials for your database.  Be absolutely certain to copy the password.  We can't get it again later and you'll need it in a later lab.  Once you've done that, click "I have stored these credentials safely to use later." Then click "Continue."
+You'll be presented with the credentials for your database.  Be absolutely certain to download the credentials or copy the password.  We can't get it again later and you'll need it in a later lab.  Once you've done that, click "I have stored these credentials safely to use later." Then click "Continue."
 
 ![](images/20-creds.png)
 
@@ -104,9 +102,18 @@ You'll see a dialog that your database is being created.  This takes less than f
 
 ![](images/21-deploying.png)
 
-When deployment is complete you'll see this menu.
+When deployment is complete you'll see this menu.  
 
 ![](images/22-deployed.png)
+
+
+We recommend enabling the workspace experience. This is the latest UI in Aura. To check that workspace is enabled, click on the gear icon in the upper right. 
+
+![](images/23-settings.png)
+
+Then ensure the "Enable workspace" toggle is switched on. 
+
+![](images/24-workspace.png)
 
 You can poke around the menus here a bit and see more on database status and connection information.
 
