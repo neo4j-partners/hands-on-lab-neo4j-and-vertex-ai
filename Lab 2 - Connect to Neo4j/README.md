@@ -50,6 +50,6 @@ Then hit the little blue triangle play button to run it.  You should see a Graph
 
 ![](images/09-gds.png)
 
-Since we got a Graph Data Science vesion back, we know that we're on AuraDS, not AuraDB.  This means that we have the libraries we'll need to connect with the Python client and use graph algorithms later in these labs.
+Since we got a Graph Data Science version back, we know that we're on AuraDS, not AuraDB.  This means that we have the libraries we'll need to connect with the Python client and use graph algorithms later in these labs.
 
 This gave us a very brief introduction to Neo4j Workspace.  We'll look at the Query and Explore functionality in more detail in the coming labs.
