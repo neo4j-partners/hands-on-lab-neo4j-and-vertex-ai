@@ -5,7 +5,7 @@
 From here on out, we will work more in Jupyter Notebooks and use Python data analysis libraries like Pandas.  
 
 ### Notebook & Pandas in Google Colab
-To start, let's fiddle with some structured data in Pandas.  We're going to use Google Colab to do that.  Colab is a really light-weight way to run a notebook on Google Cloud.  Click [here](exploring_pandas.ipynb) to get started.
+To start, let's fiddle with some structured data in Pandas.  We're going to use Google Colab to do that.  Colab is a really light-weight way to run a notebook on Google Cloud.  Click [here](exploring-pandas.ipynb) to get started.
 
 ## Setup Vertex AI Workbench
 Now that we've done some very light-weight exploration in a notebook, let's try using a more full-featured environment, Vertex AI Workbench.  Open up the [Google Cloud Console](https://console.cloud.google.com/).
