@@ -30,7 +30,7 @@ When complete, click on the Workbench link on the left hand side.
 
 Workbench is a hosted notebook environment.  Unlike Colab, it's tightly integrated into Vertex AI.  That means auth is easier and more libraries are installed by default.  Notebooks also keep running if you close you web browser, which is really helpful for long running jobs like AutoML training.  Of course, you need to pay for these hosted environments, whereas a base Colab environment is free.
 
-Since we're testing out all the most advanced Google features, we want to use the fully managed notebooks, note the user managed ones.  Click on "Managed Notebook."
+Since we're testing out all the most advanced Google features, we want to use the fully managed notebooks, not the user managed ones.  Click on "Managed Notebook."
 
 ![](images/05-workbench.png)
 
