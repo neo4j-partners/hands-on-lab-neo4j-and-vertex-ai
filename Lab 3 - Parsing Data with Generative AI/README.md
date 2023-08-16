@@ -1,10 +1,14 @@
-# Lab 3 - Parsing Data with Generative AI
+# Lab 3 - Knowledge Graph Creation with Generative AI
 
-## Pandas
-First off, let's fiddle with the data in pandas.  We're going to use Google Colab to do that.  Colab is a really light weight way to run a notebook on Google Cloud.  Click [here](exploring_pandas.ipynb) to get started.
+## Using Python Notebooks
 
-## Vertex AI Workbench
-Now that we've done some very light weight exploration, let's try using a more full featured environment, Vertex AI Workbench.  Open up the [Google Cloud Console](https://console.cloud.google.com/).
+From here on out, we will work more in Jupyter Notebooks and use Python data analysis libraries like Pandas.  
+
+### Notebook & Pandas in Google Colab
+To start, let's fiddle with some structured data in Pandas.  We're going to use Google Colab to do that.  Colab is a really light-weight way to run a notebook on Google Cloud.  Click [here](exploring_pandas.ipynb) to get started.
+
+## Setup Vertex AI Workbench
+Now that we've done some very light-weight exploration in a notebook, let's try using a more full-featured environment, Vertex AI Workbench.  Open up the [Google Cloud Console](https://console.cloud.google.com/).
 
 Type Vertex AI in the search bar.
 
@@ -24,7 +28,7 @@ When complete, click on the Workbench link on the left hand side.
 
 ![](images/04-vertex.png)
 
-Workbench is a hosted notebook environment.  Unlike Colab, it's tightly intergrated into Vertex AI.  That means auth is easier and more libraries are installed by default.  Notebooks also keep running if you close you web browser, which is really helpful for long running jobs like AutoML training.  Of course, you need to pay for these hosted environments, whereas a base Colab environment is free.
+Workbench is a hosted notebook environment.  Unlike Colab, it's tightly integrated into Vertex AI.  That means auth is easier and more libraries are installed by default.  Notebooks also keep running if you close you web browser, which is really helpful for long running jobs like AutoML training.  Of course, you need to pay for these hosted environments, whereas a base Colab environment is free.
 
 Since we're testing out all the most advanced Google features, we want to use the fully managed notebooks, note the user managed ones.  Click on "Managed Notebook."
 
