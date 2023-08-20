@@ -2,27 +2,25 @@
 
 Exercise here: [chatbot.ipynb](chatbot.ipynb)
 
-This is a sample notebook and web application which shows how Google Vertex AI Generative AI can be used with Neo4j. We will explore how to leverage Google VertexAI LLMs to automatically generate Cypher for consuming data from a financial knowledge graph.
+This sample notebook and web application shows how Google Vertex AI Generative AI can be used with Neo4j. We will explore how to leverage Google VertexAI LLMs to automatically generate Cypher for consuming data from a financial knowledge graph.
 
 ![chatbot_ui](images/investment_chatbot.png)
 
-This notebook instructs how to connect to a graph running in Neo4j Aura which contains companies, investors, and investments. We then use the `code-bison` model and prompt it to convert requests in natural language to Cypher - Neo4j's query language for data retrieval.
+This notebook instructs how to connect to a graph running in Neo4j Aura, which contains companies, investors, and investments. We then use the `code-bison` model and prompt it to convert requests in natural language to Cypher - Neo4j's query language for data retrieval.
 
 ## Setup
 
-If you're following along with the labs, you'll have already set up your graph in Aura in Lab 4. We're going to be running our code in a managed notebook in VertexAI Workbench, similarly to how we did in Lab 3.
+If you're following along with the labs, you'll have already set up your graph in Aura in Lab 4. We will be running our code in a managed notebook in VertexAI Workbench, similar to how we did in Lab 3.
 
-In this notebook we will be installing LangChain, a Python library that requires Python 3.8 or higher. Since the default Python runtime in VertexAI JupyterLab on Workbench is 3.7, we will execute these commands in a terminal to install a new runtime.
+In this notebook, we will install LangChain, a Python library that requires Python 3.8 or higher. Since the default Python runtime in VertexAI JupyterLab on Workbench is 3.7, we will execute these commands in a terminal to install a new runtime with dependencies for genAI and Neo4j. 
 
-    VENV=py38
-    conda create -y -q -p $HOME/conda_env/$VENV python=3.8 ipykernel
+    VENV=neo4j_genai
+    conda create -y -p $HOME/conda_env/$VENV python=3.8 ipykernel
     source /opt/conda/bin/activate ~/conda_env/$VENV
     python -m ipykernel install --user --name $VENV
     conda install -y -c conda-forge ipywidgets
-
-Having done this, clone the repository with the following command:
-
-    git clone https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai.git
+    pip install --user graphdatascience langchain google-cloud-aiplatform neo4j gradio tqdm IProgress
+    
 
 Now you're ready to get into the notebook and run the code.
 
