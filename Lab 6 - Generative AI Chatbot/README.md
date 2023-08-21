@@ -19,7 +19,7 @@ In this notebook, we will install LangChain, a Python library that requires Pyth
     source /opt/conda/bin/activate ~/conda_env/$VENV
     python -m ipykernel install --user --name $VENV
     conda install -y -c conda-forge ipywidgets
-    pip install --user graphdatascience langchain google-cloud-aiplatform neo4j gradio tqdm IProgress
+    pip install --user graphdatascience langchain google-cloud-aiplatform neo4j gradio tqdm IProgress nltk
     
 
 Now you're ready to get into the notebook and run the code.
