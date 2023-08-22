@@ -63,9 +63,13 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
 
 ### Part 3
 * [Lab 6 - Generative AI Chatbot](Lab%206%20-%20Generative%20AI%20Chatbot/README.md) (15 min)
-    * Fine Tuning
-    * Prompt Engineering
+    * Prompt Engineering & Few-Shot Learning
     * Using the Chatbot
+    * Fine Tuning
+* [Lab 7 - Semantic Search](Lab%207%20-%20Semantic%20Search/README.md) (20 min)
+    * Text Embedding
+    * Vector Search + Graph Traversal
+    * Graph Algorithms for Similairty
 * Lecture - [Graph Data Science](https://docs.google.com/presentation/d/133tXAH--V7Uvyd0Ylhs08_xDEPfl64uvaNNdxeHVpvk/edit?usp=sharing) (10 min)
     * Why Graph Data Science
     * Neo4j GDS
@@ -74,13 +78,13 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
     * Centrality
     * Community Detection
     * Graph Machine Learning
-* [Lab 7 - Graph Data Science](Lab%207%20-%20Graph%20Data%20Science/README.md) (15 min)
+* [Lab 8 - Graph Data Science](Lab%208%20-%20Graph%20Data%20Science/README.md) (15 min)
     * Cypher Queries in a notebook
     * Creating a Graph Embedding
     * Exporting to pandas
     * Writing to Google Cloud Storage
-* [Lab 8 - Vertex AI AutoML](Lab%208%20-%20Vertex%20AI%20AutoML) (15 min)
+* [Lab 9 - Vertex AI AutoML](Lab%209%20Vertex%20AI%20AutoML) (15 min)
     * Raw Data
     * Data with Embedding
-* [Lab 9 - Cleanup](Lab%209%20-%20Cleanup) (5 min)
+* [Lab 10 - Cleanup](Lab%209%20-%20Cleanup) (5 min)
 * [Discussion - Questions and Next Steps](Discussion%20-%20Questions%20and%20Next%20Steps.md) (5 min)
