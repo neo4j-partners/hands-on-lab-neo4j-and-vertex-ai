@@ -1,4 +1,4 @@
-# Lab 09 - Semantic Search
+# Lab 07 - Semantic Search
 In this lab, you will learn about semantic search and how a knowledge graph in Neo4j, combined with text embeddings from Vertex AI, can be leveraged for fast and effective knowledge retrieval.  We will add text documents from 10K filings to our graph to demonstrate these capabilities. 
 
 This module is broken into three notebooks.
