@@ -1,26 +1,32 @@
 # Discussion - Questions and Next Steps
 This section has some thoughts on future work, improvements and next steps.  Please feel free to [PR](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/pulls) your ideas and suggestions.
 
-## Lab 1 - Deploy Neo4j
+## Lab 00 - Signup for Google Cloud
+To do
+
+## Lab 01 - Deploy Neo4j
 The lab deploys Neo4j AuraDS Professional through a deep integration in the Google Cloud Console [here](https://console.cloud.google.com/marketplace/product/endpoints/prod.n4gcp.neo4j.io).  There are many other ways to deploy Neo4j.  If AuraDS Professional doesn't meet your needs, we probably have a different approach that does.  The [Marketplace](https://console.cloud.google.com/marketplace/browse?q=neo4j) is a good place to look for more options.
 
-## Lab 2 - Connect to Neo4j
+## Lab 02 - Connect to Neo4j
 There are currently some issues you may have noticed in accessing the Aura console directly versus a redirect from the Google Cloud Console.  We're working to improve that experience.
 
-## Lab 3 - Moving Data
+## Lab 03 - Parsing Data
+To do
+
+## Lab 04 - Moving Data
 We used LOAD CSV to pull data in.  That is one of many ways.  Neo4j [Data Loader](https://data-importer.neo4j.io/) is another.  We're exploring incorporating it into this lab.
 
 We're also working with Google on [Dataflow](https://cloud.google.com/dataflow) integration.  A [PR to Apache Beam](https://github.com/apache/beam/pull/15916) has already been accepted.  We're just working to get the templates that would wrap it together.
 
 The Neo4j [Spark Connector](https://neo4j.com/docs/spark/current/) is another way to get data in.  We've been working with the Google [Dataproc](https://cloud.google.com/dataproc) team on some demos of that.  It works today but some walkthrough are in progress.
 
-## Lab 4 - Exploration
+## Lab 05 - Exploration
 This section of the lab could be expanded.  A data enrichment exercise might be really interesting.  We've been doing work with [EKG elsewhere](http://github.com/neo4j-partners/apevue-knowledge-graph) that could be relevant.
 
-## Lab 5 - Vertex AI Workbench
-This section seems pretty solid.  We have a trade off between Colab and Workbench, so we chose to explore both.  We would be curious for feedback on that approach.
+## Lab 06 - Chatbot
+To do
 
-## Lab 6 - Graph Data Science
+## Lab 07 - Graph Data Science
 With a novel data set combined with a novel approach to machine learning, there's enough material here for numerous business applications or academic papers.  Some areas that might be interesting to explore in the future follow...
 
 The data set isn't normalized.  Between these large asset managers, it's quite likely they own a significant portion of the stock outstanding for certain issues.  So rather than measuring shares or value, a more powerful feature might be percentage of float outstanding.
@@ -37,12 +43,18 @@ Regarding the embedding, that is one approach to creating features.  We also cou
 
 Some work on tuning the embedding would improve accuracy.  It is interesting that, even without tuning, the embedding provides more valuable features than either reportCalendarOrQuarter or cusip.
 
-## Lab 7 - Vertex AI AutoML
+## Lab 08 - AutoML
 Vertex AI is an amazing suite of products.  It's largely serverless.  The GUI is intuitive.  It takes almost all the infrastructure pain out of machine learning.  At the same time, it is very very new.  The console is constantly changing.  New features are often introduced with only a REST API.  The APIs change.
 
 AutoML takes ~2.5 hours to run even with a 1 hour budget.  The nice part about using a SaaS like Vertex AI is that all this is going to improve without any need to manage upgrades, infrastructure, etc.
 
 New features for batch prediction and forecasting were recently released.  We're exploring including those in future versions of this lab as they mature.
+
+## Lab 09 - Semantic Search
+To do
+
+## Lab 10 - Cleanup
+We should automate a lot of this.
 
 ## Next Steps
 We hope you enjoyed these labs.  If you have any questions, feel free to reach out directly to any of us.  We'd love the opportunity to explore and support your use cases.
