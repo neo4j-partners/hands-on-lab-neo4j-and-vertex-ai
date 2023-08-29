@@ -43,7 +43,7 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
     * Generative AI
     * AutoML
     * Using Vertex AI with Neo4j
-* [Lab 03 - Parsing Data](Lab%2003%20-%Parsing%20Data/README.md) (10 min)
+* [Lab 03 - Parsing Data](Lab%2003%20-%20Parsing%20Data/README.md) (10 min)
     * Setup Vertex AI Workbench
     * Parsing Data
 * Lecture - [Moving Data](https://docs.google.com/presentation/d/1O6Oy_GbDYYCvQanUyUCl30hQdSsy9kKL53Jgl23Nnsk/edit?usp=sharing) (10 min)
