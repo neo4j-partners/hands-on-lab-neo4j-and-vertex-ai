@@ -1,4 +1,4 @@
-# Lab 2 - Connect to Neo4j
+# Lab 02 - Connect to Neo4j
 In this lab, we're going to connect to the Neo4j deployment we created in the previous step.  
 
 ## Neo4j Workspace

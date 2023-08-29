@@ -1,4 +1,4 @@
-# Lab 7 - Graph Data Science
+# Lab 07 - Graph Data Science
 In this lab, we're going to work with some more notebooks.
 
 ## Cypher Queries

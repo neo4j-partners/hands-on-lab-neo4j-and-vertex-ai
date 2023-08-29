@@ -1,4 +1,4 @@
-# Lab 6 - Generative AI Chatbot
+# Lab 06 - Chatbot
 To do - clean this up so it walks through like a lab.
 
 Exercise here: [chatbot.ipynb](chatbot.ipynb)

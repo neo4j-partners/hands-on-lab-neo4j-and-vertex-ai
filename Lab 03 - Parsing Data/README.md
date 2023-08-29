@@ -1,4 +1,4 @@
-# Lab 3 - Parsing Data
+# Lab 03 - Parsing Data
 In this lab we're going to parse data with generative AI to create a knowledge graph.  We'll use the generative AI functionality in Google Cloud Vertex AI.
 
 ## Setup Vertex AI Workbench

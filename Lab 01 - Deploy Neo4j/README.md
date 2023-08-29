@@ -1,4 +1,4 @@
-# Lab 1 - Deploy Neo4j
+# Lab 01 - Deploy Neo4j
 
 Neo4j has three major products:
 * Graph Database - a native graph data store built from the ground up to leverage not only data but also data relationships.
