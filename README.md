@@ -26,13 +26,13 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
 * Lecture - [Introduction to Neo4j](https://docs.google.com/presentation/d/1WvPzs_JEh8uuKEAQGecH1rUd1NoRzqZIKc-hQkuBdXQ/edit?usp=sharing) (10 min)
     * What is Neo4j?
     * How is it deployed and managed on Google Cloud?
-* [Lab 00 - Signup for Google Cloud](Lab%2000%20-%20Signup%20for%20Google%20Cloud) (15 min)
+* [Lab 0 - Signup for Google Cloud](Lab%200%20-%20Signup%20for%20Google%20Cloud) (15 min)
     * Improving the Labs
     * Signup for a Google Cloud Account
     * Activate your Google Cloud Account
-* [Lab 01 - Deploy Neo4j](Lab%2001%20-%20Deploy%20Neo4j) (15 min)
+* [Lab 1 - Deploy Neo4j](Lab%201%20-%20Deploy%20Neo4j) (15 min)
     * Deploying Neo4j AuraDS Professional
-* [Lab 02 - Connect to Neo4j](Lab%2002%20-%20Connect%20to%20Neo4j/README.md) (10 min)
+* [Lab 2 - Connect to Neo4j](Lab%202%20-%20Connect%20to%20Neo4j/README.md) (10 min)
     * Neo4j Browser
 * Break (5 min)
 
@@ -43,7 +43,7 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
     * Generative AI
     * AutoML
     * Using Vertex AI with Neo4j
-* [Lab 03 - Parsing Data](Lab%2003%20-%20Parsing%20Data/README.md) (10 min)
+* [Lab 3 - Parsing Data](Lab%203%20-%20Parsing%20Data/README.md) (10 min)
     * Setup Vertex AI Workbench
     * Parsing Data
 * Lecture - [Moving Data](https://docs.google.com/presentation/d/1O6Oy_GbDYYCvQanUyUCl30hQdSsy9kKL53Jgl23Nnsk/edit?usp=sharing) (10 min)
@@ -51,13 +51,13 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
     * Apache Beam and Google Dataflow
     * Apache Spark and Google Dataproc
     * Apache Kafka and Cloud Cloud
-* [Lab 4 - Moving Data](Lab%2004%20-%20Moving%20Data/README.md) (15 min)
+* [Lab 4 - Moving Data](Lab%204%20-%20Moving%20Data/README.md) (15 min)
     * View Existing Data
     * Simple Load Statement
     * More Performant Load
-* [Lab 5 - Exploration](Lab%2005%20-%20Exploration/README.md) 10 min)
+* [Lab 5 - Exploration](Lab%205%20-%20Exploration/README.md) 10 min)
     * Exploration with Neo4j Bloom
-* [Lab 6 - Chatbot](Lab%2006%20-%20Chatbot/README.md) (15 min)
+* [Lab 6 - Chatbot](Lab%206%20-%20Chatbot/README.md) (15 min)
     * Prompt Engineering 
     * Few Shot Learning
     * Fine Tuning
@@ -70,18 +70,13 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
     * Algorithms
     * Semantic Search
     * Graph Embedding
-* [Lab 07 - Semantic Search](Lab%2007%20-%20Semantic%20Search/README.md) (15 min)
-    * Text Embedding
-    * Vector Search
-    * Graph Traversal
-    * Graph Algorithms for Similarity
-* [Lab 08 - Graph Embedding](Lab%2008%20-%20Graph%20Embedding/README.md) (15 min)
+* [Lab 7 - Graph Embedding](Lab%207%20-%20Graph%20Embedding/README.md) (20 min)
     * Cypher Queries in a notebook
     * Creating a Graph Embedding
-    * Exporting to pandas
+    * Vector Search
     * Writing to Google Cloud Storage
-* [Lab 09 - AutoML](Lab%2009%20-%20AutoML) (15 min)
+* [Lab 8 - AutoML](Lab%208%20-%20AutoML) (15 min)
     * Raw Data
     * Data with Embedding
-* [Lab 10 - Cleanup](Lab%2010%20-%20Cleanup) (5 min)
+* [Lab 9 - Cleanup](Lab%209%20-%20Cleanup) (5 min)
 * [Discussion - Questions and Next Steps](Discussion%20-%20Questions%20and%20Next%20Steps.md) (5 min)
