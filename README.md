@@ -77,7 +77,7 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
     * Creating a Graph Embedding
     * Exporting to pandas
     * Writing to Google Cloud Storage
-* [Lab 08 - AutoML](Lab%2008%20AutoML) (15 min)
+* [Lab 08 - AutoML](Lab%2008%20-%20AutoML) (15 min)
 * [Lab 09 - Semantic Search](Lab%2009%20-%20Semantic%20Search/README.md) (15 min)
     * Text Embedding
     * Vector Search
