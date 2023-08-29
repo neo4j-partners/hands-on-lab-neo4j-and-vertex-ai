@@ -1,4 +1,5 @@
 # Lab 6 - Generative AI Chatbot
+To do - clean this up so it walks through like a lab.
 
 Exercise here: [chatbot.ipynb](chatbot.ipynb)
 
@@ -9,6 +10,7 @@ This sample notebook and web application shows how Google Vertex AI Generative A
 This notebook instructs how to connect to a graph running in Neo4j Aura, which contains companies, investors, and investments. We then use the `code-bison` model and prompt it to convert requests in natural language to Cypher - Neo4j's query language for data retrieval.
 
 ## Setup
+To do - move kernel setup to lab 3 so we use a single kernel for all the labs
 
 If you're following along with the labs, you'll have already set up your graph in Aura in Lab 4. We will be running our code in a managed notebook in VertexAI Workbench, similar to how we did in Lab 3.
 

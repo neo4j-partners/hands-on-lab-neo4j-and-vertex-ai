@@ -14,7 +14,7 @@ There are many ways to run these products on Google Cloud.  The Marketplace in p
 You can inspect these options [here](https://console.cloud.google.com/marketplace/browse?q=neo4j).
 
 ## Deploying AuraDS Professional
-We're going to use the SaaS version, AuraDS in these labs.  This is sometimes refered to as a database as a service (DBaaS).  Aura comes in a number of flavors.  There's an enterprise and a professional version.  We're going to deploy the professional version.  
+We're going to use the SaaS version, AuraDS, in these labs.  This is sometimes refered to as a database as a service (DBaaS).  Aura comes in a number of flavors.  There's an enterprise and a professional version.  We're going to deploy the professional version.  
 
 So, let's get started deploying...  To do so, let's go to the Google Cloud console [here](https://console.cloud.google.com/).  If it's not already open, click the hamburger icon in the upper left to expand the menu.
 
@@ -105,15 +105,6 @@ You'll see a dialog that your database is being created.  This takes less than f
 When deployment is complete you'll see this menu.  
 
 ![](images/22-deployed.png)
-
-
-We recommend enabling the workspace experience. This is the latest UI in Aura. To check that workspace is enabled, click on the gear icon in the upper right. 
-
-![](images/23-settings.png)
-
-Then ensure the "Enable workspace" toggle is switched on. 
-
-![](images/24-workspace.png)
 
 You can poke around the menus here a bit and see more on database status and connection information.
 

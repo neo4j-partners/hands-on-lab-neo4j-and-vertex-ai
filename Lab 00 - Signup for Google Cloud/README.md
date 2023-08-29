@@ -51,7 +51,7 @@ Congratulations!  You've signed up for a Google Cloud account.
 
 ![](images/10-console.png)
 
-## Activate your Google Cloud account
+## Activate your Google Cloud Account
 Now that you have an account, you need to activate it.  That will allow you to use the $300 free trial credits.  Click "ACTIVATE" at the top of the console.
 
 ![](images/10-console.png)

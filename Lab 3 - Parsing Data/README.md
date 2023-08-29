@@ -1,11 +1,5 @@
-# Lab 3 - Knowledge Graph Creation with Generative AI
-
-## Using Python Notebooks
-
-From here on out, we will work more in Jupyter Notebooks and use Python data analysis libraries like Pandas.  
-
-### Notebook & Pandas in Google Colab
-To start, let's fiddle with some structured data in Pandas.  We're going to use Google Colab to do that.  Colab is a really light-weight way to run a notebook on Google Cloud.  Click [here](exploring-pandas.ipynb) to get started.
+# Lab 3 - Parsing Data
+In this lab we're going to parse data with generative AI to create a knowledge graph.  We'll use the generative AI functionality in Google Cloud Vertex AI.
 
 ## Setup Vertex AI Workbench
 Now that we've done some very light-weight exploration in a notebook, let's try using a more full-featured environment, Vertex AI Workbench.  Open up the [Google Cloud Console](https://console.cloud.google.com/).

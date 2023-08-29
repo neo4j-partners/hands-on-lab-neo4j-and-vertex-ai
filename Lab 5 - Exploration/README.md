@@ -1,8 +1,7 @@
 # Lab 5 - Exploration
-Bloom is Neo4j's business intelligence (BI) tool.  It's integrated into Neo4j Workspace.  
+In this lab, we'll use Bloom, Neo4j's business intelligence (BI) tool, to explore our data.
 
 ## Exploration with Neo4j Bloom
-
 To open Bloom, go to the Neo4j Aura Console and click "Open" as in Lab 2.  From there, make sure the "Explore" tab at the top is selected.
 
 ![](images/01-bloom.png)

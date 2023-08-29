@@ -25,17 +25,16 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
 * Introductions
 * Lecture - [Introduction to Neo4j](https://docs.google.com/presentation/d/1WvPzs_JEh8uuKEAQGecH1rUd1NoRzqZIKc-hQkuBdXQ/edit?usp=sharing) (10 min)
     * What is Neo4j?
-    * Customer use cases
     * How is it deployed and managed on Google Cloud?
 * [Lab 0 - Signup for Google Cloud](Lab%200%20-%20Signup%20for%20Google%20Cloud) (15 min)
     * Improving the Labs
     * Signup for a Google Cloud Account
-    * Activate your Google Cloud account
+    * Activate your Google Cloud Account
 * [Lab 1 - Deploy Neo4j](Lab%201%20-%20Deploy%20Neo4j) (15 min)
     * Deploying Neo4j AuraDS Professional
 * [Lab 2 - Connect to Neo4j](Lab%202%20-%20Connect%20to%20Neo4j/README.md) (10 min)
-    * Neo4j Workspace
-* Break (10 min)
+    * Neo4j Browser
+* Break (5 min)
 
 ### Part 2
 * Lecture - [Vertex AI](https://docs.google.com/presentation/d/19TewJE5YgESTmN9qW4MOtFP4m39uPhUaRXErkCzrdbE/edit?usp=sharing) (10 min)
@@ -44,47 +43,45 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
     * Generative AI
     * AutoML
     * Using Vertex AI with Neo4j
-* [Lab 3 - Parsing Data with Generative AI](Lab%302%20-%Parsing%20Data%20with%20Generative%20AI/README.md) (10 min)
-    * Pandas
-    * Vertex AI Workbench
+* [Lab 3 - Parsing Data](Lab%302%20-%Parsing%20Data/README.md) (10 min)
+    * Setup Vertex AI Workbench
     * Parsing Data
 * Lecture - [Moving Data](https://docs.google.com/presentation/d/1O6Oy_GbDYYCvQanUyUCl30hQdSsy9kKL53Jgl23Nnsk/edit?usp=sharing) (10 min)
-    * Generative AI
     * LOAD CSV
     * Apache Beam and Google Dataflow
     * Apache Spark and Google Dataproc
     * Apache Kafka and Cloud Cloud
 * [Lab 4 - Loading a CSV](Lab%204%20-%20Loading%20a%20CSV/README.md) (15 min)
-    * Day of Data
-    * A Year of Data
+    * View Existing Data
+    * Simple Load Statement
+    * More Performant Load
 * [Lab 5 - Exploration](Lab%205%20-%20Exploration/README.md) 10 min)
     * Exploration with Neo4j Bloom
-* Break (10 min)
+* [Lab 6 - Chatbot](Lab%206%20-%20Chatbot/README.md) (15 min)
+    * Prompt Engineering 
+    * Few Shot Learning
+    * Fine Tuning
+    * Using the Chatbot
+* Break (5 min)
 
 ### Part 3
-* [Lab 6 - Generative AI Chatbot](Lab%206%20-%20Generative%20AI%20Chatbot/README.md) (15 min)
-    * Prompt Engineering & Few-Shot Learning
-    * Using the Chatbot
-    * Fine Tuning
-* [Lab 7 - Semantic Search](Lab%207%20-%20Semantic%20Search/README.md) (20 min)
-    * Text Embedding
-    * Vector Search + Graph Traversal
-    * Graph Algorithms for Similairty
 * Lecture - [Graph Data Science](https://docs.google.com/presentation/d/133tXAH--V7Uvyd0Ylhs08_xDEPfl64uvaNNdxeHVpvk/edit?usp=sharing) (10 min)
     * Why Graph Data Science
-    * Neo4j GDS
     * Algorithm Families and Examples
     * Similarity
     * Centrality
     * Community Detection
     * Graph Machine Learning
-* [Lab 8 - Graph Data Science](Lab%208%20-%20Graph%20Data%20Science/README.md) (15 min)
+* [Lab 7 - Graph Data Science](Lab%208%20-%20Graph%20Data%20Science/README.md) (15 min)
     * Cypher Queries in a notebook
     * Creating a Graph Embedding
     * Exporting to pandas
     * Writing to Google Cloud Storage
-* [Lab 9 - Vertex AI AutoML](Lab%209%20Vertex%20AI%20AutoML) (15 min)
-    * Raw Data
-    * Data with Embedding
+* [Lab 8 - AutoML](Lab%209%20AutoML) (15 min)
+* [Lab 9 - Semantic Search](Lab%207%20-%20Semantic%20Search/README.md) (15 min)
+    * Text Embedding
+    * Vector Search
+    * Graph Traversal
+    * Graph Algorithms for Similarity
 * [Lab 10 - Cleanup](Lab%209%20-%20Cleanup) (5 min)
 * [Discussion - Questions and Next Steps](Discussion%20-%20Questions%20and%20Next%20Steps.md) (5 min)
