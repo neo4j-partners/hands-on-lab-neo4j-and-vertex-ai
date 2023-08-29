@@ -67,21 +67,21 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
 ### Part 3
 * Lecture - [Graph Data Science](https://docs.google.com/presentation/d/133tXAH--V7Uvyd0Ylhs08_xDEPfl64uvaNNdxeHVpvk/edit?usp=sharing) (10 min)
     * Why Graph Data Science
-    * Algorithm Families and Examples
-    * Similarity
-    * Centrality
-    * Community Detection
-    * Graph Machine Learning
-* [Lab 07 - Graph Data Science](Lab%2007%20-%20Graph%20Data%20Science/README.md) (15 min)
-    * Cypher Queries in a notebook
-    * Creating a Graph Embedding
-    * Exporting to pandas
-    * Writing to Google Cloud Storage
-* [Lab 08 - AutoML](Lab%2008%20-%20AutoML) (15 min)
-* [Lab 09 - Semantic Search](Lab%2009%20-%20Semantic%20Search/README.md) (15 min)
+    * Algorithms
+    * Semantic Search
+    * Graph Embedding
+* [Lab 07 - Semantic Search](Lab%2007%20-%20Semantic%20Search/README.md) (15 min)
     * Text Embedding
     * Vector Search
     * Graph Traversal
     * Graph Algorithms for Similarity
+* [Lab 08 - Graph Embedding](Lab%2008%20-%20Graph%20Embedding/README.md) (15 min)
+    * Cypher Queries in a notebook
+    * Creating a Graph Embedding
+    * Exporting to pandas
+    * Writing to Google Cloud Storage
+* [Lab 09 - AutoML](Lab%2009%20-%20AutoML) (15 min)
+    * Raw Data
+    * Data with Embedding
 * [Lab 10 - Cleanup](Lab%2010%20-%20Cleanup) (5 min)
 * [Discussion - Questions and Next Steps](Discussion%20-%20Questions%20and%20Next%20Steps.md) (5 min)
