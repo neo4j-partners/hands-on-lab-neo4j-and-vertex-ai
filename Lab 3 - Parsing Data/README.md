@@ -55,3 +55,5 @@ In the terminal type the command:
 When complete, you should see a message in the terminal as well as a new directory in the file explorer on the left.
 
 ![](images/11-clone.png)
+
+To do - describe how to use the notebook.

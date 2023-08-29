@@ -1,4 +1,4 @@
-# Lab 00 - Signup for Google Cloud
+# Lab 0 - Signup for Google Cloud
 For this lab you'll need both a Google and a Google Cloud account.  If you don't have accounts or if they are restricted so you can't deploy things, you can follow these steps to create a free trial.
 
 You'll need to provide your phone number and credit card information.  New Google Cloud accounts come with a $300 credit. Total costs for the lab should be significantly under $50. At the end of the lab we'll show you how to delete any resources you've deployed as well.

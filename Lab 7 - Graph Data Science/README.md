@@ -1,4 +1,4 @@
-# Lab 08 - Graph Data Science
+# Lab 7 - Graph Data Science
 In this lab, we're going to work with some more notebooks.
 
 ## Exploring Cypher

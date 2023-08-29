@@ -1,4 +1,4 @@
-# Lab 09 - AutoML
+# Lab 8 - AutoML
 Now we've reached what we've been working toward -- pulling graph data into Vertex AI.  We're going to work with two notebooks in this lab.
 
 ## Raw Data
