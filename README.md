@@ -70,7 +70,7 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
     * Algorithms
     * Semantic Search
     * Graph Embedding
-* [Lab 7 - Graph Embedding](Lab%207%20-%20Graph%20Embedding/README.md) (20 min)
+* [Lab 7 - Graph Data Science](Lab%207%20-%20Graph%20Data%20Science/README.md) (20 min)
     * Cypher Queries in a notebook
     * Creating a Graph Embedding
     * Vector Search
