@@ -1,4 +1,4 @@
-# Lab 08 - Graph Data Science
+# Lab 08 - Graph Embedding
 In this lab, we're going to work with some more notebooks.
 
 ## Cypher Queries
