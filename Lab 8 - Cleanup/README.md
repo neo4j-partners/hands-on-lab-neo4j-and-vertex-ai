@@ -1,4 +1,4 @@
-# Lab 9 - Cleanup
+# Lab 8 - Cleanup
 You can keep the resources you've deployed in these labs running as long as you like.  If you used a free trial, eventually the credits in your account will be exhausted and they'll be automatically shutdown.  Alternatively, you can delete them by following these instructions.
 
 ## Delete AuraDS Professional Database
