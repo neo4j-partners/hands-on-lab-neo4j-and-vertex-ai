@@ -10,7 +10,7 @@ There are many ways to run these products on Google Cloud.  The Marketplace in p
 * Infrastructure as a Service (IaaS) - Neo4j Enterprise Edition is available on IaaS with a Google Deployment Manager template.  That allow you to choose whether you would like a single node or cluster.  It allows configuration of Graph Database, Bloom and Graph Data Science.
 * Platform as a Service (PaaS) - This is an option to deploy Graph Database on Kubernetes.
 
-You can inspect these options [here](https://console.cloud.google.com/marketplace/browse?q=neo4j).
+You can inspect these options [here](https://console.cloud.google.com/marketplace/browse?filter=partner:Neo4j).
 
 ## Deploying AuraDS Professional
 We're going to use the SaaS version, AuraDS, in these labs.  This is sometimes refered to as a database as a service (DBaaS).  Aura comes in a number of flavors.  There's an enterprise and a professional version.  We're going to deploy the professional version.  

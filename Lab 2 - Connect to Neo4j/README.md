@@ -1,8 +1,5 @@
 # Lab 2 - Connect to Neo4j
-In this lab, we're going to connect to the Neo4j deployment we created in the previous step.  
-
-## Neo4j Workspace
-To get started, open the Neo4j endpoint in the Google Cloud console by navigating [here](https://console.cloud.google.com/marketplace/product/endpoints/prod.n4gcp.neo4j.io).
+In this lab, we're going to connect to the Neo4j deployment we created in the previous step.  To get started, open the Neo4j endpoint in the Google Cloud console by navigating [here](https://console.cloud.google.com/marketplace/product/endpoints/prod.n4gcp.neo4j.io).
 
 Click "MANAGE ON PROVIDER" to get to the Neo4j console.
 
@@ -12,44 +9,39 @@ Once again, you'll need to agreee to the redirect.
 
 ![](images/02-redirect.png)
 
-You should now see the Neo4j Aura console.  Click "Open" on the "sec-edgar" instance we created.
+You should now see the Neo4j Aura console.
 
 ![](images/03-aura.png)
 
-Review and agree to the Neo4j terms.
-
-![](images/04-terms.png)
-
-Enter your password from the previous lab to login.
-
-![](images/05-login.png)
-
-We're now in Neo4j Workspace.  This environment offers three tools:
+For the form13 instance we created, you can see three options:
 
 1. Explore - This will open Neo4j Bloom, the business intelligence tool.
 2. Query - This will open Neo4j Browser, a tool where we can run database queries and inspect the results.
 3. Import - This opens the Neo4j Data Importer, a graphical tool for importing data into Neo4j.
 
-Let's start with Neo4j Browser.  To open it, click the link that says "Query." 
+## Neo4j Browser
+Let's start with Neo4j Browser.  To open it, click the link that says "Query" on the form13 instance you have running.
 
-![](images/07-query.png)
+We're now presented with the Neo4j Browser. We can accept the defaults.  Enter the password from earlier in and then click "Connect."
 
-This is the interface from which you can write Cypher statements.  Cypher is Neo4j's graph query language.  It can be thought of as an analog to SQL, designed specifically to query graphs.  We'll try writing Cypher in later labs.
+![](images/04-browser.png)
 
-We can view the contents of our database by clicking the database icon in the upper left.
+You'll be presented with the Neo4j welcome screen at this point.  If you click on the little database icon in the upper left, you can see the contents of our database.
 
-![](images/08-database.png)
+![](images/05-welcome.png)
 
-There's nothing in our database yet.  We can see the nodes, relationships and property keys are all blank.
+There's nothing in our database yet.  We can see the nodes, relationships and properties areas are all blank.
 
-Before we move on, let's check what version of Neo4j Graph Data Science is set up.  We can do that by entering the following command into the Neo4j Browser:
+![](images/06-contents.png)
+
+Before we move on, let's check what version of Neo4j Graph Data Science (GDS) is set up.  We can do that by entering the following command into the Neo4j Browser:
 
     RETURN gds.version() as version
 
-Then hit the little blue triangle play button to run it.  You should see a Graph Data Science version number.
+Then hit the little blue triangle play button to run it.  You should see a GDS version number.
 
-![](images/09-gds.png)
+![](images/07-gds.png)
+
+Assuming that all looks good, let's move on...
 
 Since we got a Graph Data Science version back, we know that we're on AuraDS, not AuraDB.  This means that we have the libraries we'll need to connect with the Python client and use graph algorithms later in these labs.
-
-This gave us a very brief introduction to Neo4j Workspace.  We'll look at the Query and Explore functionality in more detail in the coming labs.
