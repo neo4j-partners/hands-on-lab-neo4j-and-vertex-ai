@@ -104,7 +104,7 @@ You'll see a questionaire dialog you can dismiss by clicking "CLOSE."
 
 That should give you a console that's ready to use.  
 
-![](images/22.png)
+![](images/23.png)
 
 You have $300 in credits to use over 90 days.  Your credit card will not be billed unless you change your billing options.
 
