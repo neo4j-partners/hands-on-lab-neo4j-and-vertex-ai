@@ -63,11 +63,11 @@ Click "Next" to confirm your information.
 
 Review the terms and scroll to the bottom.
 
-![](14.png)
+![](images/14.png)
 
 Click "I agree."
 
-![](15.png)
+![](images/15.png)
 
 Click "Confirm."
 
