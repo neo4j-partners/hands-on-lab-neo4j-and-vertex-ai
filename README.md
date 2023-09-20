@@ -24,7 +24,7 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
 * Lecture - [Introduction to Neo4j](https://docs.google.com/presentation/d/1WvPzs_JEh8uuKEAQGecH1rUd1NoRzqZIKc-hQkuBdXQ/edit?usp=sharing) (10 min)
     * What is Neo4j?
     * How is it deployed and managed on Google Cloud?
-* [Lab 0 - Signup for Google Cloud](Lab%200%20-%20Signup%20for%20Google%20Cloud) (15 min)
+* [Lab 0 - Sign Up](Lab%200%20-%20Sign%20Up) (15 min)
     * Improving the Labs
     * Signup for a Google Cloud Account
     * Activate your Google Cloud Account
