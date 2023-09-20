@@ -1,11 +1,11 @@
 # Discussion - Questions and Next Steps
 This section has some thoughts on future work, improvements and next steps.  Please feel free to [PR](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/pulls) your ideas and suggestions.
 
-## Lab 0 - Signup for Google Cloud
+## Lab 0 - Sign Up
 To do
 
 ## Lab 1 - Deploy Neo4j
-The lab deploys Neo4j AuraDS Professional through a deep integration in the Google Cloud Console [here](https://console.cloud.google.com/marketplace/product/endpoints/prod.n4gcp.neo4j.io).  There are many other ways to deploy Neo4j.  If AuraDS Professional doesn't meet your needs, we probably have a different approach that does.  The [Marketplace](https://console.cloud.google.com/marketplace/browse?q=neo4j) is a good place to look for more options.
+The lab deploys Neo4j AuraDS Professional through a deep integration in the Google Cloud Console [here](https://console.cloud.google.com/marketplace/product/endpoints/prod.n4gcp.neo4j.io).  There are many other ways to deploy Neo4j.  If AuraDS Professional doesn't meet your needs, we probably have a different approach that does.  The [Marketplace](https://console.cloud.google.com/marketplace/browse?filter=partner:Neo4j) is a good place to look for more options.
 
 ## Lab 2 - Connect to Neo4j
 There are currently some issues you may have noticed in accessing the Aura console directly versus a redirect from the Google Cloud Console.  We're working to improve that experience.
