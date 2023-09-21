@@ -1,12 +1,9 @@
 # Lab 3 - Moving Data
 In this lab, we're going to take data from a Google Cloud Storage bucket and import it into Neo4j.  There are a few different ways to do this.  We'll start with a very naive LOAD CSV statement and then improve it.  
 
-The Neo4j [Data Importer](https://data-importer.neo4j.io/) is another option.  It's a great graphical way to import data.  However, the LOAD CSV option we're using makes it really easy to pull directly from Cloud Storage, so is probably a better choice for what we need.
+The Neo4j Data Importer is another option.  It's a great graphical way to import data.  However, the LOAD CSV option we're using makes it really easy to pull directly from Cloud Storage, so is probably a better choice for what we need.
 
-The dataset is from the SEC's EDGAR database.  These are public filings of something called Form 13.  Asset managers with over \$100m AUM are required to submit Form 13 quarterly.  That's then made available to the public over http.  The csvs linked above were pulled from EDGAR using some python scripts.  We don't have time to run those in the lab today as they take a few hours.  But, if you're curious, they're all available [here](https://github.com/neo4j-partners/neo4j-sec-edgar-form13).  We've filtered the data to only include filings over $10m in value.
-
-## View Existing Data
-To do - view the data we loaded using generative AI
+The dataset is from the SEC's EDGAR database.  These are public filings of something called Form 13.  Asset managers with over \$100m AUM are required to submit Form 13 quarterly.  That's then made available to the public over http.  We don't have time to download those in the lab today as they take a few hours.  But, if you're curious, they're all available [here](https://github.com/neo4j-partners/neo4j-sec-edgar-form13).  We've filtered the data to only include filings over $10m in value.
 
 ## Simple Load Statement
 For this portion of the lab, we're going to work with a subset of the data.  Our full dataset is a year of data.  However, we'll just be playing around with a a subset of a day's worth.  The data is [here](https://storage.googleapis.com/neo4j-datasets/form13/form13-v2-2023-05-11.csv).
@@ -14,8 +11,6 @@ For this portion of the lab, we're going to work with a subset of the data.  Our
 You may want to download the data and load it into your favorite tool for exploring CSV files.  Pandas, Excel or anything else should be able to make short work of it.  Once you understand what's in the data, the next step would be to load it into Neo4j.
 
 To load it in Neo4j, let's open the tab that has our Neo4j Workspace in it.  If you don't have that tab open, you can review the previous lab to get into it.
-
-To do - revert back to default configuration.
 
 Make sure that "Query" is selected at the top.
 
@@ -52,7 +47,7 @@ Try selecting a company now.
 
 ![](images/05-manager.png)
 
-In this case, we see the Company "APPLE INC" has CUSIP cusip: 037833100.
+In this case, we see the company "APPLE INC" has CUSIP 037833100.
 
 We can also click on the relationship, that is the line between the nodes to see detail on the transaction.
 
@@ -77,14 +72,14 @@ Now that we have some understanding of this portion of the dataset, we're going 
 Now, all your data should be deleted.  Note that Workspace is still caching some property keys.
 
 ## More Performant Load
-The LOAD CSV statement we used before was pretty naive.  It didn't create any indices.  It also loaded the nodes and relationships simultaneously.  Both of those are inefficient approaches.  It wasn't a big deal as that single day was a small amount of data.  However, we'd now like to load a full year of data. Which has millions of rows, so we have to be a bit more efficient.  That new dataset is [here](https://storage.googleapis.com/neo4j-datasets/form13/form13-v2.csv).
+The LOAD CSV statement we used before was pretty naive.  It didn't create any indices.  It also loaded the nodes and relationships simultaneously.  Both of those are inefficient approaches.  It wasn't a big deal as that single day was a small amount of data.  However, we'd now like to load a full year of data.  That has a million rows, so we have to be a bit more efficient.  That new dataset is [here](https://storage.googleapis.com/neo4j-datasets/form13/form13-v2.csv).
 
 If you're curious, you can read a bit about the intracties of optimizing those loads here:
 
 * https://neo4j.com/developer/guide-import-csv/#_optimizing_load_csv_for_performance
 * https://graphacademy.neo4j.com/courses/importing-data/
 
-First, let's create constraints, essentially a primary key, for the company and manager node types.  Company keys should be cusips.  We know a CUSIP is unique because that is the whole point of one.  They are identifiers for securities designed to be unique.  You can read more about them [here](https://www.cusip.com).  This is a much better field to use than nameOfIssuer (called companyName here) because it avoids the problem where some companies (like Apple or Apple, Inc.) are referred to by slightly different names.
+First, let's create constraints, essentially a primary key, for the company and manager node types.  Company keys should be CUSIPs.  We know a CUSIP is unique because that is the whole point of one.  They are identifiers for securities designed to be unique.  You can read more about them [here](https://www.cusip.com).  This is a much better field to use than nameOfIssuer (called companyName here) because it avoids the problem where some companies (like Apple or Apple, Inc.) are referred to by slightly different names.
 
 The manager is a little more difficult.  But, we're going to assume that the manager name field is both unique and correct.
 
@@ -94,7 +89,6 @@ The manager is a little more difficult.  But, we're going to assume that the man
 That should give this:
 
 ![](images/10-constraint.png)
-
 
 Now that we have all the constraints, let's load our nodes.  We're going to do that first and grab the relationships in a second pass.  While we could do it in a single Cypher statement, as we did above, it's more efficient to run them in series.
 
