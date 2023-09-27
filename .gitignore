@@ -1,0 +1,5 @@
+# Jupyter Notebook
+.ipynb_checkpoints
+__pycache__
+.env
+.DS_STORE
