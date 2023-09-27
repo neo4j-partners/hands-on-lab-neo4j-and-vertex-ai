@@ -17,11 +17,11 @@ We're also working with Google on [Dataflow](https://cloud.google.com/dataflow) 
 
 The Neo4j [Spark Connector](https://neo4j.com/docs/spark/current/) is another way to get data in.  We've been working with the Google [Dataproc](https://cloud.google.com/dataproc) team on some demos of that.  It works today but some walkthrough are in progress.
 
-## Lab 4 - Parsing Data
-To do
-
-## Lab 5 - Exploration
+## Lab 4 - Exploration
 This section of the lab could be expanded.  A data enrichment exercise might be really interesting.  We've been doing work with [EKG elsewhere](http://github.com/neo4j-partners/apevue-knowledge-graph) that could be relevant.
+
+## Lab 5 - Parsing Data
+To do
 
 ## Lab 6 - Chatbot
 To do

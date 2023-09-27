@@ -1,4 +1,4 @@
-# Lab 5 - Exploration
+# Lab 4 - Exploration
 In this lab, we'll use Bloom, Neo4j's business intelligence (BI) tool, to explore our data.
 
 ## Exploration with Neo4j Bloom
