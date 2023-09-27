@@ -61,11 +61,11 @@ At this point, take some time to poke around the graph.  You can expand it by cl
 
 As you play around, you may start to see some of the structure in the graph with recurrent connections and interesting communities of managers who have similar holdings.
 
+![](images/08.png)
+
 Now that we have some understanding of this portion of the dataset, we're going to delete it.  Then we'll load the full data set.  To delete all the nodes and relationships in the database, run this command:
 
     MATCH (n) DETACH DELETE n;
-
-![](images/08.png)
 
 Now, all your data should be deleted.  Note that Workspace is still caching some property keys.
 
