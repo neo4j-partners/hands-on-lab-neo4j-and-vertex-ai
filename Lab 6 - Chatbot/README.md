@@ -1,31 +1,4 @@
 # Lab 6 - Chatbot
-To do - clean this up so it walks through like a lab.
+In this lab, we'll build a chatbot.  The chatbot interface will use gradio.  Underlying the chatbot is the Neo4j knowledge graph we built in previous labs.  The chatbot uses the generative AI and langchain.  We take a natural language question, convert it to Neo4j Cypher using generative AI and run that against the database.  We take the response from the database and use generative AI again to convert that back to natural language before presenting it to the user.
 
-Exercise here: [chatbot.ipynb](chatbot.ipynb)
-
-This sample notebook and web application shows how Google Vertex AI Generative AI can be used with Neo4j. We will explore how to leverage Google VertexAI LLMs to automatically generate Cypher for consuming data from a financial knowledge graph.
-
-![chatbot_ui](images/investment_chatbot.png)
-
-This notebook instructs how to connect to a graph running in Neo4j Aura, which contains companies, investors, and investments. We then use the `code-bison` model and prompt it to convert requests in natural language to Cypher - Neo4j's query language for data retrieval.
-
-## Setup
-To do - move kernel setup to lab 3 so we use a single kernel for all the labs
-
-If you're following along with the labs, you'll have already set up your graph in Aura in Lab 4. We will be running our code in a managed notebook in VertexAI Workbench, similar to how we did in Lab 3.
-
-In this notebook, we will install LangChain, a Python library that requires Python 3.8 or higher. Since the default Python runtime in VertexAI JupyterLab on Workbench is 3.7, we will execute these commands in a terminal to install a new runtime with dependencies for genAI and Neo4j. 
-
-    VENV=neo4j_genai
-    conda create -y -p $HOME/conda_env/$VENV python=3.8 ipykernel
-    source /opt/conda/bin/activate ~/conda_env/$VENV
-    python -m ipykernel install --user --name $VENV
-    conda install -y -c conda-forge ipywidgets
-    pip install --user graphdatascience langchain google-cloud-aiplatform neo4j gradio tqdm IProgress nltk
-    
-
-Now you're ready to get into the notebook and run the code.
-
-## Notebook
-
-The [notebook](chatbot.ipynb) contains the steps to walk through the LangChain integration, prompt the chatbot for Cypher result set-enriched responses, and deploy the interface for using the chatbot. Our UI is deployed using the `gradio` library, which allows us to build an interface running locally but also gives us a shareable link that is good for 3 days.
+So, let's open up the notebook in our Vertex AI Workbench instance, as we did in the previous lab.  The notebook we want to open is [chatbot.ipynb](chatbot.ipynb).
