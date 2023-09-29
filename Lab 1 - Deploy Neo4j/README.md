@@ -33,7 +33,7 @@ That takes you to a description of Neo4j Aura Professional in the Google Cloud M
 
 On the plan summary, review it and then scroll to the bottom.
 
-![](images/5.png)
+![](images/05.png)
 
 Review the terms and accept them.  Then click "Subscribe."
 
