@@ -26,12 +26,11 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
     * How is it deployed and managed on Google Cloud?
 * [Lab 0 - Sign Up](Lab%200%20-%20Sign%20Up) (15 min)
     * Improving the Labs
-    * Signup for a Google Cloud Account
+    * Sign up for a Google Cloud Account
     * Activate your Google Cloud Account
 * [Lab 1 - Deploy Neo4j](Lab%201%20-%20Deploy%20Neo4j) (15 min)
     * Deploying Neo4j AuraDS Professional
 * [Lab 2 - Connect to Neo4j](Lab%202%20-%20Connect%20to%20Neo4j/README.md) (10 min)
-    * Neo4j Browser
 * Break (5 min)
 
 ### Part 2
@@ -41,7 +40,6 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
     * Apache Spark and Google Dataproc
     * Apache Kafka and Cloud Cloud
 * [Lab 3 - Moving Data](Lab%203%20-%20Moving%20Data/README.md) (15 min)
-    * View Existing Data
     * Simple Load Statement
     * More Performant Load
 * [Lab 4 - Exploration](Lab%204%20-%20Exploration/README.md) 10 min)
@@ -53,20 +51,17 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
     * What is Vertex AI?
     * Workbench
     * Generative AI
-    * AutoML
-    * Using Vertex AI with Neo4j
 * Lecture - [Neo4j and Generative AI](https://docs.google.com/presentation/d/133tXAH--V7Uvyd0Ylhs08_xDEPfl64uvaNNdxeHVpvk/edit?usp=sharing) (15 min)
     * Why Graph Data Science
     * Algorithms
     * Semantic Search
-    * Graph Embedding
-* [Lab 4 - Parsing Data](Lab%204%20-%20Parsing%20Data/README.md) (15 min)
+    * Using Vertex AI with Neo4j
+* [Lab 5 - Parsing Data](Lab%205%20-%20Parsing%20Data/README.md) (15 min)
     * Setup Vertex AI Workbench
     * Parsing Data
 * [Lab 6 - Chatbot](Lab%206%20-%20Chatbot/README.md) (15 min)
     * Prompt Engineering 
     * Few Shot Learning
-    * Fine Tuning
     * Using the Chatbot
 * [Lab 7 - Semantic Search](Lab%207%20-%20Semantic%20Search/README.md) (15 min)
     * Text Embedding
