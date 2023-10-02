@@ -51,9 +51,9 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
     * What is Vertex AI?
     * Workbench
     * Generative AI
-* Lecture - [Neo4j and Generative AI](https://docs.google.com/presentation/d/133tXAH--V7Uvyd0Ylhs08_xDEPfl64uvaNNdxeHVpvk/edit?usp=sharing) (15 min)
-    * Why Graph Data Science
-    * Algorithms
+* Lecture - [Neo4j and Generative AI](https://docs.google.com/presentation/d/1vVII1F9RgcFiQ8Pxd2RQUursZiqqbkpIG798sn-HWgU/edit?usp=sharing) (15 min)
+    * Generating Knowledge Graphs
+    * Retrieval Augmented Generation
     * Semantic Search
     * Using Vertex AI with Neo4j
 * [Lab 5 - Parsing Data](Lab%205%20-%20Parsing%20Data/README.md) (15 min)
