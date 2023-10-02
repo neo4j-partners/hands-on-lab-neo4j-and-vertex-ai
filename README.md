@@ -47,7 +47,7 @@ If you have a Google Cloud account with permissions that allow you to invoke Ver
 * Break (5 min)
 
 ### Part 3
-* Lecture - [Vertex AI](https://docs.google.com/presentation/d/19TewJE5YgESTmN9qW4MOtFP4m39uPhUaRXErkCzrdbE/edit?usp=sharing) (15 min)
+* Lecture - [Vertex AI](https://docs.google.com/presentation/d/1BowFoowrk0pTVqdScC4weBFZJ-xMTdHbvMUCW4ZyP68/edit?usp=sharing) (15 min)
     * What is Vertex AI?
     * Workbench
     * Generative AI
