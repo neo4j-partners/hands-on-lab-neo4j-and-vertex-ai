@@ -1,5 +1,5 @@
 # Discussion - Questions and Next Steps
-This section has some thoughts on future work, improvements and next steps.  Please feel free to [PR](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/pulls) your ideas and suggestions.
+This section has some thoughts on future work, improvements and next steps.  Known issues are [here](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/issues).  Please feel free to [PR](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/pulls) your ideas and suggestions.
 
 ## Lab 0 - Sign Up
 We're exploring training platforms that would automatically provision Google Cloud accounts.  The signup here has a lot of friction.  At the same time, it's a very real world exercise where you get a chance to learn about setting up a Google Cloud account from scratch.  We'd be curious to hear your thoughts on the most valuable approach here.
