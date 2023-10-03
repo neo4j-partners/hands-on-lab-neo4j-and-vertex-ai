@@ -1,43 +1,37 @@
 # Lab 8 - Cleanup
-You can keep the resources you've deployed in these labs running as long as you like.  If you used a free trial, eventually the credits in your account will be exhausted and they'll be automatically shutdown.  Alternatively, you can delete them by following these instructions.
+You can keep the resources you've deployed in these labs running as long as you like.  If you used a free trial, eventually the credits in your account will be exhausted and they'll be automatically shutdown.  Alternatively, you can delete resources individually.  Another option is to delete you project.  That will delete all resources in it.
 
-## Delete AuraDS Professional Database
-If you deployed a SaaS instance you can delete it in the console.  To do that, open the listing for Neo4j Aura in the Google Cloud console [here](https://console.cloud.google.com/marketplace/product/endpoints/prod.n4gcp.neo4j.io).  Click "MANAGE ON PROVIDER."
+## Delete your Project
+To delete your project, follow these instructions.  First, navigate to [https://cloud.google.com/](https://cloud.google.com/)  Click on the three dots in the upper right to open a menu.
 
-![](images/01-console.png)
+![](images/01.png)
 
-Click "OK" to confirm that you're ok to be redirected to the Aura console.
+Select "Project settings."
 
-![](images/02-console.png)
+![](images/02.png)
 
-In the Aura console, clikc on the red garbage can icon in your "form13" instance.
+Click "SHUT DOWN."
 
-![](images/03-aura.png)
+![](images/03.png)
 
-Type "form13" in the dialog and clikc "Destroy" to delete your instance.
+Enter your project id.  In this case, it was "logical-river-399518."
 
-![](images/04-aura.png)
+![](images/04.png)
 
-You'll then see a message that the instance is being destroyed.
+Click "SHUT DOWN ANYWAY."
 
-![](images/05-aura.png)
+![](images/05.png)
 
-A few seconds later, you should see a blank screen with no instances.  At this point, all billing for Neo4j Aura has ceased.
+Wait a moment for the project to shut down.
 
-![](images/06-aura.png)
+![](images/06.png)
 
-## Delete the Bucket
-We also created a Google Cloud Storage Bucket.  To delete it, you can open Google Cloud Console [here](https://console.cloud.google.com/).  Under that open a Cloud Shell terminal and run the following command:
+Click "OK."
 
-    gcloud alpha storage rm --recursive gs://YOUR_BUCKET_NAME
+![](images/07.png)
 
-That will give you something like this:
-![](images/07-aura.png)
+Your project is now deleted.  That will end all billing, even against your free trial credits.  If you deployed in a project that didn't have a free trial, that will end those costs too.
 
-## Delete Vertex AI Resources
-We created a variety of Vertex AI resoruces.  The API is not quite there for gcloud yet.  So, the easiest thing to do is probably just to login to the console [here](https://console.cloud.google.com/vertex-ai) and delete them manually.  You'll want to delete the following:
+![](images/08.png)
 
-* [Managed Notebook](https://console.cloud.google.com/vertex-ai/workbench/managed)
-* [Datasets](https://console.cloud.google.com/vertex-ai/datasets)
-* [Training Pipelines](https://console.cloud.google.com/vertex-ai/training/training-pipelines)
-* [Models](https://console.cloud.google.com/vertex-ai/models)
+Congratulations on completing the lab!
