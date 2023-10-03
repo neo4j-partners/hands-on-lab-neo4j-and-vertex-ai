@@ -14,7 +14,7 @@ Click on the first result.
 
 ![](images/02.png)
 
-Dismiss the tutorials dialog.  Click "ENABLE ALL RECOMENDED API."
+Dismiss the tutorials dialog.  Click "ENABLE ALL RECOMENDED APIS."
 
 ![](images/03.png)
 
