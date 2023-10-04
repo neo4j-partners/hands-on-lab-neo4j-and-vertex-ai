@@ -111,7 +111,7 @@ Now let's load the Managers:
 
 That should give this:
 
-![](images/12-manager.png)
+![](images/12.png)
 
 Well, this is cool.  We've got all our nodes loaded in.  Now we need to tie them together with relationships.  In this case we only need one kind of relationship.  A manager "OWNS" a company.
 
