@@ -27,23 +27,9 @@ Still in the left menu, scroll all the way to the bottom.  You'll see listings f
 
 ![](images/03.png)
 
-That takes you to a description of Neo4j Aura Professional in the Google Cloud Marketplace.  Click on "Subscribe."
+That takes you to a description of Neo4j Aura Professional in the Google Cloud Marketplace.  The parent account, owned by OneBlink.AI has already subscribed to this listing.  However, we still need to enable the API.
 
-![](images/04.png)
-
-On the plan summary, review it and then scroll to the bottom.
-
-![](images/05.png)
-
-Review the terms and accept them.  Then click "Subscribe."
-
-![](images/06.png)
-
-You'll see a message that "Your order is now active."  Click "Go to product page."
-
-![](images/07.png)
-
-We're now subscribed but need to enable the API.  Click on "Enable."
+Click on "Enable."
 
 ![](images/08.png)
 
