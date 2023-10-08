@@ -53,17 +53,16 @@ You'll need a laptop with a web browser.  Your browser will need to be able to a
     * Retrieval Augmented Generation
     * Semantic Search
     * Using Vertex AI with Neo4j
-* [Lab 5 - Parsing Data](Lab%205%20-%20Parsing%20Data/README.md) (15 min)
+* [Lab 5 - Parsing Data](Lab%205%20-%20Parsing%20Data/README.md) (20 min)
     * Setup Vertex AI Workbench
     * Parsing Data
-* [Lab 6 - Chatbot](Lab%206%20-%20Chatbot/README.md) (15 min)
+* [Lab 6 - Chatbot](Lab%206%20-%20Chatbot/README.md) (20 min)
     * Prompt Engineering 
     * Few Shot Learning
     * Using the Chatbot
-* [Lab 7 - Semantic Search](Lab%207%20-%20Semantic%20Search/README.md) (15 min)
+* [Lab 7 - Semantic Search](Lab%207%20-%20Semantic%20Search/README.md) (20 min)
     * Text Embedding
     * Vector Search
     * Graph Traversal
     * Graph Algorithms for Similairty
-* [Lab 8 - Cleanup](Lab%208%20-%20Cleanup) (5 min)
 * [Discussion - Questions and Next Steps](Discussion%20-%20Questions%20and%20Next%20Steps.md) (5 min)
