@@ -24,7 +24,7 @@ You'll need a laptop with a web browser.  Your browser will need to be able to a
     * How is it deployed and managed on Google Cloud?
 * [Lab 0 - Sign In](Lab%200%20-%20Sign%20In) (5 min)
     * Improving the Labs
-    * Sign in to a Google Cloud Account
+    * Sign into Google Cloud
 * [Lab 1 - Deploy Neo4j](Lab%201%20-%20Deploy%20Neo4j) (15 min)
     * Deploying Neo4j AuraDS Professional
 * [Lab 2 - Connect to Neo4j](Lab%202%20-%20Connect%20to%20Neo4j/README.md) (10 min)
