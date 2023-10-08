@@ -65,4 +65,4 @@ You'll need a laptop with a web browser.  Your browser will need to be able to a
     * Vector Search
     * Graph Traversal
     * Graph Algorithms for Similairty
-* [Discussion - Questions and Next Steps](Discussion%20-%20Questions%20and%20Next%20Steps.md) (5 min)
+* [Questions and Next Steps](Questions%20and%20Next%20Steps.md) (5 min)

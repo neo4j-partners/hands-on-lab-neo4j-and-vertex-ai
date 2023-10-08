@@ -1,4 +1,4 @@
-# Discussion - Questions and Next Steps
+# Questions and Next Steps
 This section has some thoughts on future work, improvements and next steps.  Known issues are [here](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/issues).  Please feel free to [PR](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/pulls) your ideas and suggestions.
 
 ## Lab 0 - Sign Up
@@ -30,4 +30,4 @@ The chatbot is somewhat brittle.  More work could be done to improve it.  You ca
 The free trial we're using has very limited quotas.  That forced us to throttle.  The result is that one cell takes 10-15 minutes to run.  We need to cut the data set down to work around that.  Ultimately the quotas will probably go up.
 
 ## Next Steps
-We hope you enjoyed these labs.  If you have any questions, feel free to reach out directly to any of us.  We'd love the opportunity to explore and support your use cases.
+We hope you enjoyed these labs.  If you have any questions, feel free to reach out directly to any of us.  We'd love the opportunity to explore and support your use cases with your data.
