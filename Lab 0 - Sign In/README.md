@@ -29,8 +29,20 @@ We're now in a new Google Cloud account.  OneBlink.AI already created a project 
 
 ![](images/05.png)
 
-Whoopsy, no project yet...
+Click on "NO ORGANIZATION" at the top.
 
 ![](images/06.png)
 
-In the next lab we'll deploy Neo4j using the account you just signed into.
+Select the "oneblink.ai" organization.
+
+![](images/07.png)
+
+Click to select the project available to you.  In my case it was "vibrant-tiger-7."
+
+![](images/08.png)
+
+Now you're all set, logged into a Google Cloud account with a project selected.
+
+![](images/09.png)
+
+In the next lab we'll deploy Neo4j.
