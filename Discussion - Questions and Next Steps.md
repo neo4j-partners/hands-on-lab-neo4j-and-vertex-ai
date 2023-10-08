@@ -2,7 +2,7 @@
 This section has some thoughts on future work, improvements and next steps.  Known issues are [here](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/issues).  Please feel free to [PR](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/pulls) your ideas and suggestions.
 
 ## Lab 0 - Sign Up
-We're exploring training platforms that would automatically provision Google Cloud accounts.  The signup here has a lot of friction.  At the same time, it's a very real world exercise where you get a chance to learn about setting up a Google Cloud account from scratch.  We'd be curious to hear your thoughts on the most valuable approach here.
+In previous versions of the lab we had users sign up for a free trial that they owned.  That was kinda cool in that attendees got to see everything start from scratch.  However, the signup required a credit card number and a phone number for identity verification.  It was also a fair bit of work.  Now we're using [OneBlink.AI](https://oneblink.ai/) to provision.  We'd be curious to hear how your experience was with this approach.
 
 ## Lab 1 - Deploy Neo4j
 The lab deploys Neo4j AuraDS Professional through a deep integration in the Google Cloud Console [here](https://console.cloud.google.com/marketplace/product/endpoints/prod.n4gcp.neo4j.io).  There are many other ways to deploy Neo4j.  If AuraDS Professional doesn't meet your needs, we probably have a different approach that does.  The [Marketplace](https://console.cloud.google.com/marketplace/browse?filter=partner:Neo4j) is a good place to look for more options.
@@ -28,9 +28,6 @@ The chatbot is somewhat brittle.  More work could be done to improve it.  You ca
 
 ## Lab 7 - Sematic Search
 The free trial we're using has very limited quotas.  That forced us to throttle.  The result is that one cell takes 10-15 minutes to run.  We need to cut the data set down to work around that.  Ultimately the quotas will probably go up.
-
-## Lab 8 - Cleanup
-Right now we're just nuking the project.  An alternative would be to delete the specific resources we deployed.
 
 ## Next Steps
 We hope you enjoyed these labs.  If you have any questions, feel free to reach out directly to any of us.  We'd love the opportunity to explore and support your use cases.
