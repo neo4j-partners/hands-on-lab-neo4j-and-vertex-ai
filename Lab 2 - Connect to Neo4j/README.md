@@ -60,6 +60,6 @@ You should see a GDS version number.
 
 ![](images/08.png)
 
-Assuming that all looks good, let's move on...
-
 Since we got a Graph Data Science version back, we know that we're on AuraDS, not AuraDB.  This means that we have the libraries we'll need to connect with the Python client and use graph algorithms later in these labs.
+
+Assuming that all looks good, let's move on...
