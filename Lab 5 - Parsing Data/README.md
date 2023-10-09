@@ -30,7 +30,7 @@ Workbench is a hosted notebook environment.
 
 Since we're testing out all the most advanced Google features, we want to use instances, not the user managed or managed notebooks.  Make sure "INSTANCES" is selected.  Then click "CREATE NEW."
 
-![](images/05_1.png)
+![](images/05.png)
 
 Feel free to explore the configuration options.  Keep the defaults and select "CREATE."
 
