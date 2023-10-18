@@ -28,6 +28,7 @@ You'll need a laptop with a web browser.  Your browser will need to be able to a
 * [Lab 1 - Deploy Neo4j](Lab%201%20-%20Deploy%20Neo4j) (15 min)
     * Deploying Neo4j AuraDS Professional
 * [Lab 2 - Connect to Neo4j](Lab%202%20-%20Connect%20to%20Neo4j/README.md) (10 min)
+* Break (5 min)
 
 ### Part 2
 * Lecture - [Moving Data](https://docs.google.com/presentation/d/1O6Oy_GbDYYCvQanUyUCl30hQdSsy9kKL53Jgl23Nnsk/edit?usp=sharing) (10 min)
@@ -40,12 +41,13 @@ You'll need a laptop with a web browser.  Your browser will need to be able to a
     * More Performant Load
 * [Lab 4 - Exploration](Lab%204%20-%20Exploration/README.md) 10 min)
     * Exploration with Neo4j Bloom
+* Break (5 min)
+
+### Part 3
 * Lecture - [Vertex AI](https://docs.google.com/presentation/d/1BowFoowrk0pTVqdScC4weBFZJ-xMTdHbvMUCW4ZyP68/edit?usp=sharing) (15 min)
     * What is Vertex AI?
     * Workbench
     * Generative AI
-
-### Part 3
 * Lecture - [Neo4j and Generative AI](https://docs.google.com/presentation/d/1vVII1F9RgcFiQ8Pxd2RQUursZiqqbkpIG798sn-HWgU/edit?usp=sharing) (15 min)
     * Generating Knowledge Graphs
     * Retrieval Augmented Generation
