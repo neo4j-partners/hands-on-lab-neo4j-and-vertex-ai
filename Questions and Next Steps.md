@@ -27,7 +27,7 @@ We only parse 3 files here.  That's down to very limited quotas.  With more, we 
 The chatbot is somewhat brittle.  More work could be done to improve it.  You can almost certainly think up some questions that it should answer but can't.  That's part of what is so exciting about this space -- everything is developing quickly.
 
 ## Lab 7 - Sematic Search
-The free trial we're using has very limited quotas.  That forced us to throttle.  The result is that one cell takes 10-15 minutes to run.  We need to cut the data set down to work around that.  Ultimately the quotas will probably go up.
+The account we're using has limited quotas.  That forced us to throttle.
 
 ## Next Steps
 We hope you enjoyed these labs.  If you have any questions, feel free to reach out directly to any of us.  We'd love the opportunity to explore and support your use cases with your data.
