@@ -59,11 +59,7 @@ We can now create our first database.  We want to create an AuraDS instance.  Th
 
 Click on "Instances" under AuraDS.
 
-Important -- Be sure to select AuraDS.
-
-![](images/10.png)
-
-Now click on "New Instance" to create a new AuraDS instance.
+Important -- Be sure to select AuraDS and click on "New Instance" to create a new AuraDS instance.
 
 ![](images/11.png)
 
