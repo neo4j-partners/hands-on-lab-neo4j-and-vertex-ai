@@ -27,9 +27,9 @@ Still in the left menu, scroll all the way to the bottom.  You'll see listings f
 
 ![](images/03.png)
 
-That takes you to a description of Neo4j Aura Professional in the Google Cloud Marketplace.  The parent account, owned by OneBlink.AI has already subscribed to this listing.  However, we still need to enable the API.
+That takes you to a description of Neo4j Aura Professional in the Google Cloud Marketplace. The Aura database is already enabled for this project. You can start using it by clicking on the "Manage" button, as shown in the screenshot.
 
-Click on "Enable."
+Click on "Manage."
 
 ![](images/04.png)
 
