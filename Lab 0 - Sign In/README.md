@@ -39,8 +39,6 @@ Select the "oneblink.ai" organization.
 
 Click to select the project available to you.  In my case it was "vibrant-tiger-7."
 
-![](images/08.png)
-
 Now you're all set, logged into a Google Cloud account with a project selected.
 
 ![](images/09.png)
