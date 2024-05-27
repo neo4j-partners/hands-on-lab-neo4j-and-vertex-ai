@@ -1,5 +1,17 @@
 # Lab 0 - Sign In
-At the start of this lab you should have been handed credentials for Google Cloud.  In this first section, we're going to use those to sign in.
+At the start of this lab, you should have received an information sheet. To begin, visit https://events.oneblink.ai and input the email you used to register for the lab, along with the event code (a 7-digit number) from the information sheet. Check the box to agree to the Terms and Conditions, and then click on Register.
+
+![](images/ob_01.png)
+
+Check your mailbox to get the OneBlink validation code, then copy the code.
+
+![](images/ob_02.png)
+
+Enter your email, the event code from the information sheet, and the validation code from your email, then click on the "Access Sandbox" button.
+
+![](images/ob_03.png)
+
+Once the entered information is validated, you will receive your own GCP and Neo4j accounts. Please refrain from sharing this account information with fellow attendees, as it is specifically assigned to you. Remember to save this information, as you will need it until the end of the lab. These accounts will be terminated by the end of the day.
 
 ## Improving the Labs
 As you work through these labs, we'd really appreciate your feedback.  One way to help us improve is to open an issue by going [here](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/issues).  Outright bugs, usability suggestions, and general comments are all appreciated.  Pull requests are great too!
