@@ -21,13 +21,13 @@ The Neo4j [Spark Connector](https://neo4j.com/docs/spark/current/) is another wa
 This section of the lab could be expanded.
 
 ## Lab 5 - Parsing Data
-We only parse 3 files here.  That's down to very limited quotas.  With more, we could make a bunch of parallel calls.  It'd be neat to get to that point and parse all the data that way rather than with LOAD CSV.
+We only parse 3 files here.  That's down to very limited quotas.  With more, we could make a bunch of parallel calls.  It'd be neat to get to that point and parse all the data that way rather than with LOAD CSV. You might also need to evaluate the graph created. This is an exciting space where you can leverage an LLM to generate synthetic questions.
 
 ## Lab 6 - Chatbot
-The chatbot is somewhat brittle.  More work could be done to improve it.  You can almost certainly think up some questions that it should answer but can't.  That's part of what is so exciting about this space -- everything is developing quickly.
+The chatbot is somewhat brittle.  More work could be done to improve it.  You can almost certainly think up some questions that it should answer but can't. Production grade systems need to be more deterministic. Semantic Layers is a great approach to consider here.
 
 ## Lab 7 - Sematic Search
-The account we're using has limited quotas.  That forced us to throttle.
+The account we're using has limited quotas.  That forced us to throttle. While evaluating your RAG system, you might need to have a good balance on recall and precision. Various retrieval methodologies can help here - lexical, vector and graph. Neo4j supports all the three. A hybrid approach can help you balance between precision and recall. Rerankers help you with relevancy. 
 
 ## Next Steps
 We hope you enjoyed these labs.  If you have any questions, feel free to reach out directly to any of us.  We'd love the opportunity to explore and support your use cases with your data.
