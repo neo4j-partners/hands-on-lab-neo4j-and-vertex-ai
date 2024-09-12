@@ -21,11 +21,11 @@ So, let's get started deploying...  To do so, let's go to the Google Cloud conso
 
 On the left menu, scroll to the bottom and click "MORE PRODUCTS."
 
-![](images/02.png)
+![](images/02-1.png)
 
 Still in the left menu, scroll all the way to the bottom.  You'll see listings for a number of partner products.  These are products from leading ISVs that Google has chosen to integrate tightly into the Cloud Consonle.  Amoung those, you'll see a listing for Neo4j.  Click on that.
 
-![](images/03.png)
+![](images/03-1.png)
 
 That takes you to a description of Neo4j Aura Professional in the Google Cloud Marketplace. The Aura database is already enabled for this project. You can start using it by clicking on the "Manage" button, as shown in the screenshot.
 
