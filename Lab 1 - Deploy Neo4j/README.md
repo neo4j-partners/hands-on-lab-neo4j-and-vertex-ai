@@ -53,8 +53,6 @@ And, now you're at the Aura console.  At this point, we've authorized the API an
 
 Click "Got it!" to dismiss the cookie dialog.
 
-![](images/09.png)
-
 We can now create our first database.  We want to create an AuraDS instance.  That way we'll have access to Graph Data Science and Bloom, the Neo4j business intelligence tool.
 
 Click on "Instances" under AuraDS.
