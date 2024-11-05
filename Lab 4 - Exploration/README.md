@@ -12,7 +12,7 @@ Click the slider icon in the upper left to open the perspective menu.
 
 If there is a refresh icon in the upper left panel, click it to refresh the perspective.  This pulls the latest data model from our database.  Click "Refresh" to agree to refresh the perspective. 
 
-If you don't see the icon then the perspective is already refreshed. 
+If you don't see the icon then the perspective is already refreshed. You can skip the next two steps and close the menu.
 
 ![](images/02.png)
 
