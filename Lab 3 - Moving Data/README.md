@@ -118,10 +118,13 @@ Well, this is cool.  We've got all our nodes loaded in.  Now we need to tie them
 So, let's add the relationships.
 
     LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/hands-on-lab/form13-2023.csv' AS row
-    MATCH (m:Manager {managerName:row.managerName})
-    MATCH (c:Company {cusip:row.cusip})
-    MERGE (m)-[r:OWNS {reportCalendarOrQuarter:date(row.reportCalendarOrQuarter)}]->(c)
-    SET r.value = toFloat(row.value), r.shares = toInteger(row.shares);
+    CALL {
+        WITH row
+        MATCH (m:Manager {managerName:row.managerName})
+        MATCH (c:Company {cusip:row.cusip})
+        MERGE (m)-[r:OWNS {reportCalendarOrQuarter:date(row.reportCalendarOrQuarter)}]->(c)
+        SET r.value = toFloat(row.value), r.shares = toInteger(row.shares)
+    } IN TRANSACTIONS OF 10000 ROWS;
 
 This will run for about two minutes.  When complete, you should see this:
 
