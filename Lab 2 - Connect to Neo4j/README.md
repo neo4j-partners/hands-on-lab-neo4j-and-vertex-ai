@@ -28,17 +28,17 @@ You'll now need to provide your password.  You can find that in the file we down
     AURA_INSTANCEID=6688b25b
     AURA_INSTANCENAME=sec-edgar
 
-The password was then _kogrNk53u8oTk5be55kmit1kHGdhZj98yJlG-VYSR
+You can find your password in the credentials file you downloaded in [Lab 1](https://github.com/neo4j-partners/hands-on-lab-neo4j-and-vertex-ai/tree/main/Lab%201%20-%20Deploy%20Neo4j#deploying-aurads-professional).
 
 Enter your password and click "Connect."
 
 ![](images/05.png)
 
-Click "X" to dismiss the beginner guides.
+If the beginners guides pop up, click "X" to dismiss.
 
 ![](images/06.png)
 
-We're now in Neo4j Workspace, a unified experience for working with graph data.  There are a number of tabs:
+We're now in Neo4j Workspace, a unified experience for working with graph data.  There are a number of views we will try out:
 
 1. Explore - This will open Neo4j Bloom, the business intelligence tool.
 2. Query - This will open Neo4j Browser, a tool where we can run database queries and inspect the results.
