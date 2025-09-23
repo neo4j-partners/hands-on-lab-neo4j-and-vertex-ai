@@ -10,76 +10,86 @@ There are many ways to run these products on Google Cloud.  The Marketplace in p
 * Infrastructure as a Service (IaaS) - Neo4j Enterprise Edition is available on IaaS with a Google Deployment Manager template.  That allow you to choose whether you would like a single node or cluster.  It allows deployment of Graph Database, Bloom and Graph Data Science.
 * Platform as a Service (PaaS) - This is an option to deploy Graph Database on Kubernetes.
 
-You can inspect these options [here](https://console.cloud.google.com/marketplace/browse?filter=partner:Neo4j).
-
 ## Deploying AuraDS Professional
 We're going to use the SaaS version, AuraDS, in these labs.  This is sometimes refered to as a database as a service (DBaaS).  Aura comes in a number of flavors.  There's an enterprise and a professional version.  We're going to deploy the professional version.  
 
-So, let's get started deploying...  To do so, let's go to the Google Cloud console [here](https://console.cloud.google.com/).  If it's not already open, click the hamburger icon in the upper left to expand the menu.
+So, let's get started deploying...  To do so, let's go to the Google Cloud Marketplace [here](https://console.cloud.google.com/marketplace).  
+
+Once you get to the main page, type "neo4j" into the search bar. 
 
 ![](images/01.png)
 
-On the left menu, scroll to the bottom and click "MORE PRODUCTS."
+Once there select the "Neo4j Aura"
 
-![](images/02-1.png)
+![](images/02.png)
 
-Still in the left menu, scroll all the way to the bottom.  You'll see listings for a number of partner products.  These are products from leading ISVs that Google has chosen to integrate tightly into the Cloud Consonle.  Amoung those, you'll see a listing for Neo4j.  Click on that.
+This will take you to the Neo4j Aura marketplace listing. Click on the "Subscribe" button. 
 
-![](images/03-1.png)
+![](images/03.png)
 
-That takes you to a description of Neo4j Aura Professional in the Google Cloud Marketplace. The Aura database is already enabled for this project. You can start using it by clicking on the "Manage" button, as shown in the screenshot.
-
-Click on "Manage."
+In the next menu, you can keep all of the default values, scroll down and tick the box to accept the Additional Terms and click "Subscribe".
 
 ![](images/04.png)
 
-When complete you'll see this page.  Click on "Manage Via Neo4j, Inc." at the top of the page.
+You will then get a pop up window, click on "Sign up with Neo4j".
 
 ![](images/05.png)
 
-Confirm that you're ok with getting redirected to the management console.
+When complete you'll see this page.  Click on "Manage on Provider" at the top of the page.
 
 ![](images/06.png)
 
-You'll be asked which Google credentials you want to use.  Be sure to select the same credentials you've been using so far.
+Confirm that you're ok with getting redirected to the management console.
 
 ![](images/07.png)
 
-You'll need to agree to some terms and cookies.  Click "Got it" and "I agree."
+At the Neo4j Aura login screen click "Continue with Google"
 
 ![](images/08.png)
 
-And, now you're at the Aura console.  At this point, we've authorized the API and logged into the console for Aura Professional.  
+Click on your temporary account name to continue, and on the next screen click "Continue" again.
 
-Click "Got it!" to dismiss the cookie dialog.
+![](images/09.png)
+![](images/10.png)
 
-We can now create our first database.  We want to create an AuraDS instance.  That way we'll have access to Graph Data Science and Bloom, the Neo4j business intelligence tool.
-
-Click on "Instances" under AuraDS.
-
-Important -- Be sure to select AuraDS and click on "New Instance" to create a new AuraDS instance.
+The next series of menus will ask some general informational questions, feel free to enter anything you like here until you get to the Aura console. 
 
 ![](images/11.png)
+![](images/12.png)
+![](images/13.png)
+![](images/14.png)
 
-Select "AuraDS" on the upper right hand corner of the screen and enter "sec-edgar" for the instance name below.
+Now we are in the Aura console and we're ready to create our first database! 
 
-![](images/10a.png)
-
-Go ahead and use the default values for the rest of the items in the menu and click "Create Instance" at the lower right.
-
-![](images/10b.png)
-
-You'll be presented with the credentials for your database.  Click "Download and continue."  That will download the credentials to a text file on your local machine.  Be sure to save that file as you won't be able to get those credentials later.
+Click on "Create Instance"
 
 ![](images/15.png)
 
-You'll see a dialog that your database is being created.  This takes less than five minutes.
+We want to create an AuraDS instance.  That way we'll have access to Graph Data Science and Bloom, the Neo4j business intelligence tool.
+
+Select "AuraDS" om the upper right hand corner. 
 
 ![](images/16.png)
 
-When deployment is complete you'll see this menu.  
+You will next be taken to the configuration menu. You can leave all of the default values in place. 
 
 ![](images/17.png)
+
+Scroll down and enter "**sec-edgar**" as the instance name and tick the box that says "I accept" at the bottom and click "Create" on the lower right. 
+
+![](images/18.png)
+
+You'll be presented with the credentials for your database.  Click "Download and continue."  That will download the credentials to a text file on your local machine.  Be sure to save that file as you won't be able to get those credentials later.
+
+![](images/19.png)
+
+You'll see a dialog that your database is being created. This should only take a few minutes.
+
+![](images/20.png)
+
+When deployment is complete you'll see the instance details in the management console.  
+
+![](images/21.png)
 
 You can poke around the menus here a bit and see more on database status and connection information.
 
