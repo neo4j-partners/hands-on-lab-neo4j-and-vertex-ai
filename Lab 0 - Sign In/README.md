@@ -20,6 +20,7 @@ As you work through these labs, we'd really appreciate your feedback.  One way t
 We're going to sign into a new Google Cloud account.  You may already have other Google accounts.  If you use Chrome, you might consider creating a new profile or using incognito mode for these exercises.  That's not mandatory though and other browsers work fine too.
 
 Our next step is to open the Google Cloud console [here](https://console.cloud.google.com/). 
+Note: It is highly recommended to open the Google console in [incognito mode](https://support.google.com/chrome/answer/95464?hl=en&co=GENIE.Platform%3DDesktop) or [private browsing](https://en.wikipedia.org/wiki/Private_browsing) mode in order to avoid conflicts with other credentials in your browser's cache. 
 
 If you have no other Google accounts, you'll see a menu as shown below.  Enter the email you were given for this lab in and click "NEXT."  In my case, the email was vibrant-tiger-7@oneblink.ai.
 
