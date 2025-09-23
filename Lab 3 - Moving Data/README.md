@@ -1,7 +1,5 @@
 # Lab 3 - Moving Data
-In this lab, we're going to take data from a Google Cloud Storage bucket and import it into Neo4j.  There are a few different ways to do this.  We'll start with a very naive LOAD CSV statement and then improve it.  
-
-The Neo4j Data Importer is another option.  It's a great graphical way to import data.  However, the LOAD CSV option we're using makes it really easy to pull directly from Cloud Storage, so is probably a better choice for what we need.
+In this lab, we're going to take data from a Google Cloud Storage bucket and import it into Neo4j.  There are a few different ways to do this.  We'll start with a very naive LOAD CSV statement using a small dataset. Then we will try it again with a larger dataset using the Neo4j Data Importer, a great graphical way to import data.
 
 The dataset is from the SEC's EDGAR database.  These are public filings of something called Form 13.  Asset managers with over \$100m AUM are required to submit Form 13 quarterly.  That's then made available to the public over http.  We don't have time to download those in the lab today as they take a few hours.  But, if you're curious, they're all available [here](https://github.com/neo4j-partners/neo4j-sec-edgar-form13).  We've filtered the data to only include filings over $10m in value.
 
@@ -73,58 +71,76 @@ Now, all your data should be deleted.  Note that Workspace is still caching some
 
 In the next section, we'll load more data.
 
-## More Performant Load
-The LOAD CSV statement we used before was pretty naive.  It didn't create any indices.  It also loaded the nodes and relationships simultaneously.  Both of those are inefficient approaches.  It wasn't a big deal as that single day was a small amount of data.  However, we'd now like to load a full year of data.  That has a million rows, so we have to be a bit more efficient.  That new dataset is [here](https://storage.googleapis.com/neo4j-datasets/hands-on-lab/form13-2023.csv).
+## Using Neo4j Data Importer
 
-If you're curious, you can read a bit about the intracties of optimizing those loads here:
+Now we're going to take data from a Cloud Storage bucket and import it into Neo4j. There are a few different ways to do this. Let's import data from SEC EDGAR Form 13 filings into a Neo4j database using the data importer tool within the Neo4j Aura console.
 
-* https://neo4j.com/developer/guide-import-csv/#_optimizing_load_csv_for_performance
-* https://graphacademy.neo4j.com/courses/importing-data/
+## Introduction
 
-First, let's create constraints, essentially a primary key, for the company and manager node types.  Company keys should be CUSIPs.  We know a CUSIP is unique because that is the whole point of one.  They are identifiers for securities designed to be unique.  You can read more about them [here](https://www.cusip.com).  This is a much better field to use than nameOfIssuer (called companyName here) because it avoids the problem where some companies (like Apple or Apple, Inc.) are referred to by slightly different names.
+The Neo4j Aura console offers a convenient data importer tool that allows you to import data from various sources, including CSV files, into your Neo4j database. This guide will walk you through the process of importing Form 13 data, which represents holdings of large asset managers.
 
-The manager is a little more difficult.  But, we're going to assume that the manager name field is both unique and correct.
+### Graph Data Modeling Overview
 
-    CREATE CONSTRAINT unique_company_id IF NOT EXISTS FOR (p:Company) REQUIRE (p.cusip) IS NODE KEY;
-    CREATE CONSTRAINT unique_manager IF NOT EXISTS FOR (p:Manager) REQUIRE (p.managerName) IS NODE KEY;
+Before diving into the import process, let's briefly touch on graph data modeling. Graph databases, like Neo4j, store data as nodes and relationships. In this example, we'll model:
 
-That should give this:
+* **Managers:** Entities that manage assets.
+* **Companies:** Entities that are held as investments.
+* **OWNS:** Relationships connecting Managers to Companies, representing ownership.
 
+This structure allows us to easily query and analyze relationships between asset managers and their investments.
+
+## About the Data
+
+The dataset used in this guide comes from the U.S. Securities and Exchange Commission's (SEC) EDGAR database. Form 13 filings are quarterly reports that asset managers with over $100 million in assets under management (AUM) are required to submit, detailing their equity holdings. These filings are publicly available.
+
+For this guide, we'll use pre-filtered Form 13 data that includes filings with over $10 million in value.
+
+## Data Files
+
+You will need the following files:
+
+1.  **Neo4j Graph Data Model:** This JSON file defines the structure of your graph, specifying the nodes, relationships, and their properties.
+    * Download from: [https://storage.googleapis.com/neo4j-datasets/hands-on-lab/neo4j_importer_model_sec-edgar-forms13.json](https://storage.googleapis.com/neo4j-datasets/hands-on-lab/neo4j_importer_model_sec-edgar-forms13.json)
+
+2.  **Form 13 Data:** This CSV file contains the actual data to be imported.
+    * Download from: [https://storage.googleapis.com/neo4j-datasets/hands-on-lab/form13-2023.csv](https://storage.googleapis.com/neo4j-datasets/hands-on-lab/form13-2023.csv)
+
+## Import Instructions
+
+1.  **Open Neo4j Aura Console:**
+Follow these steps to import the data into your Neo4j Aura database. Lets' use the Import tool. 
+    * In the data services section, click on "Import"
+    * in the Import section, select the "Graph models" tab.
+    * Click on the "New graph model" button.
+![](images/01.png)
+2. **Open Graph Model:**
+    * Locate the "Run import" button in the top right corner and click the three dots next to it.
+    * Select "Open model" from the menu.
+    * Browse and select the `neo4j_importer_model_sec-edgar-forms13.json` file that you downloaded.
+![](images/02.png)
+![](images/03.png)
+7.  **Review Graph Model:**
+    * The graph model should now be displayed on the canvas in the middle of the screen.
+![](images/04.png)
+8.  **Inspect Nodes and Relationships:**
+    * Click on the "Manager" node to view its properties and keys.
+![](images/05.png)
+    * Click on the "OWNS" relationship type to view its Node ID Mapping and properties.
+![](images/06.png)
+6.  **Select Data Source:**
+    * On the left-hand side, next to "Data source," click the "Browse" button.
+![](images/07.png)
+    * Select the `form13-2023.csv` file that you downloaded.
+![](images/08.png)
+![](images/09.png)
+9.  **Run Import:**
+    * Click on "Run import."
 ![](images/10.png)
-
-Now that we have all the constraints, let's load our nodes.  We're going to do that first and grab the relationships in a second pass.  While we could do it in a single Cypher statement, as we did above, it's more efficient to run them in series.
-
-Let's load the companies first.  We're going to have a lot of duplication, since our key is CUSIP and many different rows in our csv, each representing a filing, have the same cusip.  So, we need to enhance our LOAD CSV statement a little bit to deal with those duplicates.
-
-    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/hands-on-lab/form13-2023.csv' AS row
-    MERGE (c:Company {cusip:row.cusip})
-    ON CREATE SET c.companyName=row.companyName;
-
-That should give this:
-
+    * Wait for the import process to complete (approximately 5 minutes or less).
 ![](images/11.png)
-
-Now let's load the Managers:
-
-    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/hands-on-lab/form13-2023.csv' AS row
-    MERGE (m:Manager {managerName:row.managerName});
-
-That should give this:
-
 ![](images/12.png)
 
-Well, this is cool.  We've got all our nodes loaded in.  Now we need to tie them together with relationships.  In this case we only need one kind of relationship.  A manager "OWNS" a company.
-
-So, let's add the relationships.
-
-    LOAD CSV WITH HEADERS FROM 'https://storage.googleapis.com/neo4j-datasets/hands-on-lab/form13-2023.csv' AS row
-    MATCH (m:Manager {managerName:row.managerName})
-    MATCH (c:Company {cusip:row.cusip})
-    MERGE (m)-[r:OWNS {reportCalendarOrQuarter:date(row.reportCalendarOrQuarter)}]->(c)
-    SET r.value = toFloat(row.value), r.shares = toInteger(row.shares);
-
-This will run for about two minutes.  When complete, you should see this:
-
+You've done it!  We've loaded our data set up.  We'll explore it in the next lab.  But, feel free to poke around a bit as well.
 ![](images/13.png)
 
-You've done it!  We've loaded our data set up.  We'll explore it in the next lab.  But, feel free to poke around a bit as well.
+#### Progress:  ███░░░░ 3/7 Labs Completed!
