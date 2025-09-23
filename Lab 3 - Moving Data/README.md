@@ -12,7 +12,7 @@ You may want to download the data and load it into your favorite tool for explor
 
 To load it in Neo4j, let's open the tab that has our Neo4j Workspace in it.  If you don't have that tab open, you can review the previous lab to get into it.
 
-Make sure that "Query" is selected at the top.
+Make sure we are in the "Query" tab of the browser. If not you can select it from the side bar on the left.
 
 ![](images/01.png)
 
