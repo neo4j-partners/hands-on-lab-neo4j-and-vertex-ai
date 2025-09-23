@@ -11,7 +11,7 @@ Once again, you'll need to agreee to the redirect.
 
 You should now see the Neo4j Aura console.
 
-Click "Open."
+Click "Connect" and select "Query" from the dropdown menu on the right
 
 ![](images/03.png)
 
