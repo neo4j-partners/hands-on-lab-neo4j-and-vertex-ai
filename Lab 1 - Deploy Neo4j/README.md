@@ -61,19 +61,13 @@ Important -- Be sure to select AuraDS and click on "New Instance" to create a ne
 
 ![](images/11.png)
 
-We're presented with various options for that database.  For number of nodes, enter "500,000" and for number of relationships, enter "1,000,000".
+Select "AuraDS" on the upper right hand corner of the screen and enter "sec-edgar" for the instance name below.
 
-![](images/12.png)
+![](images/10a.png)
 
-Then scroll down.  In later labs, We're going to be making a node embedding, so select that.  The node embedding will allow us to represent our graph as features that Google Vertex AI can consume in a tablular format.
+Go ahead and use the default values for the rest of the items in the menu and click "Create Instance" at the lower right.
 
-Scroll to the bottom and click "Calculate estimate."
-
-![](images/13.png)
-
-Review the estimate, enter "sec-edgar" for instance name, and click "Create"
-
-![](images/14.png)
+![](images/10b.png)
 
 You'll be presented with the credentials for your database.  Click "Download and continue."  That will download the credentials to a text file on your local machine.  Be sure to save that file as you won't be able to get those credentials later.
 
