@@ -23,7 +23,9 @@ Once there select the "Neo4j Aura"
 
 ![](images/02.png)
 
-This will take you to the Neo4j Aura marketplace listing. Click on the "Subscribe" button. 
+This will take you to the Neo4j Aura marketplace listing. 
+- If you see a "Subscribe" button on this step, click it and continue. 
+- If you see "Manage on Provider", you can skip ahead 3 steps and continue from there.
 
 ![](images/03.png)
 
