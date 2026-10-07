@@ -1,6 +1,6 @@
 # Lab 1 - Sign In
 
-Congratulations! You logged into Vocareum and made it here! The next step is going to be starting up your Microsoft Azure environment.
+Congratulations! You logged into Vocareum and made it here! The next step is going to be starting up your Google Cloud environment.
 
 Open a window back on the Vocareum assignments page [here](https://labs.vocareum.com/main/nav.php?m=course_new&cid=213828). Scroll down to the bottom of that window.
 
